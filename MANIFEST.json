@@ -1,6 +1,11 @@
 {
-  "file_count": 108,
+  "file_count": 109,
   "files": [
+    {
+      "bytes": 19,
+      "path": ".github/FUNDING.yml",
+      "sha256": "5bd127d77684b5215fac7fb52a1306e195d5b014b353cfd49bcbc5a05abbf83e"
+    },
     {
       "bytes": 344,
       "path": ".github/ISSUE_TEMPLATE/verification_report.md",
@@ -377,9 +382,9 @@
       "sha256": "ff3ced1de29db8b5003a6b4b3255082bb6ed4e866ef5f75bcf2fef591a002814"
     },
     {
-      "bytes": 1112,
+      "bytes": 1154,
       "path": "scripts/regenerate_integrity.py",
-      "sha256": "574646d1b8c6fb6a37ad93053d6bca5a4755d52d04ab565083904b17d688dfe2"
+      "sha256": "a84fdc148e8ecd5db74e90c7920af5bdb701db813c4cde0a5d2ba9e058015a86"
     },
     {
       "bytes": 5813,
@@ -412,9 +417,9 @@
       "sha256": "b00f055e74e3308d32e9e4a540b1628b6e2fd8dbc9331ca7317fac38dfb72cb0"
     },
     {
-      "bytes": 5513,
+      "bytes": 5555,
       "path": "scripts/verify_repository.py",
-      "sha256": "c12b90eba00631b1006439cec2798bbdeadcfe613c440b57c0fcf7c541eccb8e"
+      "sha256": "2dd6dc088fedc421fc8c068610bf42588ac73c758b551d69db2e98ecb7c75212"
     },
     {
       "bytes": 1891,

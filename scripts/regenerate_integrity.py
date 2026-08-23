@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def tracked(p:Path):
  rel=p.relative_to(ROOT).as_posix()
  if rel in {'MANIFEST.json','SHA256SUMS.txt'}: return False
+ if rel.startswith('.git/'): return False
  if rel.startswith('results/') or rel.startswith('.cache/'): return False
  if '/__pycache__/' in '/'+rel or rel.endswith('.pyc'): return False
  return p.is_file()

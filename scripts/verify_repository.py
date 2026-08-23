@@ -15,6 +15,7 @@ def sha(p):
 def tracked_file(path):
  rel=path.relative_to(ROOT).as_posix()
  if rel in {'MANIFEST.json','SHA256SUMS.txt'}: return False
+ if rel.startswith('.git/'): return False
  if rel.startswith('results/') or rel.startswith('.cache/'): return False
  if '/__pycache__/' in '/'+rel or rel.endswith('.pyc'): return False
  return path.is_file()
