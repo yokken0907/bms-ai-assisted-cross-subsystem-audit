@@ -17,7 +17,7 @@ The repository **does not** establish 15 deployed product defects, 15 vulnerabil
 
 ## Publication set
 
-The `paper/` directory contains Main Manuscript + Supplements A/B/C, Version 1.1, with their published-package checksums.
+The manuscript and Supplements A/B/C are intentionally **not stored in the public Git tree while the manuscript is pending Jxiv posting**. Their canonical Version 1.1 identities remain hash-pinned in the release metadata and provenance files. After publication, the Jxiv record and/or the canonical Publication Set may be linked as the publication-facing source without changing the scientific evidence preserved here.
 
 ## Reproduce the core publication evidence
 
@@ -37,11 +37,13 @@ python scripts/verify_all.py \
 
 This command verifies:
 
-1. repository and publication-file integrity;
+1. repository integrity and publication metadata invariants;
 2. fixed publication counts and cross-file invariants;
 3. 15 candidate witness hashes and 2 control witnesses;
 4. 25 exact source anchors against the frozen foxBMS source;
 5. all 17 replay cases (15 candidates + 2 controls), including the candidate C-witness `-O0/-O2` consistency and two repeated Python/static checks.
+
+If the four canonical Version 1.1 DOCX files are later added under `paper/`, their hashes can also be checked with `python scripts/verify_paper_hashes.py`. In the current pre-publication public tree, absence of `paper/` is intentional and is reported as a skipped optional paper-file check rather than an integrity failure.
 
 ## Verify the full Master-of-All 22-gate archive
 
@@ -53,7 +55,7 @@ python scripts/verify_master_of_all.py /path/to/BMS_TECHNOLOGY_AUDIT_MASTER_OF_A
 
 The wrapper reconstructs the embedded project tree and invokes the byte-preserved, separately implemented project verifier from the frozen Master-of-All. “Separately implemented” here refers to implementation separation from the archive builder; it is **not external institutional or third-party replication**.
 
-To verify both large release assets after downloading them, run:
+To verify the canonical Publication Set and Master-of-All after downloading them, run:
 
 ```bash
 python scripts/verify_release_assets.py \
@@ -61,11 +63,10 @@ python scripts/verify_release_assets.py \
   --master-of-all /path/to/BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip
 ```
 
-This additionally checks the Publication Set ZIP identity and byte-equality of its four DOCX files against `paper/`.
+This checks the Publication Set ZIP identity and the four canonical DOCX hashes against their pinned identities, without requiring the manuscript files to be stored in the Git tree.
 
 ## Repository layout
 
-- `paper/` — publication Version 1.1.
 - `data/` — publication-facing normalized registers and counts.
 - `evidence/frozen/` — byte/content-preserved key JSON/MD evidence from Master-of-All and BMSA-12.
 - `witnesses/` — 15 candidate witnesses, 2 controls, and required support files.
@@ -74,6 +75,7 @@ This additionally checks the Publication Set ZIP identity and byte-equality of i
 - `release/` — identities of large release assets not tracked in Git.
 - `upstream/` — exact foxBMS source identity.
 - `third_party/` — upstream license notices needed for traceability of redistributed support material.
+- `paper/` — optional post-publication location for the four canonical Version 1.1 DOCX files; intentionally absent from the current public tree pending Jxiv posting.
 
 ## Important publication-facing interpretation notes
 

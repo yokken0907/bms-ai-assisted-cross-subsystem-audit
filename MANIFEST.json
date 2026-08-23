@@ -1,5 +1,5 @@
 {
-  "file_count": 113,
+  "file_count": 108,
   "files": [
     {
       "bytes": 344,
@@ -42,14 +42,14 @@
       "sha256": "ebc048e475104600bf83ebbc44dc0a26aaf4e24c76a9b7b5b38dfce48a53a160"
     },
     {
-      "bytes": 5520,
+      "bytes": 6373,
       "path": "README.md",
-      "sha256": "ac44d2c19c574443768eaedd0f5999a0f189cddfac39f3082a570f558b1c5617"
+      "sha256": "d68a38017927eb94d289afef5d2109762f7443d59f047126b9680c6ee0f3051c"
     },
     {
-      "bytes": 2310,
+      "bytes": 5194,
       "path": "README_JA.md",
-      "sha256": "f00e4d6f8a4a4a5bee5e9845724ebb1f1d3d4005dbd4e00f2f3487cd75ac289d"
+      "sha256": "4d5552148cc49b82d505d038d1ffca7b25f66a14e68dee99a1800eedc9e93118"
     },
     {
       "bytes": 517,
@@ -332,31 +332,6 @@
       "sha256": "67e01cb4f1a9e8717917a8d0951a211d49fedaf6619c3c6b089dcb2ba35e3bbb"
     },
     {
-      "bytes": 517411,
-      "path": "paper/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_v1.1.docx",
-      "sha256": "ff872a2ddd6c039786232631525d7c53622442f18ab2346c11c1ad1698b9484a"
-    },
-    {
-      "bytes": 432287,
-      "path": "paper/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_A_v1.1.docx",
-      "sha256": "f4d086a92c77094867559516ce7635687f1e742c5f0f14cc90cc662ab31f8145"
-    },
-    {
-      "bytes": 273402,
-      "path": "paper/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_B_v1.1.docx",
-      "sha256": "02cc9a657d79eb8c25cc7e8bf1b0a29687339c32c5102fb1f5ee8d457a7552c2"
-    },
-    {
-      "bytes": 550199,
-      "path": "paper/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_C_v1.1.docx",
-      "sha256": "f138cecd5c75aef215bcb5c7b6b08b872206b790b1fe81c876a6f86751132a0c"
-    },
-    {
-      "bytes": 511,
-      "path": "paper/SHA256SUMS_v1.1.txt",
-      "sha256": "72837a3ca5fe159f5565fc76bdf9441107341cd5fefb1a98954a4baf75814d90"
-    },
-    {
       "bytes": 129,
       "path": "release/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.zip.sha256",
       "sha256": "2a77db580869ee2f0bbe99d4c0ae351cc449125424c80b7bd714fbbbe1acdf15"
@@ -412,9 +387,9 @@
       "sha256": "4c195a7c600662eb3ca878008998f37cfb781e8c5ab1795851b7248f5a48a587"
     },
     {
-      "bytes": 2160,
+      "bytes": 2200,
       "path": "scripts/verify_all.py",
-      "sha256": "14921dea62082643fb0af8e19e4580a733a16425bc53ceb52b15c1439511377d"
+      "sha256": "0ff53f0b9b7599b518f548572fe05b27f935c2e6aea79d82ee2ea0c88d3f981c"
     },
     {
       "bytes": 2403,
@@ -422,9 +397,9 @@
       "sha256": "c093fd5c0e8aa7dd761b9bd24ea592aeff9ae2e2742c256dd24d0ea0052324c9"
     },
     {
-      "bytes": 672,
+      "bytes": 1932,
       "path": "scripts/verify_paper_hashes.py",
-      "sha256": "12cdb613c1bf5adef2b52bb9f17e7ad44a485e8b19647073fd67cd7cb1e3892f"
+      "sha256": "212506caa4966a38fb241d5c3732736650290aabe9216458b02b246c6d40abe3"
     },
     {
       "bytes": 2663,
@@ -432,9 +407,9 @@
       "sha256": "35fe9c0d5deaf23f4901782e88cf0ce279b5f0a5a46019776d809a4fd7742368"
     },
     {
-      "bytes": 5785,
+      "bytes": 6116,
       "path": "scripts/verify_release_assets.py",
-      "sha256": "67a4787ca451bebca4e8f89e92a996feacfdfd616c697e5f3de2ac7c3e255546"
+      "sha256": "b00f055e74e3308d32e9e4a540b1628b6e2fd8dbc9331ca7317fac38dfb72cb0"
     },
     {
       "bytes": 5513,

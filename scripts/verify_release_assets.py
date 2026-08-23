@@ -53,6 +53,10 @@ def main() -> int:
         ('publication_set', args.publication_set, PUB_SHA),
         ('master_of_all', args.master_of_all, MASTER_SHA),
     ):
+        if not path.is_file():
+            errors.append(label + ' missing: ' + str(path))
+            report[label] = {'file': path.name, 'pass': False}
+            continue
         actual = sha256_file(path)
         passed = actual == expected
         report[label] = {
@@ -64,84 +68,80 @@ def main() -> int:
         if not passed:
             errors.append(label + ' SHA mismatch')
 
-    try:
-        with zipfile.ZipFile(args.publication_set) as z:
-            names = z.namelist()
-            name_set = set(names)
+    if args.publication_set.is_file():
+        try:
+            with zipfile.ZipFile(args.publication_set) as z:
+                names = z.namelist()
+                name_set = set(names)
 
-            root_present = PUBLICATION_SET_ROOT in name_set
-            report['publication_canonical_root'] = {
-                'root': PUBLICATION_SET_ROOT,
-                'directory_entry_present': root_present,
-                'pass': root_present,
-            }
-            if not root_present:
-                errors.append('publication canonical root missing ' + PUBLICATION_SET_ROOT)
+                root_present = PUBLICATION_SET_ROOT in name_set
+                report['publication_canonical_root'] = {
+                    'root': PUBLICATION_SET_ROOT,
+                    'directory_entry_present': root_present,
+                    'pass': root_present,
+                }
+                if not root_present:
+                    errors.append('publication canonical root missing ' + PUBLICATION_SET_ROOT)
 
-            inner: dict[str, object] = {}
-            for name, expected_hash in DOCS.items():
-                canonical_member = PUBLICATION_SET_ROOT + name
-                basename_matches = [
-                    member for member in names
-                    if not member.endswith('/') and PurePosixPath(member).name == name
-                ]
+                paper_dir_present = (ROOT / 'paper').is_dir()
+                inner: dict[str, object] = {}
+                for name, expected_hash in DOCS.items():
+                    canonical_member = PUBLICATION_SET_ROOT + name
+                    basename_matches = [
+                        member for member in names
+                        if not member.endswith('/') and PurePosixPath(member).name == name
+                    ]
 
-                location_unique = basename_matches == [canonical_member]
-                if not location_unique:
-                    errors.append(
-                        'publication member location/uniqueness mismatch '
-                        + name
-                        + ': '
-                        + json.dumps(basename_matches)
-                    )
+                    location_unique = basename_matches == [canonical_member]
+                    if not location_unique:
+                        errors.append(
+                            'publication member location/uniqueness mismatch '
+                            + name
+                            + ': '
+                            + json.dumps(basename_matches)
+                        )
 
-                if canonical_member not in name_set:
-                    errors.append('publication set missing ' + canonical_member)
-                    inner[name] = {
-                        'canonical_member': canonical_member,
-                        'basename_matches': basename_matches,
-                        'canonical_presence': False,
-                        'location_unique': location_unique,
-                        'pass': False,
-                    }
-                    continue
+                    if canonical_member not in name_set:
+                        errors.append('publication set missing ' + canonical_member)
+                        inner[name] = {
+                            'canonical_member': canonical_member,
+                            'basename_matches': basename_matches,
+                            'canonical_presence': False,
+                            'location_unique': location_unique,
+                            'pass': False,
+                        }
+                        continue
 
-                zip_hash = sha256_bytes(z.read(canonical_member))
-                repo_path = ROOT / 'paper' / name
-                if not repo_path.is_file():
-                    errors.append('repository paper missing ' + name)
+                    zip_hash = sha256_bytes(z.read(canonical_member))
+                    zip_identity_ok = zip_hash == expected_hash
+                    if not zip_identity_ok:
+                        errors.append('publication paper hash mismatch ' + name)
+
+                    repo_path = ROOT / 'paper' / name
+                    repo_hash = sha256_file(repo_path) if repo_path.is_file() else None
+                    repo_identity_ok = True
+                    if paper_dir_present:
+                        repo_identity_ok = repo_hash == expected_hash
+                        if not repo_identity_ok:
+                            errors.append('repository paper identity mismatch ' + name)
+
+                    passed = location_unique and zip_identity_ok and repo_identity_ok
                     inner[name] = {
                         'canonical_member': canonical_member,
                         'basename_matches': basename_matches,
                         'canonical_presence': True,
                         'location_unique': location_unique,
                         'zip_sha256': zip_hash,
+                        'repo_paper_sha256': repo_hash,
+                        'repo_paper_check': 'ENFORCED' if paper_dir_present else 'SKIPPED_PREPUBLICATION',
                         'expected_sha256': expected_hash,
-                        'repo_paper_present': False,
-                        'pass': False,
+                        'pass': passed,
                     }
-                    continue
 
-                repo_hash = sha256_file(repo_path)
-                identity_ok = zip_hash == expected_hash == repo_hash
-                passed = location_unique and identity_ok
-                inner[name] = {
-                    'canonical_member': canonical_member,
-                    'basename_matches': basename_matches,
-                    'canonical_presence': True,
-                    'location_unique': location_unique,
-                    'zip_sha256': zip_hash,
-                    'repo_paper_sha256': repo_hash,
-                    'expected_sha256': expected_hash,
-                    'pass': passed,
-                }
-                if not identity_ok:
-                    errors.append('paper identity mismatch ' + name)
+                report['publication_docx_identity'] = inner
 
-            report['publication_docx_identity'] = inner
-
-    except zipfile.BadZipFile:
-        errors.append('publication set bad ZIP')
+        except zipfile.BadZipFile:
+            errors.append('publication set bad ZIP')
 
     report['pass'] = not errors
     report['errors'] = errors

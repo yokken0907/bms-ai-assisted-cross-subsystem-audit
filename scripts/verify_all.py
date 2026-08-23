@@ -28,4 +28,4 @@ with tempfile.TemporaryDirectory(prefix='bms-source-') as td:
  roots=[x for x in td.iterdir() if x.is_dir()];
  if len(roots)!=1: raise SystemExit('unexpected source layout')
  run([sys.executable,str(ROOT/'scripts/run_witnesses.py'),'--source',str(roots[0])])
-print(json.dumps({'status':'FULL_PASS','source_sha256':SOURCE_SHA,'candidate_count':15,'control_count':2,'source_anchor_count':25},indent=2))
+print(json.dumps({'status':'FULL_PASS','source_sha256':SOURCE_SHA,'candidate_count':15,'control_count':2,'source_anchor_count':25,'paper_files':'OPTIONAL_PREPUBLICATION'},indent=2))
