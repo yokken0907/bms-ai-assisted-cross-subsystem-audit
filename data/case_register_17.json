@@ -1,0 +1,189 @@
+[
+  {
+    "case_id": "BMSA01-F01",
+    "frozen_upstream_disposition": "WEAKNESS_CANDIDATE_VALIDITY_BYPASS",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "Current-validity propagation into SOC counting",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-01",
+    "witness_file": "bmsa01_02_range_enumeration_witness.c",
+    "witness_sha256": "379e095d317a2e10f0494ce9b9532d4ee02dad0d92a2eda5cac32d32171611e8"
+  },
+  {
+    "case_id": "BMSA03-F01",
+    "frozen_upstream_disposition": "WEAKNESS_CANDIDATE_VALIDITY_PROPAGATION_TO_CAN_POWER_LIMIT",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "Invalid battery-voltage validity propagation into CAN pack-power limits",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-03",
+    "witness_file": "bmsa03_pack_limit_validity_witness.c",
+    "witness_sha256": "b08d500bcb842269ea33565486260bca03732a52ab9808b6c30eb9bfb6a712f0"
+  },
+  {
+    "case_id": "BMSA04-F01",
+    "frozen_upstream_disposition": "BOUNDED_HISTORY_SOC_CONTRACT_MISMATCH_CANDIDATE",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "HISTORY balancing SOC interface/scale contract mismatch",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-04",
+    "witness_file": "bmsa04_history_soc_replay.c",
+    "witness_sha256": "8b2c01ede20d9c461e2a7713b03528fa4d2b590fd3eeae27822162ad6887dc56"
+  },
+  {
+    "case_id": "BMSA11-F01",
+    "frozen_upstream_disposition": "BOUNDED_SOURCE_LEVEL_SOH_REPORTING_INTEGRATION_WEAKNESS_CANDIDATE",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "SOH database-to-CAN reporting disconnection",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-11",
+    "witness_file": "bmsa11_soh_telemetry_semantics_witness.c",
+    "witness_sha256": "6d60e9916cea08140f9c9cbda56bdbd26915741c9304ecbf65ee88231ebac4e7"
+  },
+  {
+    "case_id": "BMSA02-C01",
+    "frozen_upstream_disposition": "KNOWN_DEPENDENCY_CONTROL_NO_RESIDUAL_WEAKNESS",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "State-estimation dependency control",
+    "role": "CONTROL",
+    "source_branch": "BMSA-02",
+    "witness_file": "bmsa02_capacity_dependency_control.c",
+    "witness_sha256": "a70ccc7a3ceeef744aaad6c4781760edb7d7f575ea155e5fbca61b4beadbc2ac"
+  },
+  {
+    "case_id": "BMSA06-C01",
+    "frozen_upstream_disposition": "PLAUSIBILITY_REJECTION_CONTROL_NO_WEAKNESS",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "Temperature plausibility-rejection control",
+    "role": "CONTROL",
+    "source_branch": "BMSA-06",
+    "witness_file": "bmsa06_temperature_plausibility_control.c",
+    "witness_sha256": "fab342fee74c02fd45e7f6cbfed8a780045f4928aa1493f22237fef2dea8f9f8"
+  },
+  {
+    "case_id": "BMSA05-F01",
+    "frozen_upstream_disposition": "CHARGE_MODE_OPEN_WIRE_CONFIGURATION_CONTRACT_MISMATCH_CANDIDATE",
+    "lane": "STATE_TIME",
+    "pass": true,
+    "publication_facing_title": "Charge-mode periodic open-wire configuration contract mismatch",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-05",
+    "witness_file": "bmsa05_mode_config_truth_table_witness.c",
+    "witness_sha256": "08857bcdfa9532c02dc3b1ec39ee9710274710bf879e3edb2ee14dc005b4e8c1"
+  },
+  {
+    "case_id": "BMSA07-F01",
+    "frozen_upstream_disposition": "BOUNDED_SOURCE_LEVEL_DIAGNOSTIC_CONFIGURATION_WEAKNESS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "pass": true,
+    "publication_facing_title": "Diagnostic delay identifier/value mismatch",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-07",
+    "witness_file": "bmsa07_delay_witness.c",
+    "witness_sha256": "11d6b0fb465bf401230d27daf52fe2a4bfbfe2f942162301e4b78440b9ec1504"
+  },
+  {
+    "case_id": "BMSA08-F02",
+    "frozen_upstream_disposition": "MULTI_STRING_CONNECTION_SELF_LOOP_CANDIDATE",
+    "lane": "STATE_TIME",
+    "pass": true,
+    "publication_facing_title": "Configuration-dependent multi-string contactor-state self-loop",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-08",
+    "witness_file": "bmsa08_multistring_transition_witness.c",
+    "witness_sha256": "c47428a22724b344782ff036d3b8836426a970153d781142f0d7e425a4ef97bd"
+  },
+  {
+    "case_id": "BMSA09-F03",
+    "frozen_upstream_disposition": "BENDER_ISO165C_WAIT_ACK_LIVENESS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "pass": true,
+    "publication_facing_title": "Optional IMD acknowledgement-wait liveness condition",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-09",
+    "witness_file": "bmsa09_imd_ack_liveness_witness.c",
+    "witness_sha256": "c08e49adb7676c97f125fbdd46c039899df8587bf123d79ae1bfc728bb310c8f"
+  },
+  {
+    "case_id": "BMSA10-F01",
+    "frozen_upstream_disposition": "SYSTEM_MONITOR_CONJUNCTION_SEMANTICS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "pass": true,
+    "publication_facing_title": "System Monitor conjunction semantics",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-10",
+    "witness_file": "bmsa10_sys_mon_conjunction_witness.c",
+    "witness_sha256": "0203305a2fe8022f4712e4ec7b4dd0765c4f4d70c09b2d2203881052d929b758"
+  },
+  {
+    "case_id": "BMSA08-F01",
+    "frozen_upstream_disposition": "OPEN_WIRE_BOOLEAN_INDEX_COLLAPSE_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "pass": true,
+    "publication_facing_title": "Open-wire Boolean index collapse",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-08",
+    "witness_file": "bmsa08_open_wire_witness.c",
+    "witness_sha256": "202910e7cc670326dd94b9c5870f9ed9d5c889820d8e947fc00f36ae8de5a7b8"
+  },
+  {
+    "case_id": "BMSA09-F01",
+    "frozen_upstream_disposition": "DEBUG_CAN_AFE_FRAGMENT_STALENESS_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "pass": true,
+    "publication_facing_title": "Debug-CAN fragmented AFE aggregate freshness mismatch",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-09",
+    "witness_file": "bmsa09_debug_afe_fragment_witness.c",
+    "witness_sha256": "639f3a23bf7ca91110eaf9c0e43df3fc4853ef603fb83cda1c750a0ac9830f1b"
+  },
+  {
+    "case_id": "BMSA09-F02",
+    "frozen_upstream_disposition": "AEROSOL_COUNTER_CRC_ACCEPTANCE_PATH_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "pass": true,
+    "publication_facing_title": "Optional aerosol CAN rolling-counter/CRC acceptance semantics",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-09",
+    "witness_file": "bmsa09_aerosol_integrity_witness.c",
+    "witness_sha256": "398c2f604e5d586dbd7c0d5270468bb05da333a7031ea741d205367c91cb19d3"
+  },
+  {
+    "case_id": "BMSA10-F02",
+    "frozen_upstream_disposition": "BMS_STATE_MACHINE_PUBLIC_TEST_ADEQUACY_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "pass": true,
+    "publication_facing_title": "Public BMS state-machine test-surface traceability candidate",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-10",
+    "witness_file": "bmsa10_bms_state_test_adequacy_witness.py",
+    "witness_sha256": "6a1cbc49ecd0a6b6bc1030369d1a72d2a4ba63b5f77f01802eea22603008220d"
+  },
+  {
+    "case_id": "BMSA10-F03",
+    "frozen_upstream_disposition": "AEROSOL_VALIDATOR_BUILD_STATE_DEPENDENCE_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "pass": true,
+    "publication_facing_title": "Aerosol configuration validator and build-state dependence",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-10",
+    "witness_file": "bmsa10_aerosol_configuration_witness.py",
+    "witness_sha256": "31cc673d63bcad7ab497dd73088b52a11b76ec0aab597aa75daf713a43507497"
+  },
+  {
+    "case_id": "BMSA06-F01",
+    "frozen_upstream_disposition": "SURVIVES_AS_BOUNDED_SOFTWARE_WEAKNESS_CANDIDATE_AT_HOST_UNIT_AND_DIAGNOSTIC_CONTRACT_SCOPE",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "Zero-valid-temperature sentinel semantics and thermal diagnostic clearing",
+    "role": "UPSTREAM_CANDIDATE",
+    "source_branch": "BMSA-06",
+    "witness_file": "bmsa06_f01_bounded_semantics_witness.c",
+    "witness_sha256": "3699183cfc194e3b2810dcac44180189614f4cba9726eef76a92dceb3b85193c"
+  }
+]

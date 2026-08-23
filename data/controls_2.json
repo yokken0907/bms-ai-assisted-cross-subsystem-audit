@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "BMSA02-C01",
+    "frozen_upstream_disposition": "KNOWN_DEPENDENCY_CONTROL_NO_RESIDUAL_WEAKNESS",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "State-estimation dependency control",
+    "source_branch": "BMSA-02",
+    "witness_file": "bmsa02_capacity_dependency_control.c",
+    "witness_sha256": "a70ccc7a3ceeef744aaad6c4781760edb7d7f575ea155e5fbca61b4beadbc2ac"
+  },
+  {
+    "case_id": "BMSA06-C01",
+    "frozen_upstream_disposition": "PLAUSIBILITY_REJECTION_CONTROL_NO_WEAKNESS",
+    "lane": "VALUE_DATA_FLOW",
+    "pass": true,
+    "publication_facing_title": "Temperature plausibility-rejection control",
+    "source_branch": "BMSA-06",
+    "witness_file": "bmsa06_temperature_plausibility_control.c",
+    "witness_sha256": "fab342fee74c02fd45e7f6cbfed8a780045f4928aa1493f22237fef2dea8f9f8"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "doi": null,
+  "exact_source": {
+    "archive_filename": "foxbms-2_308028fb13d046ba29b98886895c2e17937b1437.zip",
+    "archive_sha256": "2cf5cfa7c12aa27b41795650695898abd0bce79af746b8e6ca8dd0c5368c1fa2",
+    "codeload_url": "https://codeload.github.com/foxBMS/foxbms-2/zip/308028fb13d046ba29b98886895c2e17937b1437",
+    "commit": "308028fb13d046ba29b98886895c2e17937b1437",
+    "commit_url": "https://github.com/foxBMS/foxbms-2/commit/308028fb13d046ba29b98886895c2e17937b1437",
+    "project": "foxBMS 2",
+    "upstream_license_summary": {
+      "hardware_and_documentation": "CC-BY-4.0",
+      "software": "BSD-3-Clause"
+    },
+    "version": "v1.11.0"
+  },
+  "full_project_archive_embedded_in_master": {
+    "file": "BMS_TECHNOLOGY_AUDIT(18).zip",
+    "files": 810,
+    "nested_zip_archives": 383,
+    "sha256": "b21d2e5078ddb95eb692c569e1f327b4d609ba72c99f34552d923448fa36479d"
+  },
+  "public_repository_url": null,
+  "recommended_release_assets": [
+    {
+      "file": "BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip",
+      "role": "complete archival evidence package; not stored in Git tree",
+      "sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7"
+    },
+    {
+      "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.zip",
+      "role": "publication set",
+      "sha256": "5f783e651f3e64e2063a28c9bfc9337d7978f4421eee738290d01fa58fe47279"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "baseline_outer_sha256": "512446b06af26904d69d89ccb6670309f659fce44a090d1a5f6d8696cdf2fc4e",
+  "final_determinations_sha256": "7e461884cb0c2cda9974099e8c5b963482b4b8a2fcf6a1a8e078eca76db235c3",
+  "scientific_package_count": 21,
+  "scientific_packages": [
+    {
+      "bytes": 10422,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_INTEGRATION_v1.0.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "ee63eb973820074cf8c9cf54acd9626fdacd228bc7b1ee7cb193e35b3eb09ac4"
+    },
+    {
+      "bytes": 3699,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_INTEGRATION_v1.0.0_STARTER.zip",
+      "sha256": "6089b9331f75bc837a8d93d88515a34222c60111627162b6833cb43191afd9ea"
+    },
+    {
+      "bytes": 7493,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE0_HANDOFF_SCOPE_FREEZE_v0.1.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "70861b4d2d90f70ff35677a13d17e78cc25cfdf816c9be5d12b8890d0b68f51d"
+    },
+    {
+      "bytes": 4588,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE0_HANDOFF_SCOPE_FREEZE_v0.1.0_STARTER.zip",
+      "sha256": "3c9cba45d51f9dd4fcf1236fa99529ee5a72da2ec8f0d9457a686e88ee69e298"
+    },
+    {
+      "bytes": 4120,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE0_HANDOFF_SCOPE_FREEZE_v0.1.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "3ddec6950bd7a2af3abe0104aae943f6bf02838d1de3d51e29b6553562be96e3"
+    },
+    {
+      "bytes": 5636,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE1_RESIDUAL_GAP_DECISION_PROTOCOL_v0.2.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "c8aa50868d872e7aa5d090a4b68f9317cb5303d6bfbb68c0f7b233fc729c3032"
+    },
+    {
+      "bytes": 4207,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE1_RESIDUAL_GAP_DECISION_PROTOCOL_v0.2.0_STARTER.zip",
+      "sha256": "4857be09df5c94da0b2a703e9a706a87a301066c125c0e2f227909b9c42af9d3"
+    },
+    {
+      "bytes": 4299,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE1_RESIDUAL_GAP_DECISION_PROTOCOL_v0.2.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "26adfdf6234a9f8b6c12eca7e25a9d263806bc6c29fda3cbe308f7879bc778be"
+    },
+    {
+      "bytes": 26385,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE2_EXACT_SOURCE_PERSISTENCE_REPLAY_v0.3.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "856516f004b4b3e2b8e3c75a127ddc2206baf2d28c3689e672c775ff6a4ba40f"
+    },
+    {
+      "bytes": 4236,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE2_EXACT_SOURCE_PERSISTENCE_REPLAY_v0.3.0_STARTER.zip",
+      "sha256": "c9a11afd3ae795318bc19b64ebd92ea18ca910641493677265c70967fe86718e"
+    },
+    {
+      "bytes": 4290,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE2_EXACT_SOURCE_PERSISTENCE_REPLAY_v0.3.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "8d9b99e9e2e75c6b184c6bf80cf3a6f6e947c3eaeaa9aefdfe92354998274508"
+    },
+    {
+      "bytes": 15920,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE3_CANDIDATE_SPECIFIC_MITIGATION_AUDIT_v0.4.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "381366c8c4eee13f1aa5568bec2855d1cac5265a61f12e946590a088096609c5"
+    },
+    {
+      "bytes": 4293,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE3_CANDIDATE_SPECIFIC_MITIGATION_AUDIT_v0.4.0_STARTER.zip",
+      "sha256": "65a7b112ef2b8ddc3db7303674e1601b052e2ee4916286bdc82ca5dcfd92c83f"
+    },
+    {
+      "bytes": 4384,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE3_CANDIDATE_SPECIFIC_MITIGATION_AUDIT_v0.4.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "8796a286fc65f4e85ae70013898e650f39c852b2060c1ddacb33ef4614b346b4"
+    },
+    {
+      "bytes": 9004,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE4_RESIDUAL_GAP_DETERMINATION_v0.5.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "8f532854cb24f0109d66a35d47d4f106aaddbad589d54ea1b33e7e9f42dc5507"
+    },
+    {
+      "bytes": 4153,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE4_RESIDUAL_GAP_DETERMINATION_v0.5.0_STARTER.zip",
+      "sha256": "8f3599b26949765b1ddb9feb0e96a013d220975c1951f2d85a61d77d17815026"
+    },
+    {
+      "bytes": 4244,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE4_RESIDUAL_GAP_DETERMINATION_v0.5.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "9d03cfb4eafa08f5661be5b6fc2bee1707f52029ae96b557f2e24385cba1d639"
+    },
+    {
+      "bytes": 13013,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE5_CROSS_CASE_RECONCILIATION_v0.6.0_RESULTS_FOR_REVIEW.zip",
+      "sha256": "636a3000e07085a20b38e893bb088af8dfa9a5215f83a131fc3805d96384c1d3"
+    },
+    {
+      "bytes": 4095,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE5_CROSS_CASE_RECONCILIATION_v0.6.0_STARTER.zip",
+      "sha256": "953c56a30aa73397baeb22a9f6eed375841f99fbb21df443053370ef52ea6730"
+    },
+    {
+      "bytes": 4203,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_PHASE5_CROSS_CASE_RECONCILIATION_v0.6.1_AUDITED_CLOSEOUT.zip",
+      "sha256": "f6fc22f697f3732891773bfb8eb8dfc5c33d5c47422fdd6d557673e410dfac31"
+    },
+    {
+      "bytes": 5010,
+      "file": "BMS_TECHNOLOGY_AUDIT_BMSA14_v1.0.1_AUDITED_BRANCH_CLOSEOUT.zip",
+      "sha256": "631181acfee01014eb33de26e573186a5b76dc5e41f3e3f88feea9fe126e86fc"
+    }
+  ],
+  "source_zip_sha256": "2cf5cfa7c12aa27b41795650695898abd0bce79af746b8e6ca8dd0c5368c1fa2",
+  "upstream_masters": [
+    {
+      "bytes": 267740,
+      "file": "BMSA12_UNIFIED_REPRODUCTION_STRESS_HARNESS_MASTER_REFERENCE_PACKAGE_v1.0.2.zip",
+      "sha256": "eed4dd009e52cc3feeceb0a1096cbdbad9998ffcbb02aa2841b8434d3e83b47d"
+    },
+    {
+      "bytes": 517072,
+      "file": "BMSA12_UNIFIED_REPRODUCTION_STRESS_HARNESS_MASTER_REFERENCE_PACKAGE_v1.0.3.zip",
+      "sha256": "d8000ef499b29af4ffcf71e23abd2a93a504bac25d6f19babe2d7d06437efed3"
+    },
+    {
+      "bytes": 340106,
+      "file": "BMSA13_EXISTING_MITIGATION_PATENT_MAP_MASTER_REFERENCE_PACKAGE_v1.0.3.zip",
+      "sha256": "4fd5e1a1dc7204cb7834306d78c06c320668bc062ea0f20d6e3baa8604160097"
+    }
+  ]
+}

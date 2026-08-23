@@ -1,0 +1,154 @@
+[
+  {
+    "bounded_relevance": "Vendor primary documentation for the selected monitor family and its open-wire/communication capabilities.",
+    "evidence_level": "E1_COMPONENT_VENDOR_DOCUMENTATION",
+    "publisher": "Analog Devices",
+    "source_id": "ADI_LTC6813",
+    "title": "LTC6813-1 Multicell Battery Stack Monitor",
+    "url": "https://www.analog.com/en/products/ltc6813-1.html"
+  },
+  {
+    "bounded_relevance": "Provides established sender/receiver protection-library patterns for sequence and integrity checks.",
+    "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+    "publisher": "AUTOSAR",
+    "source_id": "AUTOSAR_E2E_LIBRARY",
+    "title": "Specification of SW-C End-to-End Communication Protection Library",
+    "url": "https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_SWS_E2ELibrary.pdf"
+  },
+  {
+    "bounded_relevance": "Defines established communication-integrity concepts including data identifiers, counters, and CRC-based protection profiles.",
+    "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+    "publisher": "AUTOSAR",
+    "source_id": "AUTOSAR_E2E_PROTOCOL",
+    "title": "Requirements on E2E Protection Protocol",
+    "url": "https://www.autosar.org/fileadmin/standards/R20-11/FO/AUTOSAR_PRS_E2EProtocol.pdf"
+  },
+  {
+    "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+    "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+    "publisher": "AUTOSAR",
+    "source_id": "AUTOSAR_HEALTH_MONITORING",
+    "title": "Specification of Health Monitoring",
+    "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+  },
+  {
+    "bounded_relevance": "Documents established state-request, transition, and recovery-management patterns.",
+    "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+    "publisher": "AUTOSAR",
+    "source_id": "AUTOSAR_STATE_MANAGEMENT",
+    "title": "Specification of State Management",
+    "url": "https://www.autosar.org/fileadmin/standards/R24-11/AP/AUTOSAR_AP_SWS_StateManagement.pdf"
+  },
+  {
+    "bounded_relevance": "Primary literature context for explicit balancing strategy criteria and operating boundaries.",
+    "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+    "publisher": "ScienceDirect",
+    "source_id": "BALANCING_REVIEW",
+    "title": "Battery balancing strategy research record",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352152X22002924"
+  },
+  {
+    "bounded_relevance": "Documents explicit build-target and dependency declaration patterns.",
+    "evidence_level": "E1_TOOL_VENDOR_DOCUMENTATION",
+    "publisher": "Bazel",
+    "source_id": "BAZEL_BUILD_FILES",
+    "title": "BUILD files",
+    "url": "https://bazel.build/concepts/build-files"
+  },
+  {
+    "bounded_relevance": "Documents established hermetic-build controls against undeclared and stale environmental inputs.",
+    "evidence_level": "E1_TOOL_VENDOR_DOCUMENTATION",
+    "publisher": "Bazel",
+    "source_id": "BAZEL_HERMETICITY",
+    "title": "Hermeticity",
+    "url": "https://bazel.build/basics/hermeticity"
+  },
+  {
+    "bounded_relevance": "Project-native communication architecture context; not proof of any exact-route mitigation.",
+    "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+    "publisher": "foxBMS",
+    "source_id": "FOXBMS_COMMUNICATION",
+    "title": "Communication",
+    "url": "https://docs.foxbms.org/system/communication.html"
+  },
+  {
+    "bounded_relevance": "Project-native database validation and configuration checking pattern.",
+    "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+    "publisher": "foxBMS",
+    "source_id": "FOXBMS_DATABASE_VALIDATION",
+    "title": "foxBMS database tool",
+    "url": "https://docs.foxbms.org/tools/fox/db/fox_db.html"
+  },
+  {
+    "bounded_relevance": "The audited project's own public unit-test workflow and test infrastructure.",
+    "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+    "publisher": "foxBMS",
+    "source_id": "FOXBMS_UNIT_TESTS",
+    "title": "Unit Tests",
+    "url": "https://docs.foxbms.org/software/unit-tests/unit-tests.html"
+  },
+  {
+    "bounded_relevance": "The audited project's own procedure for direct unit tests and assertions.",
+    "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+    "publisher": "foxBMS",
+    "source_id": "FOXBMS_UNIT_TEST_HOWTO",
+    "title": "How to Write Unit Tests",
+    "url": "https://docs.foxbms.org/software/unit-tests/unit-tests_how-to.html"
+  },
+  {
+    "bounded_relevance": "Primary research context for redundant/model-based battery sensor fault diagnosis.",
+    "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+    "publisher": "IEEE",
+    "source_id": "IEEE_SENSOR_FAULT_DIAGNOSIS",
+    "title": "Lithium-ion battery sensor fault diagnosis research record",
+    "url": "https://ieeexplore.ieee.org/document/8616868/"
+  },
+  {
+    "bounded_relevance": "Primary research context for propagating measurement uncertainty into battery-state estimates.",
+    "evidence_level": "E2_PRIMARY_TECHNICAL_REPORT",
+    "publisher": "NASA",
+    "source_id": "NASA_BATTERY_UNCERTAINTY",
+    "title": "Battery state-estimation uncertainty research record",
+    "url": "https://ntrs.nasa.gov/citations/20130010482"
+  },
+  {
+    "bounded_relevance": "Primary government guidance on using coverage evidence and interpreting uncovered code.",
+    "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+    "publisher": "NASA",
+    "source_id": "NASA_COVERAGE",
+    "title": "SWE-189 - Code Coverage",
+    "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=50889417"
+  },
+  {
+    "bounded_relevance": "Primary research context for measured health-state estimation and reporting pipelines.",
+    "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+    "publisher": "PHM Society",
+    "source_id": "NASA_PHM_BATTERY",
+    "title": "Battery prognostics and health-management research record",
+    "url": "https://doi.org/10.36001/phmconf.2014.v6i1.2490"
+  },
+  {
+    "bounded_relevance": "Primary government software-assurance guidance on unit testing and objective evidence.",
+    "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+    "publisher": "NASA",
+    "source_id": "NASA_UNIT_TESTING",
+    "title": "SWE-062 - Unit Test",
+    "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=202145998"
+  },
+  {
+    "bounded_relevance": "Primary battery state-estimation work illustrating model/measurement reconciliation rather than blind integration.",
+    "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+    "publisher": "Journal of Power Sources",
+    "source_id": "PLETT_SOC",
+    "title": "Extended Kalman filtering for battery management systems of LiPB-based HEV battery packs",
+    "url": "https://doi.org/10.1016/j.jpowsour.2004.02.033"
+  },
+  {
+    "bounded_relevance": "Vendor primary material describing established open-wire detection and channel-oriented test concepts.",
+    "evidence_level": "E1_VENDOR_APPLICATION_NOTE",
+    "publisher": "Texas Instruments",
+    "source_id": "TI_OPEN_WIRE",
+    "title": "Open-Wire Detection in Battery-Monitoring Systems",
+    "url": "https://www.ti.com/lit/pdf/sdaa369"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "canonical_artifacts": {
+    "all_sha_sidecar_crc_pass": true,
+    "count": 14
+  },
+  "inner_zip_crc": {
+    "failure_count": 0,
+    "pass_count": 383
+  },
+  "known_inherited_packaging_anomalies": {
+    "manifest": 2,
+    "scientific_result_defect": false,
+    "sidecar": 4,
+    "unexpected": 0
+  },
+  "overall_pass": true,
+  "project_archive": {
+    "archive": "BMS_TECHNOLOGY_AUDIT(18).zip",
+    "crc_pass": true,
+    "errors": [],
+    "expected_sha256": "b21d2e5078ddb95eb692c569e1f327b4d609ba72c99f34552d923448fa36479d",
+    "member_count": 810,
+    "member_set_and_content_equal_to_tree": true,
+    "pass": true,
+    "sha256": "b21d2e5078ddb95eb692c569e1f327b4d609ba72c99f34552d923448fa36479d"
+  },
+  "project_tree": {
+    "expected_file_count": 810,
+    "expected_inner_zip_count": 383,
+    "file_count": 810,
+    "inner_zip_count": 383
+  },
+  "scientific_result_changes": 0
+}

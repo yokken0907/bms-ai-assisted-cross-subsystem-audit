@@ -1,0 +1,270 @@
+[
+  {
+    "case_id": "BMSA01-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "DOMAIN_ADJACENT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "CN103197188A",
+        "publication": "CN103197188A",
+        "technical_pattern": "Battery current-sensor fault diagnosis using cross-checking/diagnostic logic.",
+        "url": "https://patents.google.com/patent/CN103197188A/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA03-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "DOMAIN_ADJACENT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US7489108B2",
+        "publication": "US7489108B2",
+        "technical_pattern": "Battery current/power limits derived conservatively from multiple state-of-charge indications.",
+        "url": "https://patents.google.com/patent/US7489108B2/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA04-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US8796993B2",
+        "publication": "US8796993B2",
+        "technical_pattern": "Cell balancing decisions using stored historical balancing information/counts.",
+        "url": "https://patents.google.com/patent/US8796993B2/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA11-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20240142531A1",
+        "publication": "US20240142531A1",
+        "technical_pattern": "Battery state-of-health indicator conveyed to an interface/reporting path.",
+        "url": "https://patents.google.com/patent/US20240142531A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA05-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "DOMAIN_ADJACENT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20130041606A1",
+        "publication": "US20130041606A1",
+        "technical_pattern": "Battery open-wire diagnosis with channel/measurement selection.",
+        "url": "https://patents.google.com/patent/US20130041606A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA07-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "DOMAIN_ADJACENT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20030204792A1",
+        "publication": "US20030204792A1",
+        "technical_pattern": "Configurable watchdog timeout and timeout supervision.",
+        "url": "https://patents.google.com/patent/US20030204792A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA08-F02",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US6917124B2",
+        "publication": "US6917124B2",
+        "technical_pattern": "Battery switching/breaker command followed by feedback and timeout evaluation.",
+        "url": "https://patents.google.com/patent/US6917124B2/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA09-F03",
+    "correction_version": "v1.0.3",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_mapping_correction_applied": true,
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_STATE_MACHINE_LIVENESS_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US8971920B2",
+        "publication": "US8971920B2",
+        "support_note": "The published document explicitly describes a wait-for-acknowledgement state, loss of the acknowledgement, remaining in that state until timeout-period expiry, and retransmission of the protocol message. The mapping is limited to this state-machine and liveness structure; the document concerns LTE LPP and does not establish a foxBMS, IMD, product, safety, or defect conclusion.",
+        "supporting_reference": "https://patentimages.storage.googleapis.com/b5/12/57/21b5a25dcaca31/US8971920.pdf",
+        "technical_pattern": "Acknowledgement-wait state with lost-acknowledgement liveness handling, retransmission-timer expiry, and message retransmission.",
+        "url": "https://patents.google.com/patent/US8971920B2/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA10-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20030204792A1",
+        "publication": "US20030204792A1",
+        "technical_pattern": "Configurable watchdog timeout and timeout supervision.",
+        "url": "https://patents.google.com/patent/US20030204792A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA08-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20130041606A1",
+        "publication": "US20130041606A1",
+        "technical_pattern": "Battery open-wire diagnosis with channel/measurement selection.",
+        "url": "https://patents.google.com/patent/US20130041606A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA09-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "DOMAIN_ADJACENT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20180131522A1",
+        "publication": "US20180131522A1",
+        "technical_pattern": "CAN-message freshness/validity supervision.",
+        "url": "https://patents.google.com/patent/US20180131522A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA09-F02",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20120191888A1",
+        "publication": "US20120191888A1",
+        "technical_pattern": "Vehicle message integrity using CRC and changing identifier/message counter.",
+        "url": "https://patents.google.com/patent/US20120191888A1/en"
+      },
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20180131522A1",
+        "publication": "US20180131522A1",
+        "technical_pattern": "CAN-message freshness/validity supervision.",
+        "url": "https://patents.google.com/patent/US20180131522A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA10-F02",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "CN108107373A",
+        "publication": "CN108107373A",
+        "technical_pattern": "BMS software testing using simulated operating and fault cases.",
+        "url": "https://patents.google.com/patent/CN108107373A/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA10-F03",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "US20110239195A1",
+        "publication": "US20110239195A1",
+        "technical_pattern": "Dependency-based software build control.",
+        "url": "https://patents.google.com/patent/US20110239195A1/en"
+      }
+    ]
+  },
+  {
+    "case_id": "BMSA06-F01",
+    "landscape_exhaustive": false,
+    "legal_opinion": false,
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "patent_maps": [
+      {
+        "directness": "TECHNICALLY_DIRECT_PATTERN",
+        "legal_conclusion": null,
+        "mapping_scope": "TECHNICAL_PATTERN_ORIENTATION_ONLY",
+        "patent_id": "CN104316812A",
+        "publication": "CN104316812A",
+        "technical_pattern": "Battery temperature-acquisition fault diagnosis across sensing channels.",
+        "url": "https://patents.google.com/patent/CN104316812A/en"
+      }
+    ]
+  }
+]

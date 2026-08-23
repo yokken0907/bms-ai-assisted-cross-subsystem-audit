@@ -1,0 +1,2435 @@
+{
+  "all_pass": true,
+  "candidate_count": 15,
+  "case_count": 17,
+  "control_count": 2,
+  "results": [
+    {
+      "case_id": "BMSA01-F01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Current-validity propagation into SOC counting",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa01_02_range_enumeration_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa01_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "fractions": [
+              0,
+              0.1,
+              0.5,
+              1.0
+            ],
+            "maximum_absolute_delta_pct": 19.84126984127,
+            "nonzero_invalid_propagations": 15,
+            "pass": true,
+            "range_variant_count": 5,
+            "scenario_count": 40,
+            "validity_flags": [
+              0,
+              1
+            ],
+            "validity_pair_equalities": 20,
+            "zero_current_control_delta_pct": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa01_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":40,\"range_variant_count\":5,\"fractions\":[0,0.1,0.5,1.0],\"validity_flags\":[0,1],\"validity_pair_equalities\":20,\"nonzero_invalid_propagations\":15,\"zero_current_control_delta_pct\":0,\"maximum_absolute_delta_pct\":19.841269841270}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa01_02_range_enumeration_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa01_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "fractions": [
+              0,
+              0.1,
+              0.5,
+              1.0
+            ],
+            "maximum_absolute_delta_pct": 19.84126984127,
+            "nonzero_invalid_propagations": 15,
+            "pass": true,
+            "range_variant_count": 5,
+            "scenario_count": 40,
+            "validity_flags": [
+              0,
+              1
+            ],
+            "validity_pair_equalities": 20,
+            "zero_current_control_delta_pct": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa01_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":40,\"range_variant_count\":5,\"fractions\":[0,0.1,0.5,1.0],\"validity_flags\":[0,1],\"validity_pair_equalities\":20,\"nonzero_invalid_propagations\":15,\"zero_current_control_delta_pct\":0,\"maximum_absolute_delta_pct\":19.841269841270}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa01_02_range_enumeration_witness.c"
+    },
+    {
+      "case_id": "BMSA03-F01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Invalid battery-voltage validity propagation into CAN pack-power limits",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa03_pack_limit_validity_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa03_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "invalid_sentinel_encoded_raw": 4095,
+            "invalid_sentinel_power_w": 5153960.7528,
+            "nominal_encoded_raw": 9,
+            "nominal_power_w": 960.0,
+            "pass": true,
+            "propagated_invalid_nonzero": 1,
+            "saturated_invalid_nonzero": 1,
+            "scenario_count": 4,
+            "zero_current_control_raw": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa03_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":4,\"nominal_power_w\":960.0000,\"nominal_encoded_raw\":9,\"invalid_sentinel_power_w\":5153960.7528,\"invalid_sentinel_encoded_raw\":4095,\"propagated_invalid_nonzero\":1,\"saturated_invalid_nonzero\":1,\"zero_current_control_raw\":0}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa03_pack_limit_validity_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa03_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "invalid_sentinel_encoded_raw": 4095,
+            "invalid_sentinel_power_w": 5153960.7528,
+            "nominal_encoded_raw": 9,
+            "nominal_power_w": 960.0,
+            "pass": true,
+            "propagated_invalid_nonzero": 1,
+            "saturated_invalid_nonzero": 1,
+            "scenario_count": 4,
+            "zero_current_control_raw": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa03_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":4,\"nominal_power_w\":960.0000,\"nominal_encoded_raw\":9,\"invalid_sentinel_power_w\":5153960.7528,\"invalid_sentinel_encoded_raw\":4095,\"propagated_invalid_nonzero\":1,\"saturated_invalid_nonzero\":1,\"zero_current_control_raw\":0}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa03_pack_limit_validity_witness.c"
+    },
+    {
+      "case_id": "BMSA04-F01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "HISTORY balancing SOC interface/scale contract mismatch",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa04_history_soc_replay.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa04_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "argument_max": 4,
+            "argument_min": 2,
+            "constant_dod": true,
+            "pass": true,
+            "scenario_count": 100,
+            "zero_soc_count": 100
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa04_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "2716,2,0,12600000\n2825,2,0,12600000\n2901,2,0,12600000\n2957,2,0,12600000\n3003,3,0,12600000\n3046,3,0,12600000\n3087,3,0,12600000\n3129,3,0,12600000\n3167,3,0,12600000\n3202,3,0,12600000\n3234,3,0,12600000\n3261,3,0,12600000\n3287,3,0,12600000\n3310,3,0,12600000\n3334,3,0,12600000\n3351,3,0,12600000\n3363,3,0,12600000\n3374,3,0,12600000\n3383,3,0,12600000\n3392,3,0,12600000\n3400,3,0,12600000\n3410,3,0,12600000\n3422,3,0,12600000\n3435,3,0,12600000\n3448,3,0,12600000\n3461,3,0,12600000\n3472,3,0,12600000\n3483,3,0,12600000\n3493,3,0,12600000\n3501,3,0,12600000\n3510,3,0,12600000\n3518,3,0,12600000\n3525,3,0,12600000\n3532,3,0,12600000\n3538,3,0,12600000\n3544,3,0,12600000\n3551,3,0,12600000\n3557,3,0,12600000\n3563,3,0,12600000\n3568,3,0,12600000\n3574,3,0,12600000\n3580,3,0,12600000\n3586,3,0,12600000\n3592,3,0,12600000\n3599,3,0,12600000\n3606,3,0,12600000\n3613,3,0,12600000\n3620,3,0,12600000\n3628,3,0,12600000\n3636,3,0,12600000\n3644,3,0,12600000\n3653,3,0,12600000\n3663,3,0,12600000\n3673,3,0,12600000\n3683,3,0,12600000\n3693,3,0,12600000\n3703,3,0,12600000\n3713,3,0,12600000\n3724,3,0,12600000\n3735,3,0,12600000\n3746,3,0,12600000\n3757,3,0,12600000\n3769,3,0,12600000\n3780,3,0,12600000\n3791,3,0,12600000\n3802,3,0,12600000\n3812,3,0,12600000\n3822,3,0,12600000\n3831,3,0,12600000\n3840,3,0,12600000\n3849,3,0,12600000\n3857,3,0,12600000\n3867,3,0,12600000\n3876,3,0,12600000\n3885,3,0,12600000\n3895,3,0,12600000\n3905,3,0,12600000\n3916,3,0,12600000\n3927,3,0,12600000\n3939,3,0,12600000\n3950,3,0,12600000\n3961,3,0,12600000\n3972,3,0,12600000\n3982,3,0,12600000\n3992,3,0,12600000\n4001,4,0,12600000\n4009,4,0,12600000\n4015,4,0,12600000\n4020,4,0,12600000\n4024,4,0,12600000\n4028,4,0,12600000\n4032,4,0,12600000\n4036,4,0,12600000\n4040,4,0,12600000\n4045,4,0,12600000\n4052,4,0,12600000\n4060,4,0,12600000\n4072,4,0,12600000\n4088,4,0,12600000\n4123,4,0,12600000\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa04_history_soc_replay.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa04_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "argument_max": 4,
+            "argument_min": 2,
+            "constant_dod": true,
+            "pass": true,
+            "scenario_count": 100,
+            "zero_soc_count": 100
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa04_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "2716,2,0,12600000\n2825,2,0,12600000\n2901,2,0,12600000\n2957,2,0,12600000\n3003,3,0,12600000\n3046,3,0,12600000\n3087,3,0,12600000\n3129,3,0,12600000\n3167,3,0,12600000\n3202,3,0,12600000\n3234,3,0,12600000\n3261,3,0,12600000\n3287,3,0,12600000\n3310,3,0,12600000\n3334,3,0,12600000\n3351,3,0,12600000\n3363,3,0,12600000\n3374,3,0,12600000\n3383,3,0,12600000\n3392,3,0,12600000\n3400,3,0,12600000\n3410,3,0,12600000\n3422,3,0,12600000\n3435,3,0,12600000\n3448,3,0,12600000\n3461,3,0,12600000\n3472,3,0,12600000\n3483,3,0,12600000\n3493,3,0,12600000\n3501,3,0,12600000\n3510,3,0,12600000\n3518,3,0,12600000\n3525,3,0,12600000\n3532,3,0,12600000\n3538,3,0,12600000\n3544,3,0,12600000\n3551,3,0,12600000\n3557,3,0,12600000\n3563,3,0,12600000\n3568,3,0,12600000\n3574,3,0,12600000\n3580,3,0,12600000\n3586,3,0,12600000\n3592,3,0,12600000\n3599,3,0,12600000\n3606,3,0,12600000\n3613,3,0,12600000\n3620,3,0,12600000\n3628,3,0,12600000\n3636,3,0,12600000\n3644,3,0,12600000\n3653,3,0,12600000\n3663,3,0,12600000\n3673,3,0,12600000\n3683,3,0,12600000\n3693,3,0,12600000\n3703,3,0,12600000\n3713,3,0,12600000\n3724,3,0,12600000\n3735,3,0,12600000\n3746,3,0,12600000\n3757,3,0,12600000\n3769,3,0,12600000\n3780,3,0,12600000\n3791,3,0,12600000\n3802,3,0,12600000\n3812,3,0,12600000\n3822,3,0,12600000\n3831,3,0,12600000\n3840,3,0,12600000\n3849,3,0,12600000\n3857,3,0,12600000\n3867,3,0,12600000\n3876,3,0,12600000\n3885,3,0,12600000\n3895,3,0,12600000\n3905,3,0,12600000\n3916,3,0,12600000\n3927,3,0,12600000\n3939,3,0,12600000\n3950,3,0,12600000\n3961,3,0,12600000\n3972,3,0,12600000\n3982,3,0,12600000\n3992,3,0,12600000\n4001,4,0,12600000\n4009,4,0,12600000\n4015,4,0,12600000\n4020,4,0,12600000\n4024,4,0,12600000\n4028,4,0,12600000\n4032,4,0,12600000\n4036,4,0,12600000\n4040,4,0,12600000\n4045,4,0,12600000\n4052,4,0,12600000\n4060,4,0,12600000\n4072,4,0,12600000\n4088,4,0,12600000\n4123,4,0,12600000\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa04_history_soc_replay.c"
+    },
+    {
+      "case_id": "BMSA11-F01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "SOH database-to-CAN reporting disconnection",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa11_soh_telemetry_semantics_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa11_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "database_vectors": 4,
+            "distinct_database_average_values": 4,
+            "pack_preencoding_signal_inputs": [
+              100,
+              100,
+              100,
+              100
+            ],
+            "pass": true,
+            "string_preencoding_signal_inputs": [
+              100,
+              100,
+              100,
+              100
+            ]
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa11_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"database_vectors\":4,\"distinct_database_average_values\":4,\"pack_preencoding_signal_inputs\":[100,100,100,100],\"string_preencoding_signal_inputs\":[100,100,100,100]}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa11_soh_telemetry_semantics_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa11_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "database_vectors": 4,
+            "distinct_database_average_values": 4,
+            "pack_preencoding_signal_inputs": [
+              100,
+              100,
+              100,
+              100
+            ],
+            "pass": true,
+            "string_preencoding_signal_inputs": [
+              100,
+              100,
+              100,
+              100
+            ]
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa11_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"database_vectors\":4,\"distinct_database_average_values\":4,\"pack_preencoding_signal_inputs\":[100,100,100,100],\"string_preencoding_signal_inputs\":[100,100,100,100]}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa11_soh_telemetry_semantics_witness.c"
+    },
+    {
+      "case_id": "BMSA02-C01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "State-estimation dependency control",
+      "role": "CONTROL",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa02_capacity_dependency_control.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa02_c01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "configured_capacity_mAh": 3500,
+            "controlled_retention": [
+              1.0,
+              0.9,
+              0.8
+            ],
+            "indicated_remaining_pct_after_actual_full_discharge": [
+              0.0,
+              10.0,
+              20.0
+            ],
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa02_c01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"configured_capacity_mAh\":3500,\"controlled_retention\":[1.0,0.9,0.8],\"indicated_remaining_pct_after_actual_full_discharge\":[0.000000,10.000000,20.000000]}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa02_capacity_dependency_control.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa02_c01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "configured_capacity_mAh": 3500,
+            "controlled_retention": [
+              1.0,
+              0.9,
+              0.8
+            ],
+            "indicated_remaining_pct_after_actual_full_discharge": [
+              0.0,
+              10.0,
+              20.0
+            ],
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa02_c01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"configured_capacity_mAh\":3500,\"controlled_retention\":[1.0,0.9,0.8],\"indicated_remaining_pct_after_actual_full_discharge\":[0.000000,10.000000,20.000000]}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa02_capacity_dependency_control.c"
+    },
+    {
+      "case_id": "BMSA06-C01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Temperature plausibility-rejection control",
+      "role": "CONTROL",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa06_temperature_plausibility_control.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_c01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "converted_temperature_ddegC": 1664,
+            "pass": true,
+            "raw_adc_mV": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_c01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "RAW_ADC_MV=0\nCONVERTED_TEMPERATURE_DDEGC=1664\nBMSA06_PHASE5_RUN02R2_EXACT_ACQUISITION_BRIDGE_PASS\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa06_temperature_plausibility_control.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_c01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "converted_temperature_ddegC": 1664,
+            "pass": true,
+            "raw_adc_mV": 0
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_c01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "RAW_ADC_MV=0\nCONVERTED_TEMPERATURE_DDEGC=1664\nBMSA06_PHASE5_RUN02R2_EXACT_ACQUISITION_BRIDGE_PASS\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa06_temperature_plausibility_control.c"
+    },
+    {
+      "case_id": "BMSA05-F01",
+      "lane": "STATE_TIME",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Charge-mode periodic open-wire configuration contract mismatch",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa05_mode_config_truth_table_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa05_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "pass": true,
+            "reference_divergence_count": 2,
+            "scenario_count": 4,
+            "truth_table": [
+              {
+                "actual": 0,
+                "charge": 0,
+                "normal": 0,
+                "reference": 0
+              },
+              {
+                "actual": 0,
+                "charge": 1,
+                "normal": 0,
+                "reference": 1
+              },
+              {
+                "actual": 1,
+                "charge": 0,
+                "normal": 1,
+                "reference": 0
+              },
+              {
+                "actual": 1,
+                "charge": 1,
+                "normal": 1,
+                "reference": 1
+              }
+            ]
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa05_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":4,\"reference_divergence_count\":2,\"truth_table\":[{\"normal\":0,\"charge\":0,\"actual\":0,\"reference\":0},{\"normal\":0,\"charge\":1,\"actual\":0,\"reference\":1},{\"normal\":1,\"charge\":0,\"actual\":1,\"reference\":0},{\"normal\":1,\"charge\":1,\"actual\":1,\"reference\":1}]}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa05_mode_config_truth_table_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa05_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "pass": true,
+            "reference_divergence_count": 2,
+            "scenario_count": 4,
+            "truth_table": [
+              {
+                "actual": 0,
+                "charge": 0,
+                "normal": 0,
+                "reference": 0
+              },
+              {
+                "actual": 0,
+                "charge": 1,
+                "normal": 0,
+                "reference": 1
+              },
+              {
+                "actual": 1,
+                "charge": 0,
+                "normal": 1,
+                "reference": 0
+              },
+              {
+                "actual": 1,
+                "charge": 1,
+                "normal": 1,
+                "reference": 1
+              }
+            ]
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa05_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"scenario_count\":4,\"reference_divergence_count\":2,\"truth_table\":[{\"normal\":0,\"charge\":0,\"actual\":0,\"reference\":0},{\"normal\":0,\"charge\":1,\"actual\":0,\"reference\":1},{\"normal\":1,\"charge\":0,\"actual\":1,\"reference\":0},{\"normal\":1,\"charge\":1,\"actual\":1,\"reference\":1}]}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa05_mode_config_truth_table_witness.c"
+    },
+    {
+      "case_id": "BMSA07-F01",
+      "lane": "STATE_TIME",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Diagnostic delay identifier/value mismatch",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa07_delay_witness.c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/main/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/moving_average",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/counting",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/counting",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/sof",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/sof/trapezoid",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/history",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/voltage",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bms",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/ethernet",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/plausibility",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/redundancy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/soa",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/adc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/ades1830",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/ades1830/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/pec",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/can",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/can/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/default",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/default/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6804-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6806",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6806/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6811-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6812-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6813-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6813-1/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/common/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/common/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/max17852",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common/mc3377x",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common/mc3377x/vendor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/vendor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/common/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/dummy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/dummy/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/rx",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/tx-async",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/tx-cyclic",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/contactor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/crc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/dma",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/emac",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/foxmath",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/fram",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/htsensor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/i2c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/ir155",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/ir155/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/iso165c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/iso165c/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/none/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/interlock",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/io",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/led",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/mcu",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/meas",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/pex",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/phy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/pwm",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/rtc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sbc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sbc/fs8x_driver",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/spi",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sps",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec/103jt",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec/103jt/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcg163jx103dt1s",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcg163jx103dt1s/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcgs103jf103ft8",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcgs103jf103ft8/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle317e4103sba",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle317e4103sba/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle413e2103f102l",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle413e2103f102l/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/uart",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/database",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/diag",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/diag/cbs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/hw_info",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/sys",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/sys_mon",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/hal",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/main",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/ftask",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/ftask/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/os",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/os/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/timer",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/.github",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/ccs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/ccs/arm_cortex-r5",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/memmang",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/BufferManagement",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/Compiler",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/Compiler/CCS",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/Common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/loopback",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/tms570lc435",
+              "-I",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa07_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "pass": true,
+            "values_ms": {
+              "DIAG_DELAY_1000ms": 1000,
+              "DIAG_DELAY_2000ms": 1000
+            }
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa07_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "DIAG_DELAY_1000ms=1000\nDIAG_DELAY_2000ms=1000\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa07_delay_witness.c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/main/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/moving_average",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/counting",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soc/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/counting",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soe/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/sof",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/sof/trapezoid",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/algorithm/state_estimation/soh/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/history",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bal/voltage",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/bms",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/ethernet",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/plausibility",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/redundancy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/application/soa",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/adc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/ades1830",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/ades1830/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/adi/common/ades183x/pec",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/can",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/can/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/default",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/debug/default/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6804-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6806",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6806/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6811-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6812-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6813-1",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/6813-1/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ltc/common/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/common/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/maxim/max17852",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common/mc3377x",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/common/mc3377x/vendor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/nxp/mc33775a/vendor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/common/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/dummy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/afe/ti/dummy/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/rx",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/tx-async",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/can/cbs/tx-cyclic",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/contactor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/crc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/dma",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/emac",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/foxmath",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/fram",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/htsensor",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/i2c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/ir155",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/ir155/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/iso165c",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/bender/iso165c/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/imd/none/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/interlock",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/io",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/led",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/mcu",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/meas",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/pex",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/phy",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/pwm",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/rtc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sbc",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sbc/fs8x_driver",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/spi",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/sps",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/api",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57251v5103j060/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57332v5103f360/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/epcos/b57861s0103f045/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/fake/none/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/murata/ncxxxxh103/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec/103jt",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/semitec/103jt/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcg163jx103dt1s",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcg163jx103dt1s/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcgs103jf103ft8",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/tdk/ntcgs103jf103ft8/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcalug01a103g/polynomial",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle317e4103sba",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle317e4103sba/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle413e2103f102l",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/ts/vishay/ntcle413e2103f102l/lookup-table",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/driver/uart",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/database",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/diag",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/diag/cbs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/hw_info",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/sys",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/engine/sys_mon",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/hal",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/main",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/config",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/ftask",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/ftask/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/os",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/os/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/app/task/timer",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/.github",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/ccs",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/ccs/arm_cortex-r5",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos/portable/memmang",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/BufferManagement",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/Compiler",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/Compiler/CCS",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/Common",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/include",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/loopback",
+              "-I",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437/src/os/freertos/freertos-plus/freertos-plus-tcp/source/portable/NetworkInterface/tms570lc435",
+              "-I",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa07_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "pass": true,
+            "values_ms": {
+              "DIAG_DELAY_1000ms": 1000,
+              "DIAG_DELAY_2000ms": 1000
+            }
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa07_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "DIAG_DELAY_1000ms=1000\nDIAG_DELAY_2000ms=1000\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa07_delay_witness.c"
+    },
+    {
+      "case_id": "BMSA08-F02",
+      "lane": "STATE_TIME",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Configuration-dependent multi-string contactor-state self-loop",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa08_multistring_transition_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f02_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "actual": [
+              0,
+              4,
+              0,
+              1,
+              0,
+              0
+            ],
+            "comparator": [
+              2,
+              1,
+              1,
+              2
+            ],
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f02_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "actual_substate=0 actual_plus_requests=4 actual_closed=0 actual_count=1 actual_fatal_checks=0 actual_request_checks=0\nreference_substate=2 reference_plus_requests=1 reference_closed=1 reference_count=2\nclosest_a_actual=2 closest_a_reference=1\nclosest_b_actual=2 closest_b_reference=1 actual_b_difference=4000 reference_b_difference=2000\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa08_multistring_transition_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f02_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "actual": [
+              0,
+              4,
+              0,
+              1,
+              0,
+              0
+            ],
+            "comparator": [
+              2,
+              1,
+              1,
+              2
+            ],
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f02_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "actual_substate=0 actual_plus_requests=4 actual_closed=0 actual_count=1 actual_fatal_checks=0 actual_request_checks=0\nreference_substate=2 reference_plus_requests=1 reference_closed=1 reference_count=2\nclosest_a_actual=2 closest_a_reference=1\nclosest_b_actual=2 closest_b_reference=1 actual_b_difference=4000 reference_b_difference=2000\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa08_multistring_transition_witness.c"
+    },
+    {
+      "case_id": "BMSA09-F03",
+      "lane": "STATE_TIME",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Optional IMD acknowledgement-wait liveness condition",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_imd_ack_liveness_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f03_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "no_response_300_cycles_stays_waiting": true,
+            "no_retry_transmission": true,
+            "pass": true,
+            "success_response_progresses": true,
+            "tries_after_uint8_wrap": 44
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f03_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"no_response_300_cycles_stays_waiting\":true,\"no_retry_transmission\":true,\"success_response_progresses\":true,\"tries_after_uint8_wrap\":44}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_imd_ack_liveness_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f03_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "no_response_300_cycles_stays_waiting": true,
+            "no_retry_transmission": true,
+            "pass": true,
+            "success_response_progresses": true,
+            "tries_after_uint8_wrap": 44
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f03_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"no_response_300_cycles_stays_waiting\":true,\"no_retry_transmission\":true,\"success_response_progresses\":true,\"tries_after_uint8_wrap\":44}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa09_imd_ack_liveness_witness.c"
+    },
+    {
+      "case_id": "BMSA10-F01",
+      "lane": "STATE_TIME",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "System Monitor conjunction semantics",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_sys_mon_conjunction_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa10_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "late_and_long_reports": true,
+            "late_with_short_previous_duration_reports": false,
+            "on_time_short_reports": false,
+            "on_time_with_long_duration_reports": false,
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa10_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"on_time_short_reports\":false,\"late_with_short_previous_duration_reports\":false,\"on_time_with_long_duration_reports\":false,\"late_and_long_reports\":true}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_sys_mon_conjunction_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa10_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "late_and_long_reports": true,
+            "late_with_short_previous_duration_reports": false,
+            "on_time_short_reports": false,
+            "on_time_with_long_duration_reports": false,
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa10_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"on_time_short_reports\":false,\"late_with_short_previous_duration_reports\":false,\"on_time_with_long_duration_reports\":false,\"late_and_long_reports\":true}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa10_sys_mon_conjunction_witness.c"
+    },
+    {
+      "case_id": "BMSA08-F01",
+      "lane": "COMMUNICATION_CONFIGURATION",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Open-wire Boolean index collapse",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa08_open_wire_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "cross_string_carryover": true,
+            "detected_indices": 2,
+            "missed_indices": 17,
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "index=0 actual_string0=1 reference_string0=1\nindex=1 actual_string0=1 reference_string0=1\nindex=2 actual_string0=0 reference_string0=1\nindex=3 actual_string0=0 reference_string0=1\nindex=4 actual_string0=0 reference_string0=1\nindex=5 actual_string0=0 reference_string0=1\nindex=6 actual_string0=0 reference_string0=1\nindex=7 actual_string0=0 reference_string0=1\nindex=8 actual_string0=0 reference_string0=1\nindex=9 actual_string0=0 reference_string0=1\nindex=10 actual_string0=0 reference_string0=1\nindex=11 actual_string0=0 reference_string0=1\nindex=12 actual_string0=0 reference_string0=1\nindex=13 actual_string0=0 reference_string0=1\nindex=14 actual_string0=0 reference_string0=1\nindex=15 actual_string0=0 reference_string0=1\nindex=16 actual_string0=0 reference_string0=1\nindex=17 actual_string0=0 reference_string0=1\nindex=18 actual_string0=0 reference_string0=1\ncarryover_actual_string1=1 carryover_reference_string1=0\nsummary_detected_indices=2 summary_missed_indices=17\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa08_open_wire_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "cross_string_carryover": true,
+            "detected_indices": 2,
+            "missed_indices": 17,
+            "pass": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa08_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "index=0 actual_string0=1 reference_string0=1\nindex=1 actual_string0=1 reference_string0=1\nindex=2 actual_string0=0 reference_string0=1\nindex=3 actual_string0=0 reference_string0=1\nindex=4 actual_string0=0 reference_string0=1\nindex=5 actual_string0=0 reference_string0=1\nindex=6 actual_string0=0 reference_string0=1\nindex=7 actual_string0=0 reference_string0=1\nindex=8 actual_string0=0 reference_string0=1\nindex=9 actual_string0=0 reference_string0=1\nindex=10 actual_string0=0 reference_string0=1\nindex=11 actual_string0=0 reference_string0=1\nindex=12 actual_string0=0 reference_string0=1\nindex=13 actual_string0=0 reference_string0=1\nindex=14 actual_string0=0 reference_string0=1\nindex=15 actual_string0=0 reference_string0=1\nindex=16 actual_string0=0 reference_string0=1\nindex=17 actual_string0=0 reference_string0=1\nindex=18 actual_string0=0 reference_string0=1\ncarryover_actual_string1=1 carryover_reference_string1=0\nsummary_detected_indices=2 summary_missed_indices=17\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa08_open_wire_witness.c"
+    },
+    {
+      "case_id": "BMSA09-F01",
+      "lane": "COMMUNICATION_CONFIGURATION",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Debug-CAN fragmented AFE aggregate freshness mismatch",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_debug_afe_fragment_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "aggregate_headers_fresh": true,
+            "cells_16_17_remain_old_and_valid": true,
+            "pass": true,
+            "temperature_fragments_required": 2,
+            "temps_6_7_remain_old_and_valid": true,
+            "voltage_fragments_required": 5
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"cells_16_17_remain_old_and_valid\":true,\"temps_6_7_remain_old_and_valid\":true,\"aggregate_headers_fresh\":true,\"voltage_fragments_required\":5,\"temperature_fragments_required\":2}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_debug_afe_fragment_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "aggregate_headers_fresh": true,
+            "cells_16_17_remain_old_and_valid": true,
+            "pass": true,
+            "temperature_fragments_required": 2,
+            "temps_6_7_remain_old_and_valid": true,
+            "voltage_fragments_required": 5
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"cells_16_17_remain_old_and_valid\":true,\"temps_6_7_remain_old_and_valid\":true,\"aggregate_headers_fresh\":true,\"voltage_fragments_required\":5,\"temperature_fragments_required\":2}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa09_debug_afe_fragment_witness.c"
+    },
+    {
+      "case_id": "BMSA09-F02",
+      "lane": "COMMUNICATION_CONFIGURATION",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Optional aerosol CAN rolling-counter/CRC acceptance semantics",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_aerosol_integrity_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f02_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "all_three_frames_written": true,
+            "arbitrary_crc_values_accepted_as_data": true,
+            "pass": true,
+            "repeated_counter_accepted": true,
+            "skipped_counter_accepted": true,
+            "writes": 3
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f02_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"all_three_frames_written\":true,\"repeated_counter_accepted\":true,\"skipped_counter_accepted\":true,\"arbitrary_crc_values_accepted_as_data\":true,\"writes\":3}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa09_aerosol_integrity_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f02_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "all_three_frames_written": true,
+            "arbitrary_crc_values_accepted_as_data": true,
+            "pass": true,
+            "repeated_counter_accepted": true,
+            "skipped_counter_accepted": true,
+            "writes": 3
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa09_f02_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"pass\":true,\"all_three_frames_written\":true,\"repeated_counter_accepted\":true,\"skipped_counter_accepted\":true,\"arbitrary_crc_values_accepted_as_data\":true,\"writes\":3}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa09_aerosol_integrity_witness.c"
+    },
+    {
+      "case_id": "BMSA10-F02",
+      "lane": "COMMUNICATION_CONFIGURATION",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Public BMS state-machine test-surface traceability candidate",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "parsed": {
+            "check_string_closed_assignments_in_source": 0,
+            "check_string_closed_literals_in_test": 0,
+            "pass": true,
+            "state_assignments_in_source": 34,
+            "state_literals_in_test": 0,
+            "states_declared": 13,
+            "substate_assignments_in_source": 105,
+            "substate_literals_in_test": 0,
+            "substates_declared": 34,
+            "test_functions": 11,
+            "todos_in_test": 2,
+            "trigger_calls_in_test": 3,
+            "two_string_test_define_for_bms": true
+          },
+          "pass": true,
+          "repeat": 1,
+          "run": {
+            "command": [
+              "/opt/pyvenv/bin/python",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_bms_state_test_adequacy_witness.py",
+              "--source",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"check_string_closed_assignments_in_source\": 0, \"check_string_closed_literals_in_test\": 0, \"pass\": true, \"state_assignments_in_source\": 34, \"state_literals_in_test\": 0, \"states_declared\": 13, \"substate_assignments_in_source\": 105, \"substate_literals_in_test\": 0, \"substates_declared\": 34, \"test_functions\": 11, \"todos_in_test\": 2, \"trigger_calls_in_test\": 3, \"two_string_test_define_for_bms\": true}\n"
+          }
+        },
+        {
+          "parsed": {
+            "check_string_closed_assignments_in_source": 0,
+            "check_string_closed_literals_in_test": 0,
+            "pass": true,
+            "state_assignments_in_source": 34,
+            "state_literals_in_test": 0,
+            "states_declared": 13,
+            "substate_assignments_in_source": 105,
+            "substate_literals_in_test": 0,
+            "substates_declared": 34,
+            "test_functions": 11,
+            "todos_in_test": 2,
+            "trigger_calls_in_test": 3,
+            "two_string_test_define_for_bms": true
+          },
+          "pass": true,
+          "repeat": 2,
+          "run": {
+            "command": [
+              "/opt/pyvenv/bin/python",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_bms_state_test_adequacy_witness.py",
+              "--source",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"check_string_closed_assignments_in_source\": 0, \"check_string_closed_literals_in_test\": 0, \"pass\": true, \"state_assignments_in_source\": 34, \"state_literals_in_test\": 0, \"states_declared\": 13, \"substate_assignments_in_source\": 105, \"substate_literals_in_test\": 0, \"substates_declared\": 34, \"test_functions\": 11, \"todos_in_test\": 2, \"trigger_calls_in_test\": 3, \"two_string_test_define_for_bms\": true}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa10_bms_state_test_adequacy_witness.py"
+    },
+    {
+      "case_id": "BMSA10-F03",
+      "lane": "COMMUNICATION_CONFIGURATION",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Aerosol configuration validator and build-state dependence",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "parsed": {
+            "fresh_final_env": [
+              "honeywell",
+              "bas6c-x00"
+            ],
+            "fresh_valid_route_defines": [
+              "FOXBMS_HAVE_AEROSOL_SENSOR"
+            ],
+            "fresh_valid_route_macro_emitted": false,
+            "pass": true,
+            "stale_final_env": [
+              "none",
+              "none"
+            ],
+            "stale_honeywell_to_none_defines": [
+              "FOXBMS_HAVE_AEROSOL_SENSOR",
+              "FOXBMS_AS_HONEYWELL",
+              "FOXBMS_AS_HONEYWELL_BAS6C_X00"
+            ],
+            "stale_honeywell_to_none_route_macro_emitted": true,
+            "unsupported_model_rejected": true,
+            "validation_matrix": [
+              {
+                "accepted": true,
+                "stored_type": "can",
+                "type": "can"
+              },
+              {
+                "accepted": true,
+                "stored_type": "pwm",
+                "type": "pwm"
+              },
+              {
+                "accepted": true,
+                "stored_type": "typo",
+                "type": "typo"
+              },
+              {
+                "accepted": true,
+                "stored_type": "",
+                "type": ""
+              }
+            ]
+          },
+          "pass": true,
+          "repeat": 1,
+          "run": {
+            "command": [
+              "/opt/pyvenv/bin/python",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_aerosol_configuration_witness.py",
+              "--source",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"fresh_final_env\": [\"honeywell\", \"bas6c-x00\"], \"fresh_valid_route_defines\": [\"FOXBMS_HAVE_AEROSOL_SENSOR\"], \"fresh_valid_route_macro_emitted\": false, \"pass\": true, \"stale_final_env\": [\"none\", \"none\"], \"stale_honeywell_to_none_defines\": [\"FOXBMS_HAVE_AEROSOL_SENSOR\", \"FOXBMS_AS_HONEYWELL\", \"FOXBMS_AS_HONEYWELL_BAS6C_X00\"], \"stale_honeywell_to_none_route_macro_emitted\": true, \"unsupported_model_rejected\": true, \"validation_matrix\": [{\"accepted\": true, \"stored_type\": \"can\", \"type\": \"can\"}, {\"accepted\": true, \"stored_type\": \"pwm\", \"type\": \"pwm\"}, {\"accepted\": true, \"stored_type\": \"typo\", \"type\": \"typo\"}, {\"accepted\": true, \"stored_type\": \"\", \"type\": \"\"}]}\n"
+          }
+        },
+        {
+          "parsed": {
+            "fresh_final_env": [
+              "honeywell",
+              "bas6c-x00"
+            ],
+            "fresh_valid_route_defines": [
+              "FOXBMS_HAVE_AEROSOL_SENSOR"
+            ],
+            "fresh_valid_route_macro_emitted": false,
+            "pass": true,
+            "stale_final_env": [
+              "none",
+              "none"
+            ],
+            "stale_honeywell_to_none_defines": [
+              "FOXBMS_HAVE_AEROSOL_SENSOR",
+              "FOXBMS_AS_HONEYWELL",
+              "FOXBMS_AS_HONEYWELL_BAS6C_X00"
+            ],
+            "stale_honeywell_to_none_route_macro_emitted": true,
+            "unsupported_model_rejected": true,
+            "validation_matrix": [
+              {
+                "accepted": true,
+                "stored_type": "can",
+                "type": "can"
+              },
+              {
+                "accepted": true,
+                "stored_type": "pwm",
+                "type": "pwm"
+              },
+              {
+                "accepted": true,
+                "stored_type": "typo",
+                "type": "typo"
+              },
+              {
+                "accepted": true,
+                "stored_type": "",
+                "type": ""
+              }
+            ]
+          },
+          "pass": true,
+          "repeat": 2,
+          "run": {
+            "command": [
+              "/opt/pyvenv/bin/python",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa10_aerosol_configuration_witness.py",
+              "--source",
+              "/tmp/bms-source-p6ahe0s5/foxbms-2-308028fb13d046ba29b98886895c2e17937b1437"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"fresh_final_env\": [\"honeywell\", \"bas6c-x00\"], \"fresh_valid_route_defines\": [\"FOXBMS_HAVE_AEROSOL_SENSOR\"], \"fresh_valid_route_macro_emitted\": false, \"pass\": true, \"stale_final_env\": [\"none\", \"none\"], \"stale_honeywell_to_none_defines\": [\"FOXBMS_HAVE_AEROSOL_SENSOR\", \"FOXBMS_AS_HONEYWELL\", \"FOXBMS_AS_HONEYWELL_BAS6C_X00\"], \"stale_honeywell_to_none_route_macro_emitted\": true, \"unsupported_model_rejected\": true, \"validation_matrix\": [{\"accepted\": true, \"stored_type\": \"can\", \"type\": \"can\"}, {\"accepted\": true, \"stored_type\": \"pwm\", \"type\": \"pwm\"}, {\"accepted\": true, \"stored_type\": \"typo\", \"type\": \"typo\"}, {\"accepted\": true, \"stored_type\": \"\", \"type\": \"\"}]}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa10_aerosol_configuration_witness.py"
+    },
+    {
+      "case_id": "BMSA06-F01",
+      "lane": "VALUE_DATA_FLOW",
+      "optimization_or_repeat_consistent": true,
+      "pass": true,
+      "publication_facing_title": "Zero-valid-temperature sentinel semantics and thermal diagnostic clearing",
+      "role": "UPSTREAM_CANDIDATE",
+      "variants": [
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O0",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa06_f01_bounded_semantics_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O0",
+          "parsed": {
+            "average_ddegC": 0.0,
+            "case_id": "BMSA06-F01",
+            "charging_ok_events": 6,
+            "counter_after_499_not_ok": 499,
+            "counter_after_499_ok": 1,
+            "counter_after_500th_not_ok": 500,
+            "counter_after_500th_ok": 0,
+            "discharging_ok_events": 6,
+            "fatal_after_499_not_ok": false,
+            "fatal_after_499_ok": true,
+            "fatal_after_500th_not_ok": true,
+            "fatal_after_500th_ok": false,
+            "maximum_ddegC": -32768,
+            "minimum_ddegC": 32767,
+            "pass": true,
+            "valid_count": 0,
+            "zero_valid_temperature_state": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_f01_o0"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"case_id\":\"BMSA06-F01\",\"zero_valid_temperature_state\":true,\"minimum_ddegC\":32767,\"maximum_ddegC\":-32768,\"valid_count\":0,\"average_ddegC\":0.0,\"charging_ok_events\":6,\"discharging_ok_events\":6,\"counter_after_499_not_ok\":499,\"fatal_after_499_not_ok\":false,\"counter_after_500th_not_ok\":500,\"fatal_after_500th_not_ok\":true,\"counter_after_499_ok\":1,\"fatal_after_499_ok\":true,\"counter_after_500th_ok\":0,\"fatal_after_500th_ok\":false,\"pass\":true}\n"
+          }
+        },
+        {
+          "compile": {
+            "command": [
+              "gcc",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-Wno-unknown-pragmas",
+              "-Wno-cpp",
+              "-O2",
+              "/mnt/data/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.0.0/witnesses/bmsa06_f01_bounded_semantics_witness.c",
+              "-lm",
+              "-o",
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": ""
+          },
+          "optimization": "-O2",
+          "parsed": {
+            "average_ddegC": 0.0,
+            "case_id": "BMSA06-F01",
+            "charging_ok_events": 6,
+            "counter_after_499_not_ok": 499,
+            "counter_after_499_ok": 1,
+            "counter_after_500th_not_ok": 500,
+            "counter_after_500th_ok": 0,
+            "discharging_ok_events": 6,
+            "fatal_after_499_not_ok": false,
+            "fatal_after_499_ok": true,
+            "fatal_after_500th_not_ok": true,
+            "fatal_after_500th_ok": false,
+            "maximum_ddegC": -32768,
+            "minimum_ddegC": 32767,
+            "pass": true,
+            "valid_count": 0,
+            "zero_valid_temperature_state": true
+          },
+          "pass": true,
+          "run": {
+            "command": [
+              "/tmp/bms-witness-7rfnqg9o/bmsa06_f01_o2"
+            ],
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\"case_id\":\"BMSA06-F01\",\"zero_valid_temperature_state\":true,\"minimum_ddegC\":32767,\"maximum_ddegC\":-32768,\"valid_count\":0,\"average_ddegC\":0.0,\"charging_ok_events\":6,\"discharging_ok_events\":6,\"counter_after_499_not_ok\":499,\"fatal_after_499_not_ok\":false,\"counter_after_500th_not_ok\":500,\"fatal_after_500th_not_ok\":true,\"counter_after_499_ok\":1,\"fatal_after_499_ok\":true,\"counter_after_500th_ok\":0,\"fatal_after_500th_ok\":false,\"pass\":true}\n"
+          }
+        }
+      ],
+      "witness_file": "bmsa06_f01_bounded_semantics_witness.c"
+    }
+  ]
+}
