@@ -6,7 +6,7 @@
   "exact_source_anchor_verification": "PASS (25/25)",
   "final_release_binding": {
     "file": "FINAL_RELEASE_BINDING_v1.1.1.json",
-    "sha256": "55c8f83a1842fe34ddd927f9ccda3ab92b545f58a9eecaedd5942a7c9b36bf7d"
+    "sha256": "db498a93f5ada43e05d6deffaf4d5b1a25b102fa77e5b240223d6de839b4b1c8"
   },
   "jxiv_screening_readiness": "PASS",
   "maintenance_statement": "No scientific result was changed in this GitHub publication maintenance.",
@@ -15,16 +15,16 @@
     "sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7"
   },
   "master_verifier": "PASS (22/22)",
-  "paper_hash_verification": "PASS_AT_FINAL_PACKAGING (8/8); external paper artifacts intentionally absent from GitHub repository",
+  "paper_hash_verification": "PASS_FINAL_SUBMISSION_PACKAGE (8/8); external paper artifacts intentionally absent from GitHub repository",
   "paper_screening": "PASS",
   "public_release_date": "2026-09-05",
   "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
   "publication_set": {
     "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
-    "sha256": "4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776",
+    "sha256": "14efcc91f5fa90df4cb956df09ad5d0f9d9e29818331e459ebf4b3737cfa0c26",
     "distribution": "external; not stored in GitHub repository"
   },
-  "publication_set_binding_verification": "PASS_AT_FINAL_PACKAGING; canonical external SHA-256 binding retained",
+  "publication_set_binding_verification": "PASS_FINAL_SUBMISSION_PACKAGE; canonical external SHA-256 binding retained",
   "publication_version": "1.1.1",
   "reference_audit": "PASS",
   "release": "Version 1.1.1 - Final Maintenance Synchronization",

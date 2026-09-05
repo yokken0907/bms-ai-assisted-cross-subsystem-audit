@@ -95,7 +95,7 @@ The expected identities are recorded in `release/RELEASE_ASSET_MANIFEST.json`.
 
 - Master-of-All SHA-256: `4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7` (frozen scientific archive; GitHub Release asset, not normal Git-tree content)
 - Full project archive SHA-256: `b21d2e5078ddb95eb692c569e1f327b4d609ba72c99f34552d923448fa36479d`
-- Publication Set v1.1.1 SHA-256 (external; not stored on GitHub): `4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776`
+- Publication Set v1.1.1 SHA-256 (external; not stored on GitHub): `14efcc91f5fa90df4cb956df09ad5d0f9d9e29818331e459ebf4b3737cfa0c26`
 
 ## License status
 

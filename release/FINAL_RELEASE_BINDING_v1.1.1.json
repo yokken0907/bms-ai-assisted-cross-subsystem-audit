@@ -15,8 +15,8 @@
   "packaging_timestamp_jst": "2026-09-05T13:06:16+09:00",
   "packaging_timestamp_utc": "2026-09-05T04:06:16Z",
   "paper_artifact_hashes": {
-    "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_v1.1.1.docx": "929c7f03556356d5f3c0a7bcd46d1dafbdf8377e847925786f4ef81b61f48492",
-    "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_v1.1.1.pdf": "da7e6545fcdbe9abc3f24fd12f53fac7299b139f2b34129334500c369b647838",
+    "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_v1.1.1.docx": "3bd9397b2111dc983aa8826cdef01f04ccbfa96e26582da9682d09b161cb2222",
+    "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_v1.1.1.pdf": "f2f9bab09438f007593368b27fe8d43dcabeba2a0591494038eb2a2dcda5117b",
     "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_A_v1.1.1.docx": "543947b6a550976800502171d6b45586cd9be958968b86a68d02e2199cbc9e36",
     "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_A_v1.1.1.pdf": "0d05b9171a1770375daf83b65d869825646af3aa72c2afde47050ff44d1e6b33",
     "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_B_v1.1.1.docx": "fd045e648146e87537a3cd3165a5be1490d7884038d79d6ceeb99d453a75e2e4",
@@ -28,7 +28,7 @@
   "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
   "publication_set": {
     "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
-    "sha256": "4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776",
+    "sha256": "14efcc91f5fa90df4cb956df09ad5d0f9d9e29818331e459ebf4b3737cfa0c26",
     "sidecar": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip.sha256",
     "stored_in_github_repository": false,
     "distribution_note": "Canonical publication package retained outside GitHub for Jxiv submission/publication; SHA-256 binding retained here."
@@ -52,5 +52,10 @@
   "public_release_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1",
   "github_release_tag": "v1.1.1",
   "github_release_target_commit": "2a3c605f7afecb45defff6dd5f93440f7e68d0ef",
-  "public_release_timestamp_utc": "2026-09-05T09:47:44Z"
+  "public_release_timestamp_utc": "2026-09-05T09:47:44Z",
+  "publication_artifact_metadata_synchronization": {
+    "reason": "Main manuscript Data Availability synchronized with the public GitHub repository and v1.1.1 Release after repository publication.",
+    "scientific_result_changed": false,
+    "supplements_changed": false
+  }
 }

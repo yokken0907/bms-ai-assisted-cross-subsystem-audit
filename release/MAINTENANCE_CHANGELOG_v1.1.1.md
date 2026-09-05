@@ -6,11 +6,11 @@ This final packaging synchronization corrected current-release README version la
 
 Candidate register, witness results, control results, exact source anchors, frozen source identity, Master-of-All scientific artifacts, and claim boundaries remain unchanged.
 
-Canonical Publication Set SHA-256: `4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776`
+Canonical Publication Set SHA-256: `14efcc91f5fa90df4cb956df09ad5d0f9d9e29818331e459ebf4b3737cfa0c26`
 
 Frozen Master-of-All SHA-256: `4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7`
 
-Final binding: `FINAL_RELEASE_BINDING_v1.1.1.json` (`55c8f83a1842fe34ddd927f9ccda3ab92b545f58a9eecaedd5942a7c9b36bf7d`)
+Final binding: `FINAL_RELEASE_BINDING_v1.1.1.json` (`db498a93f5ada43e05d6deffaf4d5b1a25b102fa77e5b240223d6de839b4b1c8`)
 
 ## GitHub distribution profile
 
@@ -19,3 +19,7 @@ For GitHub publication, manuscript DOCX/PDF files and `BMS_AI_ASSISTED_CROSS_SUB
 GitHub public repository identity synchronized: `https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit`.
 
 GitHub Release v1.1.1 was published on 2026-09-05 at `https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1`. GitHub reports the uploaded Master-of-All asset digest as the canonical SHA-256 `4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7`. The assistant environment could not independently re-download the binary asset, so that specific byte-level re-download gate is recorded as not performed rather than silently treated as an independent verification.
+
+## Final submission metadata synchronization
+
+The Main manuscript Data Availability section was updated to record the public repository and v1.1.1 GitHub Release. Main DOCX/PDF and the external Publication Set SHA-256 were rebound accordingly. Supplements A/B/C and all scientific results remained unchanged.

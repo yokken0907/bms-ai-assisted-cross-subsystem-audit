@@ -9,7 +9,7 @@ This GitHub repository contains reproducibility materials only. The Main Manuscr
 ## External canonical publication package
 
 - `BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip`
-  - SHA-256: `4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776`
+  - SHA-256: `14efcc91f5fa90df4cb956df09ad5d0f9d9e29818331e459ebf4b3737cfa0c26`
   - Not stored in the GitHub repository.
 
 ## Frozen scientific archive distributed through GitHub Release
@@ -17,7 +17,7 @@ This GitHub repository contains reproducibility materials only. The Main Manuscr
 - `BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip`
   - SHA-256: `4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7`
   - Not stored in the normal Git tree; unchanged.
-  - Distributed as a GitHub Release asset. The v1.1.1 release URL is recorded only after that release is actually published.
+  - Distributed as a GitHub Release asset under https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1.
 
 ## Repository-side binding metadata
 
