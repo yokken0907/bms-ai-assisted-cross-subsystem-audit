@@ -1,5 +1,5 @@
 {
-  "file_count": 116,
+  "file_count": 117,
   "files": [
     {
       "bytes": 19,
@@ -10,6 +10,11 @@
       "bytes": 344,
       "path": ".github/ISSUE_TEMPLATE/verification_report.md",
       "sha256": "63266fac93461379991aa82a64d7ea4454e663a30f537c2e3479cc3e616f51ba"
+    },
+    {
+      "bytes": 1390,
+      "path": ".github/workflows/repair-integrity.yml",
+      "sha256": "3c9684df5097f8d26318a80c576465d8cf5e1e1ad98d16614e6482c02d3b75b8"
     },
     {
       "bytes": 482,
@@ -229,17 +234,17 @@
     {
       "bytes": 304,
       "path": "evidence/frozen/AI_ASSISTANCE_DISCLOSURE.md",
-      "sha256": "7ca4720b139e527d8141a3e085c315eb4d4efd1b7ca41f07d12d027698237c7"
+      "sha256": "7ca4720b139e527d8141a3e085c315eb4dd489b1c7ca41f07d12d027698237c7"
     },
     {
       "bytes": 139405,
       "path": "evidence/frozen/BMSA12__UNIFIED_HARNESS_RESULTS_17_CASES.json",
-      "sha256": "9a93643a50a935493bc277a797dfe33354f22625e1e862d0c34f5ccf863bf7e8"
+      "sha256": "9a93643a50a935493bc277a797fde33354f22625e1e862d0c34f5ccf863bf7e8"
     },
     {
       "bytes": 41448,
       "path": "evidence/frozen/BMSA12__UPSTREAM_CANDIDATE_INVENTORY_COMPLETENESS.json",
-      "sha256": "302e0d4f605f7c71be6150d0129d89fc1058991fe59fdb5abc25e96161bc57e"
+      "sha256": "302e0d4f605f7c71be6150d0129d89fc1058991fec59fdb5abc25e96161bc57e"
     },
     {
       "bytes": 13230,
@@ -294,7 +299,7 @@
     {
       "bytes": 19683,
       "path": "evidence/frozen/CROSS_BRANCH__RESIDUAL_GAP_DETERMINATIONS_15_CASES.json",
-      "sha256": "c45e929971a6f288902c2f4a781b44352e03e50ccaeeb7dbff41991caf87e10a"
+      "sha256": "c45e929971a6f288902c2f4a781b44352e03e50cceaeb7dbff41991caf87e10a"
     },
     {
       "bytes": 129188,
@@ -332,17 +337,17 @@
       "sha256": "93749d4a1aee3a6962258d8a6f56b2d0af74da97f63611451c205798d2c1ef73"
     },
     {
-      "bytes": 2558,
+      "bytes": 1768,
       "path": "evidence/frozen/PROJECT_CLOSURE_SUMMARY.md",
       "sha256": "2558c941cb7a79e0e82d3f5e139cecc5506eff8611cee6fa5d273c886a57b664"
     },
     {
-      "bytes": 2349,
+      "bytes": 1204,
       "path": "evidence/frozen/PROJECT_MASTER_INDEX.json",
       "sha256": "d426689305d8753f8699c4143eb6ca05ecda610ce2f36e451f99b1b8043c70d6"
     },
     {
-      "bytes": 2886,
+      "bytes": 3907,
       "path": "generated/PUBLICATION_EVIDENCE_SUMMARY.md",
       "sha256": "903462fd33c7ea9703c91b208689f0f259c4a5dd7cca9c58cf1379f01252f4d0"
     },
@@ -579,7 +584,7 @@
     {
       "bytes": 19673,
       "path": "witnesses/diag_cfg.h",
-      "sha256": "3cfe5a17f575767a16aab7dee4d4080ebe7300ded023987acf06d1d950df27bf"
+      "sha256": "3cfe5a17f575767a16abb7dee4d4080ebe7300ded023987acf06d1d950df27bf"
     }
   ],
   "repository_version": "1.1.1",
