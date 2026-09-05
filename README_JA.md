@@ -3,8 +3,8 @@
 本リポジトリは、Keiji Yoshimuraによる論文 **“From Candidate Detection to Bounded Claims: A Reproducible AI-Assisted Cross-Subsystem Audit of Open-Source Battery Management Software”** とSupplement A/B/C（Version 1.1.1）の再現性資料である。論文本体とSupplementのDOCX/PDFはJxiv投稿・公開と分離するため、GitHubリポジトリには意図的に収録しない。
 
 **Repository:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit  
-**Release assets:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases  
-**Version 1.1.1 Release:** 現在release asset公開前。Git treeはv1.1.1公開用に同期済み。
+**Release v1.1.1:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1  
+**Version 1.1.1 Release:** 2026-09-05公開済み。frozen Master-of-AllはGitHub Release assetとして取得できる。
 
 目的は、固定されたfoxBMS 2ソースから、15件のbounded source-level candidate findings、2 controls、25 exact source anchors、witness replay、mitigation-pattern mapping、patent-document technical-pattern orientation、最終source-level dispositionまでを第三者が追跡・検証できるようにすることである。
 
@@ -40,7 +40,7 @@ python scripts/verify_master_of_all.py BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0
 
 ## Release Asset identity確認
 
-Publication SetはJxiv投稿・公開系統でGitHub外に保持する。一方、Master-of-Allは通常のGit追跡対象には含めず、Version 1.1.1のGitHub Release assetとして配布する。両方を取得した場合は、次でcanonical SHAと、Publication Set内8論文ファイルのfinal binding一致を確認できる。
+Publication SetはJxiv投稿・公開系統でGitHub外に保持する。一方、Master-of-Allは通常のGit追跡対象には含めず、公開済みVersion 1.1.1 GitHub Releaseのassetとして配布する。両方を取得した場合は、次でcanonical SHAと、Publication Set内8論文ファイルのfinal binding一致を確認できる。
 
 ```bash
 python scripts/verify_release_assets.py --publication-set BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip --master-of-all BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip

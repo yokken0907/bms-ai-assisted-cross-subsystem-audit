@@ -6,7 +6,11 @@
     "sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7",
     "unchanged": true,
     "stored_in_github_repository": false,
-    "distribution": "GitHub Release asset; not normal Git tree"
+    "distribution": "GitHub Release asset; not normal Git tree",
+    "github_release_asset_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/download/v1.1.1/BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip",
+    "github_reported_digest": "sha256:4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7",
+    "github_reported_digest_matches_canonical": true,
+    "independent_redownload_byte_verification": "NOT_PERFORMED_IN_ASSISTANT_ENVIRONMENT"
   },
   "packaging_timestamp_jst": "2026-09-05T13:06:16+09:00",
   "packaging_timestamp_utc": "2026-09-05T04:06:16Z",
@@ -20,7 +24,7 @@
     "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_C_v1.1.1.docx": "c8515050bd5d2826f4e974e6601d91c78e56c3cb1c8a82e7c624516d7d69c21e",
     "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_C_v1.1.1.pdf": "135b3b854a168a6d7aa9bd6c044440ba25aa79217317993959cf9ff013ac1c25"
   },
-  "public_release_date": null,
+  "public_release_date": "2026-09-05",
   "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
   "publication_set": {
     "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
@@ -45,5 +49,8 @@
   "repository_distribution_profile": "github-reproducibility-only",
   "paper_artifacts_stored_in_github_repository": false,
   "paper_distribution_note": "Main Manuscript and Supplements A/B/C are intentionally not distributed through this GitHub repository.",
-  "public_release_url": null
+  "public_release_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1",
+  "github_release_tag": "v1.1.1",
+  "github_release_target_commit": "2a3c605f7afecb45defff6dd5f93440f7e68d0ef",
+  "public_release_timestamp_utc": "2026-09-05T09:47:44Z"
 }

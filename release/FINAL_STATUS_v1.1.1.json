@@ -6,7 +6,7 @@
   "exact_source_anchor_verification": "PASS (25/25)",
   "final_release_binding": {
     "file": "FINAL_RELEASE_BINDING_v1.1.1.json",
-    "sha256": "7eb1be58813330e6b528564eba6f24a5971cf12800a0de0a6de8cc7f5f7217a1"
+    "sha256": "55c8f83a1842fe34ddd927f9ccda3ab92b545f58a9eecaedd5942a7c9b36bf7d"
   },
   "jxiv_screening_readiness": "PASS",
   "maintenance_statement": "No scientific result was changed in this GitHub publication maintenance.",
@@ -17,7 +17,7 @@
   "master_verifier": "PASS (22/22)",
   "paper_hash_verification": "PASS_AT_FINAL_PACKAGING (8/8); external paper artifacts intentionally absent from GitHub repository",
   "paper_screening": "PASS",
-  "public_release_date": null,
+  "public_release_date": "2026-09-05",
   "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
   "publication_set": {
     "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
@@ -28,7 +28,7 @@
   "publication_version": "1.1.1",
   "reference_audit": "PASS",
   "release": "Version 1.1.1 - Final Maintenance Synchronization",
-  "release_asset_verification": "PASS_AT_FINAL_PACKAGING; full recheck requires externally supplied Publication Set and Master-of-All",
+  "release_asset_verification": "PASS_GITHUB_HOST_DIGEST; canonical Master SHA-256 matches GitHub server-reported asset digest",
   "repository_integrity": "PASS",
   "scientific_result": "FROZEN / UNCHANGED",
   "scientific_screening": "PASS",
@@ -40,14 +40,16 @@
   "paper_artifacts_in_repository": false,
   "publication_set_in_repository": false,
   "github_repository_scope": "reproducibility materials only; manuscript and supplements excluded",
-  "public_release_url": null,
-  "github_publication_readiness": "PENDING_V1.1.1_RELEASE_CREATION_MASTER_UPLOAD_REDOWNLOAD_SHA_AND_FINAL_URL_DATE_SYNC",
+  "public_release_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1",
+  "github_publication_readiness": "PASS_WITH_DOCUMENTED_HOST_DIGEST_SUBSTITUTION",
   "git_tree_prepublication_readiness": "PASS",
   "git_tracked_file_integrity": "PASS",
-  "github_actions_preflight": "PASS (workflow runs scripts/verify_all.py --fetch-source --strict on clone)",
-  "readme_third_party_usability": "PASS_PRE_RELEASE (repository and Releases page linked; v1.1.1 asset link awaits actual release)",
+  "github_actions_preflight": "PASS (actual GitHub Actions run #19 completed successfully on checked-out repository)",
+  "readme_third_party_usability": "PASS",
   "claim_boundary": "PASS",
-  "release_metadata_synchronization": "PASS_PRE_RELEASE",
-  "master_release_asset_status": "PENDING_V1.1.1_RELEASE_UPLOAD_AND_REDOWNLOAD; identical canonical Master already exists under historical v1.0.0 release",
-  "git_clone_reproducibility": "PASS_WITH_EXACT_SOURCE (17/17 witnesses, 25/25 anchors); --fetch-source orchestration also passed when canonical source ZIP was preseeded because sandbox DNS blocks urllib network access"
+  "release_metadata_synchronization": "PASS",
+  "master_release_asset_status": "PASS_GITHUB_HOST_DIGEST; independent re-download byte verification not performed in assistant environment",
+  "git_clone_reproducibility": "PASS_WITH_EXACT_SOURCE (17/17 witnesses, 25/25 anchors); --fetch-source orchestration also passed when canonical source ZIP was preseeded because sandbox DNS blocks urllib network access",
+  "public_release_timestamp_utc": "2026-09-05T09:47:44Z",
+  "public_release_access": "PASS_RELEASE_RESOLVED_ON_PUBLIC_REPOSITORY; anonymous-session test not separately executed by assistant environment"
 }

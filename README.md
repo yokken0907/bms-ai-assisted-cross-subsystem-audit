@@ -3,8 +3,8 @@
 Reproducibility repository for the manuscript **“From Candidate Detection to Bounded Claims: A Reproducible AI-Assisted Cross-Subsystem Audit of Open-Source Battery Management Software”** by Keiji Yoshimura.
 
 **Repository:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit  
-**Release assets:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases  
-**Version 1.1.1 release status:** release asset publication pending; the Git tree is prepared for the v1.1.1 public release.
+**Release v1.1.1:** https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1  
+**Version 1.1.1 release status:** published on 2026-09-05; the frozen Master-of-All is available as a GitHub Release asset.
 
 This repository preserves the publication-facing evidence chain from a fixed foxBMS 2 source revision to 15 bounded source-level candidate findings, 2 controls, source-anchor verification, witness replay, mitigation-pattern mapping, patent-document technical-pattern orientation, and final source-level dispositions.
 
@@ -51,7 +51,7 @@ Paper-file integrity is deliberately not part of the default GitHub repository c
 
 ## Verify the full Master-of-All 22-gate archive
 
-The complete Master-of-All is **not tracked in the normal Git tree**. It is distributed through GitHub Releases as the frozen scientific archive and is identified by its canonical SHA-256. For Version 1.1.1, use the release asset published under the v1.1.1 release once that release is posted. If downloaded alongside this repository:
+The complete Master-of-All is **not tracked in the normal Git tree**. It is distributed through GitHub Releases as the frozen scientific archive and is identified by its canonical SHA-256. For Version 1.1.1, use the frozen asset published under the [v1.1.1 GitHub Release](https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases/tag/v1.1.1). If downloaded alongside this repository:
 
 ```bash
 python scripts/verify_master_of_all.py /path/to/BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip
