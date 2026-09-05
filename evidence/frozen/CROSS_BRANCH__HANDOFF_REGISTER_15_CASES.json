@@ -1,0 +1,167 @@
+[
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA01-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "WEAKNESS_CANDIDATE_VALIDITY_BYPASS",
+    "lane": "VALUE_DATA_FLOW",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-01"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA03-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "WEAKNESS_CANDIDATE_VALIDITY_PROPAGATION_TO_CAN_POWER_LIMIT",
+    "lane": "VALUE_DATA_FLOW",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-03"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA04-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "BOUNDED_HISTORY_SOC_CONTRACT_MISMATCH_CANDIDATE",
+    "lane": "VALUE_DATA_FLOW",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-04"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA11-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "BOUNDED_SOURCE_LEVEL_SOH_REPORTING_INTEGRATION_WEAKNESS_CANDIDATE",
+    "lane": "VALUE_DATA_FLOW",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-11"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA06-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "SURVIVES_AS_BOUNDED_SOFTWARE_WEAKNESS_CANDIDATE_AT_HOST_UNIT_AND_DIAGNOSTIC_CONTRACT_SCOPE",
+    "lane": "VALUE_DATA_FLOW",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-06"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA05-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "CHARGE_MODE_OPEN_WIRE_CONFIGURATION_CONTRACT_MISMATCH_CANDIDATE",
+    "lane": "STATE_TIME",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-05"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA07-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "BOUNDED_SOURCE_LEVEL_DIAGNOSTIC_CONFIGURATION_WEAKNESS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-07"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA08-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "MULTI_STRING_CONNECTION_SELF_LOOP_CANDIDATE",
+    "lane": "STATE_TIME",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-08"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA09-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "BENDER_ISO165C_WAIT_ACK_LIVENESS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-09"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA10-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "SYSTEM_MONITOR_CONJUNCTION_SEMANTICS_CANDIDATE",
+    "lane": "STATE_TIME",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-10"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA08-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "OPEN_WIRE_BOOLEAN_INDEX_COLLAPSE_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-08"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA09-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "DEBUG_CAN_AFE_FRAGMENT_STALENESS_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-09"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA09-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "AEROSOL_COUNTER_CRC_ACCEPTANCE_PATH_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-09"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA10-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "BMS_STATE_MACHINE_PUBLIC_TEST_ADEQUACY_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-10"
+  },
+  {
+    "bmsa13_handoff": "ELIGIBLE_FOR_RESIDUAL_GAP_DETERMINATION",
+    "case_id": "BMSA10-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "classification_change_authorized": false,
+    "frozen_classification": "AEROSOL_VALIDATOR_BUILD_STATE_DEPENDENCE_CANDIDATE",
+    "lane": "COMMUNICATION_CONFIGURATION",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "novelty_status": "NOVELTY_UNDETERMINED",
+    "source_branch": "BMSA-10"
+  }
+]

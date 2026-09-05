@@ -1,0 +1,8 @@
+{
+  "BMSA03-F01": "The earlier branch audit reported a conservative source-level timing window corresponding to at least four PackLimits transmissions under its frozen timing assumptions. That integer is treated as an upstream branch result, not independently re-derived at project level.",
+  "BMSA05-F01": "The truth-table witness uses an explicit analysis comparator. It is not an externally frozen foxBMS requirement or formal specification.",
+  "BMSA09-F02": "The frozen audit did not establish an authoritative external protocol revision or CRC algorithm sufficient to determine exact required acceptance behavior. No Honeywell protocol-violation claim is made.",
+  "BMSA10-F02": "Publication-facing title: Public BMS state-machine test-surface traceability candidate. The static witness does not measure statement, branch, MC/DC, or transition coverage and does not establish inadequate testing or zero execution coverage.",
+  "patent_language": "Patent documents are used only for technical-pattern orientation/mapping. No novelty, patentability, validity, infringement, freedom-to-operate, or legal conclusion is made.",
+  "verification_language": "Within this repository, implementation-separated verification means a separately implemented project verifier. It does not mean external institutional, blinded, or third-party replication."
+}

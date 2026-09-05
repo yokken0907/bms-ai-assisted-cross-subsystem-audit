@@ -1,0 +1,607 @@
+[
+  {
+    "bounded_observation": "The audited SOC-counting consumer uses current samples without a local invalidMeasurement guard on the reproduced route.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA01-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "WEAKNESS_CANDIDATE_VALIDITY_BYPASS",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Gate SOC integration on an explicit current-sample validity state.",
+      "Cross-check the current input against a redundant sensor or model residual before accumulation.",
+      "On invalid input, freeze or bound the estimate and expose the degraded-validity state to consumers."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Primary research context for propagating measurement uncertainty into battery-state estimates.",
+        "evidence_level": "E2_PRIMARY_TECHNICAL_REPORT",
+        "publisher": "NASA",
+        "source_id": "NASA_BATTERY_UNCERTAINTY",
+        "title": "Battery state-estimation uncertainty research record",
+        "url": "https://ntrs.nasa.gov/citations/20130010482"
+      },
+      {
+        "bounded_relevance": "Primary research context for redundant/model-based battery sensor fault diagnosis.",
+        "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+        "publisher": "IEEE",
+        "source_id": "IEEE_SENSOR_FAULT_DIAGNOSIS",
+        "title": "Lithium-ion battery sensor fault diagnosis research record",
+        "url": "https://ieeexplore.ieee.org/document/8616868/"
+      },
+      {
+        "bounded_relevance": "Primary battery state-estimation work illustrating model/measurement reconciliation rather than blind integration.",
+        "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+        "publisher": "Journal of Power Sources",
+        "source_id": "PLETT_SOC",
+        "title": "Extended Kalman filtering for battery management systems of LiPB-based HEV battery packs",
+        "url": "https://doi.org/10.1016/j.jpowsour.2004.02.033"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The reproduced PackLimits power calculation consumes batteryVoltage_mV while the database validity flag invalidBatteryVoltage is not consumed in that callback.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA03-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "WEAKNESS_CANDIDATE_VALIDITY_PROPAGATION_TO_CAN_POWER_LIMIT",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Propagate invalidBatteryVoltage into PackLimits calculation and transmission eligibility.",
+      "Apply a documented conservative fallback or suppress the affected power signal when voltage validity is false.",
+      "Carry validity/freshness as an explicit interface contract and test both valid and invalid branches."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Defines established communication-integrity concepts including data identifiers, counters, and CRC-based protection profiles.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R20-11",
+        "source_id": "AUTOSAR_E2E_PROTOCOL",
+        "title": "Requirements on E2E Protection Protocol",
+        "url": "https://www.autosar.org/fileadmin/standards/R20-11/FO/AUTOSAR_PRS_E2EProtocol.pdf"
+      },
+      {
+        "bounded_relevance": "Project-native database validation and configuration checking pattern.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_DATABASE_VALIDATION",
+        "title": "foxBMS database tool",
+        "url": "https://docs.foxbms.org/tools/fox/db/fox_db.html"
+      },
+      {
+        "bounded_relevance": "Primary research context for propagating measurement uncertainty into battery-state estimates.",
+        "evidence_level": "E2_PRIMARY_TECHNICAL_REPORT",
+        "publisher": "NASA",
+        "source_id": "NASA_BATTERY_UNCERTAINTY",
+        "title": "Battery state-estimation uncertainty research record",
+        "url": "https://ntrs.nasa.gov/citations/20130010482"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The non-default history-balancing route uses voltage-derived SOC in a history/counting contract that differed from the audited expectation.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA04-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "BOUNDED_HISTORY_SOC_CONTRACT_MISMATCH_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Define one explicit unit, scale, initialization, and update invariant for the history value.",
+      "Use typed state records that distinguish voltage-derived SOC from counting/history counters.",
+      "Add equality, just-below, just-above, reset, and long-run differential tests for the non-default strategy."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Primary literature context for explicit balancing strategy criteria and operating boundaries.",
+        "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+        "publisher": "ScienceDirect",
+        "source_id": "BALANCING_REVIEW",
+        "title": "Battery balancing strategy research record",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352152X22002924"
+      },
+      {
+        "bounded_relevance": "The audited project's own public unit-test workflow and test infrastructure.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TESTS",
+        "title": "Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests.html"
+      },
+      {
+        "bounded_relevance": "Primary government guidance on using coverage evidence and interpreting uncovered code.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_COVERAGE",
+        "title": "SWE-189 - Code Coverage",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=50889417"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "State-estimation writes SOH data, while the reproduced pack/string CAN callbacks supply a fixed 100 percent value.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA11-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "BOUNDED_SOURCE_LEVEL_SOH_REPORTING_INTEGRATION_WEAKNESS_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Use the state-estimation database SOH record as the single source for both pack and string reporting callbacks.",
+      "Specify initialization, unavailable, stale, and range semantics at the SOH interface.",
+      "Run end-to-end callback tests with non-100, boundary, and unavailable SOH values."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Primary research context for measured health-state estimation and reporting pipelines.",
+        "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+        "publisher": "PHM Society",
+        "source_id": "NASA_PHM_BATTERY",
+        "title": "Battery prognostics and health-management research record",
+        "url": "https://doi.org/10.36001/phmconf.2014.v6i1.2490"
+      },
+      {
+        "bounded_relevance": "Project-native database validation and configuration checking pattern.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_DATABASE_VALIDATION",
+        "title": "foxBMS database tool",
+        "url": "https://docs.foxbms.org/tools/fox/db/fox_db.html"
+      },
+      {
+        "bounded_relevance": "The audited project's own procedure for direct unit tests and assertions.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TEST_HOWTO",
+        "title": "How to Write Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests_how-to.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "Separate charge-mode periodic open-wire settings exist, but the reproduced executive route consumes the normal-mode settings.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA05-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "CHARGE_MODE_OPEN_WIRE_CONFIGURATION_CONTRACT_MISMATCH_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "MIT-COW-MODE-01: select NORMAL versus CHARGE open-wire enable/period settings using the existing mode discriminator.",
+      "MIT-COW-TEST-02: compile and execute target-configuration tests that independently vary NORMAL and CHARGE settings.",
+      "Reject or diagnose ambiguous mode/configuration combinations during configuration validation."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Vendor primary material describing established open-wire detection and channel-oriented test concepts.",
+        "evidence_level": "E1_VENDOR_APPLICATION_NOTE",
+        "publisher": "Texas Instruments",
+        "source_id": "TI_OPEN_WIRE",
+        "title": "Open-Wire Detection in Battery-Monitoring Systems",
+        "url": "https://www.ti.com/lit/pdf/sdaa369"
+      },
+      {
+        "bounded_relevance": "Vendor primary documentation for the selected monitor family and its open-wire/communication capabilities.",
+        "evidence_level": "E1_COMPONENT_VENDOR_DOCUMENTATION",
+        "publisher": "Analog Devices",
+        "source_id": "ADI_LTC6813",
+        "title": "LTC6813-1 Multicell Battery Stack Monitor",
+        "url": "https://www.analog.com/en/products/ltc6813-1.html"
+      },
+      {
+        "bounded_relevance": "The audited project's own public unit-test workflow and test infrastructure.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TESTS",
+        "title": "Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "DIAG_DELAY_2000ms expands to 1000u and is consumed by the two reproduced fatal CC/EC responding diagnostics.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA07-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "BOUNDED_SOURCE_LEVEL_DIAGNOSTIC_CONFIGURATION_WEAKNESS_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Represent diagnostic delays with typed duration constants whose names are generated from or checked against values.",
+      "Add compile-time assertions for named-unit/value equality and accepted ranges.",
+      "Compile exact configuration rows in unit tests and assert the consumed delay value."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R23-11",
+        "source_id": "AUTOSAR_HEALTH_MONITORING",
+        "title": "Specification of Health Monitoring",
+        "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+      },
+      {
+        "bounded_relevance": "The audited project's own procedure for direct unit tests and assertions.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TEST_HOWTO",
+        "title": "How to Write Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests_how-to.html"
+      },
+      {
+        "bounded_relevance": "Primary government software-assurance guidance on unit testing and objective evidence.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_UNIT_TESTING",
+        "title": "SWE-062 - Unit Test",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=202145998"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The reproduced multi-string PLUS-close path writes the same substate rather than the existing feedback/accounting substate.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "MULTI_STRING_CONNECTION_SELF_LOOP_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "After a close request, transition to a distinct feedback-verification state.",
+      "Track progress per string and update the connected-string count only after verified feedback.",
+      "Apply a finite deadline with explicit failure/rollback and test every transition edge."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Documents established state-request, transition, and recovery-management patterns.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R24-11",
+        "source_id": "AUTOSAR_STATE_MANAGEMENT",
+        "title": "Specification of State Management",
+        "url": "https://www.autosar.org/fileadmin/standards/R24-11/AP/AUTOSAR_AP_SWS_StateManagement.pdf"
+      },
+      {
+        "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R23-11",
+        "source_id": "AUTOSAR_HEALTH_MONITORING",
+        "title": "Specification of Health Monitoring",
+        "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+      },
+      {
+        "bounded_relevance": "Primary government software-assurance guidance on unit testing and objective evidence.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_UNIT_TESTING",
+        "title": "SWE-062 - Unit Test",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=202145998"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The optional Bender initialization route can remain in a WAIT_ACK substate when neither success nor explicit error is observed.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "BENDER_ISO165C_WAIT_ACK_LIVENESS_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Attach a finite deadline and retry budget to every acknowledgement-wait state.",
+      "Transition timeout exhaustion to a defined initialization-error or degraded state.",
+      "Test ACK, negative response, dropped response, late response, and retry exhaustion deterministically."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R23-11",
+        "source_id": "AUTOSAR_HEALTH_MONITORING",
+        "title": "Specification of Health Monitoring",
+        "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+      },
+      {
+        "bounded_relevance": "Documents established state-request, transition, and recovery-management patterns.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R24-11",
+        "source_id": "AUTOSAR_STATE_MANAGEMENT",
+        "title": "Specification of State Management",
+        "url": "https://www.autosar.org/fileadmin/standards/R24-11/AP/AUTOSAR_AP_SWS_StateManagement.pdf"
+      },
+      {
+        "bounded_relevance": "The audited project's own public unit-test workflow and test infrastructure.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TESTS",
+        "title": "Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The system-monitor diagnostic triggers only when lateness and execution-duration violations are both true in the reproduced conjunction.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "SYSTEM_MONITOR_CONJUNCTION_SEMANTICS_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Specify lateness, execution overrun, and their reaction semantics as separate named predicates.",
+      "Supervise arrival/alive, execution deadline, and logical control flow independently where required.",
+      "Add truth-table tests for neither, each predicate alone, and both predicates together."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R23-11",
+        "source_id": "AUTOSAR_HEALTH_MONITORING",
+        "title": "Specification of Health Monitoring",
+        "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+      },
+      {
+        "bounded_relevance": "Primary government software-assurance guidance on unit testing and objective evidence.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_UNIT_TESTING",
+        "title": "SWE-062 - Unit Test",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=202145998"
+      },
+      {
+        "bounded_relevance": "Primary government guidance on using coverage evidence and interpreting uncovered code.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_COVERAGE",
+        "title": "SWE-189 - Code Coverage",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=50889417"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The reproduced open-wire aggregation expression evaluates a comparison as the array index, collapsing configured positions to Boolean indices 0/1.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "OPEN_WIRE_BOOLEAN_INDEX_COLLAPSE_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Compute the channel index as an integer expression, then enforce an explicit bounds assertion before access.",
+      "Reset the detected-wire accumulator independently for each string.",
+      "Run single-hot tests for every configured index plus multi-string carry-over cases."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Vendor primary material describing established open-wire detection and channel-oriented test concepts.",
+        "evidence_level": "E1_VENDOR_APPLICATION_NOTE",
+        "publisher": "Texas Instruments",
+        "source_id": "TI_OPEN_WIRE",
+        "title": "Open-Wire Detection in Battery-Monitoring Systems",
+        "url": "https://www.ti.com/lit/pdf/sdaa369"
+      },
+      {
+        "bounded_relevance": "Vendor primary documentation for the selected monitor family and its open-wire/communication capabilities.",
+        "evidence_level": "E1_COMPONENT_VENDOR_DOCUMENTATION",
+        "publisher": "Analog Devices",
+        "source_id": "ADI_LTC6813",
+        "title": "LTC6813-1 Multicell Battery Stack Monitor",
+        "url": "https://www.analog.com/en/products/ltc6813-1.html"
+      },
+      {
+        "bounded_relevance": "The audited project's own procedure for direct unit tests and assertions.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TEST_HOWTO",
+        "title": "How to Write Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests_how-to.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The optional debug-CAN AFE route commits an aggregate after a fragment update, permitting non-updated elements to retain older values.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "DEBUG_CAN_AFE_FRAGMENT_STALENESS_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Track validity, timestamp, fragment number, and epoch separately for every fragment.",
+      "Commit the aggregate atomically only after all required fragments from one epoch are present.",
+      "Invalidate or age out missing members rather than refreshing the whole aggregate header."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Defines established communication-integrity concepts including data identifiers, counters, and CRC-based protection profiles.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R20-11",
+        "source_id": "AUTOSAR_E2E_PROTOCOL",
+        "title": "Requirements on E2E Protection Protocol",
+        "url": "https://www.autosar.org/fileadmin/standards/R20-11/FO/AUTOSAR_PRS_E2EProtocol.pdf"
+      },
+      {
+        "bounded_relevance": "Project-native communication architecture context; not proof of any exact-route mitigation.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_COMMUNICATION",
+        "title": "Communication",
+        "url": "https://docs.foxbms.org/system/communication.html"
+      },
+      {
+        "bounded_relevance": "Provides established sender/receiver protection-library patterns for sequence and integrity checks.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R20-11",
+        "source_id": "AUTOSAR_E2E_LIBRARY",
+        "title": "Specification of SW-C End-to-End Communication Protection Library",
+        "url": "https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_SWS_E2ELibrary.pdf"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The optional aerosol callback extracts a transmitted CRC value and writes the database without a reproduced CRC comparison or rolling-counter acceptance check.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "AEROSOL_COUNTER_CRC_ACCEPTANCE_PATH_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Calculate and compare the specified CRC before accepting or storing the payload.",
+      "Enforce a documented rolling-counter window with duplicate, replay, jump, and wrap handling.",
+      "Reject or mark invalid on integrity failure and raise a separately testable diagnostic."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Defines established communication-integrity concepts including data identifiers, counters, and CRC-based protection profiles.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R20-11",
+        "source_id": "AUTOSAR_E2E_PROTOCOL",
+        "title": "Requirements on E2E Protection Protocol",
+        "url": "https://www.autosar.org/fileadmin/standards/R20-11/FO/AUTOSAR_PRS_E2EProtocol.pdf"
+      },
+      {
+        "bounded_relevance": "Provides established sender/receiver protection-library patterns for sequence and integrity checks.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R20-11",
+        "source_id": "AUTOSAR_E2E_LIBRARY",
+        "title": "Specification of SW-C End-to-End Communication Protection Library",
+        "url": "https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_SWS_E2ELibrary.pdf"
+      },
+      {
+        "bounded_relevance": "Project-native communication architecture context; not proof of any exact-route mitigation.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_COMMUNICATION",
+        "title": "Communication",
+        "url": "https://docs.foxbms.org/system/communication.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The public BMS unit-test surface does not directly exercise the full audited state/substate transition inventory.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "BMS_STATE_MACHINE_PUBLIC_TEST_ADEQUACY_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Create direct tests for every public state request and every internal transition/substate edge.",
+      "Maintain a requirements-to-transition-to-test trace matrix including failure and timeout edges.",
+      "Measure coverage by configuration variant and investigate each uncovered reachable transition."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Primary government software-assurance guidance on unit testing and objective evidence.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_UNIT_TESTING",
+        "title": "SWE-062 - Unit Test",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=202145998"
+      },
+      {
+        "bounded_relevance": "Primary government guidance on using coverage evidence and interpreting uncovered code.",
+        "evidence_level": "E0_GOVERNMENT_SOFTWARE_ASSURANCE_GUIDANCE",
+        "publisher": "NASA",
+        "source_id": "NASA_COVERAGE",
+        "title": "SWE-189 - Code Coverage",
+        "url": "https://swehb.nasa.gov/plugins/viewsource/viewpagesrc.action?pageId=50889417"
+      },
+      {
+        "bounded_relevance": "The audited project's own public unit-test workflow and test infrastructure.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TESTS",
+        "title": "Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests.html"
+      },
+      {
+        "bounded_relevance": "The audited project's own procedure for direct unit tests and assertions.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_UNIT_TEST_HOWTO",
+        "title": "How to Write Unit Tests",
+        "url": "https://docs.foxbms.org/software/unit-tests/unit-tests_how-to.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "Aerosol configuration selection and generated build state have a reproduced validator/dependency-state sensitivity.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "AEROSOL_VALIDATOR_BUILD_STATE_DEPENDENCE_CANDIDATE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Validate manufacturer/model values against a closed schema before generating build state.",
+      "Declare every generated configuration input as an explicit build dependency.",
+      "Use hermetic clean-build and stale-output differential tests across accepted and rejected configurations."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Documents established hermetic-build controls against undeclared and stale environmental inputs.",
+        "evidence_level": "E1_TOOL_VENDOR_DOCUMENTATION",
+        "publisher": "Bazel",
+        "source_id": "BAZEL_HERMETICITY",
+        "title": "Hermeticity",
+        "url": "https://bazel.build/basics/hermeticity"
+      },
+      {
+        "bounded_relevance": "Documents explicit build-target and dependency declaration patterns.",
+        "evidence_level": "E1_TOOL_VENDOR_DOCUMENTATION",
+        "publisher": "Bazel",
+        "source_id": "BAZEL_BUILD_FILES",
+        "title": "BUILD files",
+        "url": "https://bazel.build/concepts/build-files"
+      },
+      {
+        "bounded_relevance": "Project-native database validation and configuration checking pattern.",
+        "evidence_level": "E3_PROJECT_PRIMARY_DOCUMENTATION",
+        "publisher": "foxBMS",
+        "source_id": "FOXBMS_DATABASE_VALIDATION",
+        "title": "foxBMS database tool",
+        "url": "https://docs.foxbms.org/tools/fox/db/fox_db.html"
+      }
+    ]
+  },
+  {
+    "bounded_observation": "The reproduced zero-valid-temperature state yields sentinel extrema; the thermal SOA path can emit OK events whose repeated semantics reduce/clear an active fatal counter.",
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA06-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "frozen_classification": "SURVIVES_AS_BOUNDED_SOFTWARE_WEAKNESS_CANDIDATE_AT_HOST_UNIT_AND_DIAGNOSTIC_CONTRACT_SCOPE",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_patterns": [
+      "Represent zero valid temperature samples as an explicit invalid aggregate state.",
+      "Do not evaluate thermal SOA with sentinel extrema; hold or degrade the diagnostic state until valid evidence returns.",
+      "Require recovery evidence/hysteresis before OK events can decrement or clear an active thermal fatal counter."
+    ],
+    "public_sources": [
+      {
+        "bounded_relevance": "Primary research context for redundant/model-based battery sensor fault diagnosis.",
+        "evidence_level": "E2_PRIMARY_RESEARCH_PAPER",
+        "publisher": "IEEE",
+        "source_id": "IEEE_SENSOR_FAULT_DIAGNOSIS",
+        "title": "Lithium-ion battery sensor fault diagnosis research record",
+        "url": "https://ieeexplore.ieee.org/document/8616868/"
+      },
+      {
+        "bounded_relevance": "Vendor primary documentation for the selected monitor family and its open-wire/communication capabilities.",
+        "evidence_level": "E1_COMPONENT_VENDOR_DOCUMENTATION",
+        "publisher": "Analog Devices",
+        "source_id": "ADI_LTC6813",
+        "title": "LTC6813-1 Multicell Battery Stack Monitor",
+        "url": "https://www.analog.com/en/products/ltc6813-1.html"
+      },
+      {
+        "bounded_relevance": "Documents established alive, deadline, and logical supervision concepts and reaction handling.",
+        "evidence_level": "E0_STANDARD_OR_CONSORTIUM_SPECIFICATION",
+        "publisher": "AUTOSAR",
+        "release": "R23-11",
+        "source_id": "AUTOSAR_HEALTH_MONITORING",
+        "title": "Specification of Health Monitoring",
+        "url": "https://www.autosar.org/fileadmin/standards/R23-11/FO/AUTOSAR_FO_ASWS_HealthMonitoring.pdf"
+      }
+    ]
+  }
+]

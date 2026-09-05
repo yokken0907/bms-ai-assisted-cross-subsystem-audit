@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying manuscript."
+title: "BMS AI-Assisted Cross-Subsystem Audit Reproducibility Repository"
+type: dataset
+version: 1.1.1
+repository-code: "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit"
+authors:
+  - family-names: Yoshimura
+    given-names: Keiji
+    email: keiji.yoshimura.research@gmail.com
+preferred-citation:
+  type: article
+  title: "From Candidate Detection to Bounded Claims: A Reproducible AI-Assisted Cross-Subsystem Audit of Open-Source Battery Management Software"
+  authors:
+    - family-names: Yoshimura
+      given-names: Keiji
+      email: keiji.yoshimura.research@gmail.com

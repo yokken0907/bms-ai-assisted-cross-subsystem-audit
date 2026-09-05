@@ -1,0 +1,85 @@
+{
+  "author": "Keiji Yoshimura",
+  "doi": null,
+  "final_packaging_synchronization": {
+    "final_binding": {
+      "file": "release/FINAL_RELEASE_BINDING_v1.1.1.json",
+      "sha256": "7eb1be58813330e6b528564eba6f24a5971cf12800a0de0a6de8cc7f5f7217a1"
+    },
+    "from_version": "1.1",
+    "master_of_all": {
+      "file": "BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip",
+      "sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7",
+      "unchanged": true,
+      "stored_in_github_repository": false
+    },
+    "packaging_timestamp_utc": "2026-09-05T04:06:16Z",
+    "publication_files_updated": true,
+    "publication_set": {
+      "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
+      "sha256": "4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776",
+      "stored_in_github_repository": false,
+      "distribution": "external publication package"
+    },
+    "release_packaging_synchronized": true,
+    "scientific_results_unchanged": true,
+    "to_version": "1.1.1",
+    "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
+    "public_release_url": null
+  },
+  "generated_utc": "2026-09-05T04:06:16Z",
+  "inputs": {
+    "exact_source": {
+      "file": "foxbms-2_308028fb13d046ba29b98886895c2e17937b1437.zip",
+      "sha256": "2cf5cfa7c12aa27b41795650695898abd0bce79af746b8e6ca8dd0c5368c1fa2"
+    },
+    "master_of_all": {
+      "file": "BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_v1.0.0.zip",
+      "sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7",
+      "stored_in_github_repository": false
+    },
+    "publication_set": {
+      "file": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.1.zip",
+      "sha256": "4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776",
+      "stored_in_github_repository": false,
+      "distribution": "external publication package"
+    }
+  },
+  "notes": [
+    "Publication-facing terminology follows the Version 1.1.1 maintenance synchronization.",
+    "Frozen upstream classifications and witness bytes are unchanged.",
+    "No scientific result was changed in this maintenance release.",
+    "The publication-set ZIP SHA-256 is stored in an external sidecar/release binding to avoid cryptographic self-reference.",
+    "Version 1.1 -> 1.1.1 final maintenance synchronization changed release packaging only.",
+    "No scientific result was changed in Version 1.1.1.",
+    "Canonical Publication Set SHA-256: 4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776.",
+    "Frozen Master-of-All SHA-256: 4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7.",
+    "Candidate register, witness results, control results, source anchors, and Master-of-All are unchanged.",
+    "GitHub distribution excludes manuscript DOCX/PDF files and the Publication Set ZIP; cryptographic identities remain recorded for external verification.",
+    "No scientific result was changed in this GitHub publication maintenance."
+  ],
+  "public_release_date": null,
+  "public_repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
+  "publication_version": "1.1.1",
+  "release_identity": "Version 1.1.1 - Final Maintenance Synchronization",
+  "release_type": "maintenance",
+  "repository_package": "BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_REPRODUCIBILITY_REPOSITORY_v1.1.1",
+  "repository_version": "1.1.1",
+  "scientific_result_changes_made_by_repository_packaging": 0,
+  "github_distribution": {
+    "profile": "reproducibility-materials-only",
+    "paper_artifacts_in_repository": false,
+    "publication_set_in_repository": false,
+    "publication_set_external_sha256": "4ea40c9798f6bf1cffbf247eb35cb3bd5f6f7da049a7ffc10492ec00e524a776",
+    "master_of_all_in_repository": false,
+    "master_of_all_external_sha256": "4cb220a0a7331062becb25240e28b330a02f258a21d44050cdba40ffdcd4efc7",
+    "reason": "Manuscript and supplements are maintained separately for Jxiv submission/publication; GitHub distributes reproducibility materials only.",
+    "scientific_results_unchanged": true,
+    "repository_url": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit",
+    "releases_page": "https://github.com/yokken0907/bms-ai-assisted-cross-subsystem-audit/releases",
+    "release_v1_1_1_url": null,
+    "master_distribution": "GitHub Release asset; not normal Git-tracked content",
+    "publication_set_distribution": "external Jxiv/publication workflow; not GitHub-distributed"
+  },
+  "public_release_url": null
+}

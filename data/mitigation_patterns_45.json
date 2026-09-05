@@ -1,0 +1,407 @@
+[
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA01-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Gate SOC integration on an explicit current-sample validity state.",
+    "pattern_index": 1,
+    "public_source_ids": "NASA_BATTERY_UNCERTAINTY;IEEE_SENSOR_FAULT_DIAGNOSIS;PLETT_SOC"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA01-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Cross-check the current input against a redundant sensor or model residual before accumulation.",
+    "pattern_index": 2,
+    "public_source_ids": "NASA_BATTERY_UNCERTAINTY;IEEE_SENSOR_FAULT_DIAGNOSIS;PLETT_SOC"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA01-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "On invalid input, freeze or bound the estimate and expose the degraded-validity state to consumers.",
+    "pattern_index": 3,
+    "public_source_ids": "NASA_BATTERY_UNCERTAINTY;IEEE_SENSOR_FAULT_DIAGNOSIS;PLETT_SOC"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA03-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Propagate invalidBatteryVoltage into PackLimits calculation and transmission eligibility.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_DATABASE_VALIDATION;NASA_BATTERY_UNCERTAINTY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA03-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Apply a documented conservative fallback or suppress the affected power signal when voltage validity is false.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_DATABASE_VALIDATION;NASA_BATTERY_UNCERTAINTY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA03-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Carry validity/freshness as an explicit interface contract and test both valid and invalid branches.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_DATABASE_VALIDATION;NASA_BATTERY_UNCERTAINTY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA04-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Define one explicit unit, scale, initialization, and update invariant for the history value.",
+    "pattern_index": 1,
+    "public_source_ids": "BALANCING_REVIEW;FOXBMS_UNIT_TESTS;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA04-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Use typed state records that distinguish voltage-derived SOC from counting/history counters.",
+    "pattern_index": 2,
+    "public_source_ids": "BALANCING_REVIEW;FOXBMS_UNIT_TESTS;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA04-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Add equality, just-below, just-above, reset, and long-run differential tests for the non-default strategy.",
+    "pattern_index": 3,
+    "public_source_ids": "BALANCING_REVIEW;FOXBMS_UNIT_TESTS;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA11-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Use the state-estimation database SOH record as the single source for both pack and string reporting callbacks.",
+    "pattern_index": 1,
+    "public_source_ids": "NASA_PHM_BATTERY;FOXBMS_DATABASE_VALIDATION;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA11-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Specify initialization, unavailable, stale, and range semantics at the SOH interface.",
+    "pattern_index": 2,
+    "public_source_ids": "NASA_PHM_BATTERY;FOXBMS_DATABASE_VALIDATION;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA11-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Run end-to-end callback tests with non-100, boundary, and unavailable SOH values.",
+    "pattern_index": 3,
+    "public_source_ids": "NASA_PHM_BATTERY;FOXBMS_DATABASE_VALIDATION;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA05-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "MIT-COW-MODE-01: select NORMAL versus CHARGE open-wire enable/period settings using the existing mode discriminator.",
+    "pattern_index": 1,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA05-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "MIT-COW-TEST-02: compile and execute target-configuration tests that independently vary NORMAL and CHARGE settings.",
+    "pattern_index": 2,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA05-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Reject or diagnose ambiguous mode/configuration combinations during configuration validation.",
+    "pattern_index": 3,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA07-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Represent diagnostic delays with typed duration constants whose names are generated from or checked against values.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;FOXBMS_UNIT_TEST_HOWTO;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA07-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Add compile-time assertions for named-unit/value equality and accepted ranges.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;FOXBMS_UNIT_TEST_HOWTO;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA07-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Compile exact configuration rows in unit tests and assert the consumed delay value.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;FOXBMS_UNIT_TEST_HOWTO;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "After a close request, transition to a distinct feedback-verification state.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_STATE_MANAGEMENT;AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Track progress per string and update the connected-string count only after verified feedback.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_STATE_MANAGEMENT;AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Apply a finite deadline with explicit failure/rollback and test every transition edge.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_STATE_MANAGEMENT;AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Attach a finite deadline and retry budget to every acknowledgement-wait state.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;AUTOSAR_STATE_MANAGEMENT;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Transition timeout exhaustion to a defined initialization-error or degraded state.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;AUTOSAR_STATE_MANAGEMENT;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Test ACK, negative response, dropped response, late response, and retry exhaustion deterministically.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;AUTOSAR_STATE_MANAGEMENT;FOXBMS_UNIT_TESTS"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Specify lateness, execution overrun, and their reaction semantics as separate named predicates.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Supervise arrival/alive, execution deadline, and logical control flow independently where required.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Add truth-table tests for neither, each predicate alone, and both predicates together.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_HEALTH_MONITORING;NASA_UNIT_TESTING;NASA_COVERAGE"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Compute the channel index as an integer expression, then enforce an explicit bounds assertion before access.",
+    "pattern_index": 1,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Reset the detected-wire accumulator independently for each string.",
+    "pattern_index": 2,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA08-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Run single-hot tests for every configured index plus multi-string carry-over cases.",
+    "pattern_index": 3,
+    "public_source_ids": "TI_OPEN_WIRE;ADI_LTC6813;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Track validity, timestamp, fragment number, and epoch separately for every fragment.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_COMMUNICATION;AUTOSAR_E2E_LIBRARY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Commit the aggregate atomically only after all required fragments from one epoch are present.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_COMMUNICATION;AUTOSAR_E2E_LIBRARY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Invalidate or age out missing members rather than refreshing the whole aggregate header.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;FOXBMS_COMMUNICATION;AUTOSAR_E2E_LIBRARY"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Calculate and compare the specified CRC before accepting or storing the payload.",
+    "pattern_index": 1,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;AUTOSAR_E2E_LIBRARY;FOXBMS_COMMUNICATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Enforce a documented rolling-counter window with duplicate, replay, jump, and wrap handling.",
+    "pattern_index": 2,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;AUTOSAR_E2E_LIBRARY;FOXBMS_COMMUNICATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA09-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Reject or mark invalid on integrity failure and raise a separately testable diagnostic.",
+    "pattern_index": 3,
+    "public_source_ids": "AUTOSAR_E2E_PROTOCOL;AUTOSAR_E2E_LIBRARY;FOXBMS_COMMUNICATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Create direct tests for every public state request and every internal transition/substate edge.",
+    "pattern_index": 1,
+    "public_source_ids": "NASA_UNIT_TESTING;NASA_COVERAGE;FOXBMS_UNIT_TESTS;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Maintain a requirements-to-transition-to-test trace matrix including failure and timeout edges.",
+    "pattern_index": 2,
+    "public_source_ids": "NASA_UNIT_TESTING;NASA_COVERAGE;FOXBMS_UNIT_TESTS;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F02",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Measure coverage by configuration variant and investigate each uncovered reachable transition.",
+    "pattern_index": 3,
+    "public_source_ids": "NASA_UNIT_TESTING;NASA_COVERAGE;FOXBMS_UNIT_TESTS;FOXBMS_UNIT_TEST_HOWTO"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Validate manufacturer/model values against a closed schema before generating build state.",
+    "pattern_index": 1,
+    "public_source_ids": "BAZEL_HERMETICITY;BAZEL_BUILD_FILES;FOXBMS_DATABASE_VALIDATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Declare every generated configuration input as an explicit build dependency.",
+    "pattern_index": 2,
+    "public_source_ids": "BAZEL_HERMETICITY;BAZEL_BUILD_FILES;FOXBMS_DATABASE_VALIDATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA10-F03",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Use hermetic clean-build and stale-output differential tests across accepted and rejected configurations.",
+    "pattern_index": 3,
+    "public_source_ids": "BAZEL_HERMETICITY;BAZEL_BUILD_FILES;FOXBMS_DATABASE_VALIDATION"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA06-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Represent zero valid temperature samples as an explicit invalid aggregate state.",
+    "pattern_index": 1,
+    "public_source_ids": "IEEE_SENSOR_FAULT_DIAGNOSIS;ADI_LTC6813;AUTOSAR_HEALTH_MONITORING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA06-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Do not evaluate thermal SOA with sentinel extrema; hold or degrade the diagnostic state until valid evidence returns.",
+    "pattern_index": 2,
+    "public_source_ids": "IEEE_SENSOR_FAULT_DIAGNOSIS;ADI_LTC6813;AUTOSAR_HEALTH_MONITORING"
+  },
+  {
+    "candidate_specific_validation_status": "NOT_VALIDATED",
+    "case_id": "BMSA06-F01",
+    "claim_boundary": "Bounded source-level candidate and existing technical-pattern mapping only; no exact-route mitigation validation, residual-weakness determination, novelty, legal, deployed, physical, product, certification, field, or safety conclusion.",
+    "mitigation_disposition": "MAPPED_NOT_VALIDATED",
+    "mitigation_pattern": "Require recovery evidence/hysteresis before OK events can decrement or clear an active thermal fatal counter.",
+    "pattern_index": 3,
+    "public_source_ids": "IEEE_SENSOR_FAULT_DIAGNOSIS;ADI_LTC6813;AUTOSAR_HEALTH_MONITORING"
+  }
+]

@@ -1,0 +1,21 @@
+.cache/
+results/
+__pycache__/
+*.pyc
+*.o
+*.out
+.DS_Store
+
+# Publication artifacts are intentionally distributed outside GitHub (Jxiv/publication workflow)
+paper/
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_*.docx
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_MAIN_MANUSCRIPT_*.pdf
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_*.docx
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_SUPPLEMENT_*.pdf
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_*.zip
+BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_*.zip.sha256
+!release/historical_v1.1/BMS_AI_ASSISTED_CROSS_SUBSYSTEM_AUDIT_PUBLICATION_SET_v1.1.zip.sha256
+
+# Large/external frozen assets are verified by identity and are not normal Git-tracked files
+BMS_TECHNOLOGY_AUDIT_MASTER_OF_ALL_*.zip
+foxbms-2_*.zip
