@@ -452,9 +452,9 @@
       "sha256": "3897ddc37f8f5332c7337db86a0e64420b10933d20d22279263fdedb9b8fc53f"
     },
     {
-      "bytes": 5545,
+      "bytes": 5684,
       "path": "scripts/verify_repository.py",
-      "sha256": "29cc71ed862a3f018a07cb76a0c97cedd8d601f9571f70a86c8327738b784092"
+      "sha256": "93f7886d8de81e068eacfdad29ae77f3bc0fe09b40563222f9bacf8d24d97402"
     },
     {
       "bytes": 1891,
