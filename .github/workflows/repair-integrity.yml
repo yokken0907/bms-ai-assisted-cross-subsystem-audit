@@ -22,21 +22,19 @@ jobs:
           python-version: '3.12'
       - name: Install verification dependencies
         run: python -m pip install -r requirements.txt
-      - name: Regenerate integrity ledgers from checked-out tree
+      - name: Remove one-shot repair workflow from final tree
+        run: rm .github/workflows/repair-integrity.yml
+      - name: Regenerate integrity ledgers from final checked-out tree
         run: python scripts/regenerate_integrity.py
       - name: Verify regenerated repository integrity
         run: python scripts/verify_repository.py
       - name: Verify full reproducibility chain
         run: python scripts/verify_all.py --fetch-source --strict
-      - name: Commit repaired ledgers
+      - name: Commit final repaired tree
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add MANIFEST.json SHA256SUMS.txt
-          if git diff --cached --quiet; then
-            echo "No integrity-ledger changes required."
-          else
-            git commit -m "Repair integrity ledgers from canonical tree"
-            git push origin HEAD:${{ github.ref_name }}
-          fi
+          git add -A -- .github/workflows/repair-integrity.yml MANIFEST.json SHA256SUMS.txt
+          git commit -m "Finalize integrity-ledger repair"
+          git push origin HEAD:${{ github.ref_name }}
