@@ -1,7 +1,0 @@
-.cache/
-results/
-__pycache__/
-*.pyc
-*.o
-*.out
-.DS_Store
