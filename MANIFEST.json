@@ -1,5 +1,5 @@
 {
-  "file_count": 117,
+  "file_count": 116,
   "files": [
     {
       "bytes": 19,
@@ -10,11 +10,6 @@
       "bytes": 344,
       "path": ".github/ISSUE_TEMPLATE/verification_report.md",
       "sha256": "63266fac93461379991aa82a64d7ea4454e663a30f537c2e3479cc3e616f51ba"
-    },
-    {
-      "bytes": 1390,
-      "path": ".github/workflows/repair-integrity.yml",
-      "sha256": "3c9684df5097f8d26318a80c576465d8cf5e1e1ad98d16614e6482c02d3b75b8"
     },
     {
       "bytes": 482,
