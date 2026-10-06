@@ -1,0 +1,3446 @@
+{
+  "snapshot_date": "2026-10-07",
+  "protocol_registration_commit": "be04c6922967736b5a50bf668ceb0a18f4449444",
+  "hash_salt_literal_from_frozen_rule": "d569610b90766fc965d44fb5ff9c9e87d70fc486eab1770f7f3b4553fa8f6aa7",
+  "unique_repository_count": 169,
+  "note": "Exact frozen queries executed through connected GitHub repository search. A secondary sort:stars-desc cross-check returned identical lists for all six queries.",
+  "query_snapshots": [
+    {
+      "query_id": 1,
+      "query": "topic:embedded language:C stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 50,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "raysan5/raylib",
+          "size_kb": 415803,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "micropython/micropython",
+          "size_kb": 76917,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "zephyrproject-rtos/zephyr",
+          "size_kb": 969324,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "cesanta/mongoose",
+          "size_kb": 53165,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "wasm3/wasm3",
+          "size_kb": 8547,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "hrvach/deskhop",
+          "size_kb": 14977,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "Serial-Studio/Serial-Studio",
+          "size_kb": 530021,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "hathach/tinyusb",
+          "size_kb": 54454,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "littlefs-project/littlefs",
+          "size_kb": 12915,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "lmarzen/esp32-weather-epd",
+          "size_kb": 79654,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "wasm-micro-runtime/wasm-micro-runtime",
+          "size_kb": 30917,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "nanopb/nanopb",
+          "size_kb": 5494,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 13,
+          "repository_full_name": "stlink-org/stlink",
+          "size_kb": 17886,
+          "default_branch": "testing",
+          "archived": false
+        },
+        {
+          "rank": 14,
+          "repository_full_name": "apache/nuttx",
+          "size_kb": 382469,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 15,
+          "repository_full_name": "eclipse-threadx/threadx",
+          "size_kb": 25309,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 16,
+          "repository_full_name": "InfiniTimeOrg/InfiniTime",
+          "size_kb": 50085,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 17,
+          "repository_full_name": "zlgopen/awtk",
+          "size_kb": 236791,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 18,
+          "repository_full_name": "tio/tio",
+          "size_kb": 18107,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 19,
+          "repository_full_name": "armink/FlashDB",
+          "size_kb": 4751,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 20,
+          "repository_full_name": "ARMmbed/DAPLink",
+          "size_kb": 28769,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 21,
+          "repository_full_name": "armink/EasyFlash",
+          "size_kb": 6889,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 22,
+          "repository_full_name": "symisc/unqlite",
+          "size_kb": 2555,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 23,
+          "repository_full_name": "RightNow-AI/picolm",
+          "size_kb": 297,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 24,
+          "repository_full_name": "cesanta/mjs",
+          "size_kb": 5331,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 25,
+          "repository_full_name": "CANopenNode/CANopenNode",
+          "size_kb": 2664,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 26,
+          "repository_full_name": "ardera/flutter-pi",
+          "size_kb": 2162,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 27,
+          "repository_full_name": "cesanta/elk",
+          "size_kb": 4814,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 28,
+          "repository_full_name": "sbabic/swupdate",
+          "size_kb": 25091,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 29,
+          "repository_full_name": "buserror/simavr",
+          "size_kb": 6067,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 30,
+          "repository_full_name": "pikasTech/PikaPython",
+          "size_kb": 330578,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 31,
+          "repository_full_name": "sbrin/lopaka",
+          "size_kb": 6806,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 32,
+          "repository_full_name": "ghaerr/elks",
+          "size_kb": 41118,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 33,
+          "repository_full_name": "pellepl/spiffs",
+          "size_kb": 1105,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 34,
+          "repository_full_name": "Xilinx/Vitis-Tutorials",
+          "size_kb": 953667,
+          "default_branch": "2026.1",
+          "archived": false
+        },
+        {
+          "rank": 35,
+          "repository_full_name": "embox/embox",
+          "size_kb": 108906,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 36,
+          "repository_full_name": "eclipse-paho/paho.mqtt.embedded-c",
+          "size_kb": 602,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 37,
+          "repository_full_name": "acados/acados",
+          "size_kb": 53612,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 38,
+          "repository_full_name": "QuantumLeaps/modern-embedded-programming-course",
+          "size_kb": 16416,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 39,
+          "repository_full_name": "Softmotions/ejdb",
+          "size_kb": 12622,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 40,
+          "repository_full_name": "QuantumLeaps/qpc",
+          "size_kb": 69606,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 41,
+          "repository_full_name": "ImpulseAdventure/GUIslice",
+          "size_kb": 42233,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 42,
+          "repository_full_name": "LibVNC/libvncserver",
+          "size_kb": 15787,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 43,
+          "repository_full_name": "rauc/rauc",
+          "size_kb": 7238,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 44,
+          "repository_full_name": "rusefi/rusefi",
+          "size_kb": 1674542,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 45,
+          "repository_full_name": "majianjia/nnom",
+          "size_kb": 27147,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 46,
+          "repository_full_name": "ARM-software/CMSIS-DSP",
+          "size_kb": 99970,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 47,
+          "repository_full_name": "introlab/odas",
+          "size_kb": 1212,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 48,
+          "repository_full_name": "berry-lang/berry",
+          "size_kb": 1972,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 49,
+          "repository_full_name": "korginc/logue-sdk",
+          "size_kb": 37571,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 50,
+          "repository_full_name": "GhostESP-Revival/GhostESP",
+          "size_kb": 345993,
+          "default_branch": "Development-deki",
+          "archived": false
+        }
+      ]
+    },
+    {
+      "query_id": 2,
+      "query": "topic:firmware language:C stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 50,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "arendst/Tasmota",
+          "size_kb": 283894,
+          "default_branch": "development",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "DarkFlippers/unleashed-firmware",
+          "size_kb": 107011,
+          "default_branch": "dev",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "flipperdevices/flipperzero-firmware",
+          "size_kb": 80093,
+          "default_branch": "dev",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "Next-Flip/Momentum-Firmware",
+          "size_kb": 597572,
+          "default_branch": "dev",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "Ralim/IronOS",
+          "size_kb": 59717,
+          "default_branch": "dev",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "crosspoint-reader/crosspoint-reader",
+          "size_kb": 103086,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "nodemcu/nodemcu-firmware",
+          "size_kb": 113147,
+          "default_branch": "release",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "tianocore/edk2",
+          "size_kb": 344391,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "RMerl/asuswrt-merlin.ng",
+          "size_kb": 2769051,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "fwupd/fwupd",
+          "size_kb": 87473,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "RavenSystem/esp-homekit-devices",
+          "size_kb": 25048,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "seemoo-lab/nexmon",
+          "size_kb": 385352,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 13,
+          "repository_full_name": "ARMmbed/DAPLink",
+          "size_kb": 28769,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 14,
+          "repository_full_name": "coreboot/coreboot",
+          "size_kb": 262897,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 15,
+          "repository_full_name": "cesanta/mongoose-os",
+          "size_kb": 47081,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 16,
+          "repository_full_name": "gnuton/asuswrt-merlin.ng",
+          "size_kb": 2940441,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 17,
+          "repository_full_name": "o-gs/dji-firmware-tools",
+          "size_kb": 24659,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 18,
+          "repository_full_name": "OpenIPC/firmware",
+          "size_kb": 229092,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 19,
+          "repository_full_name": "ipxe/ipxe",
+          "size_kb": 28303,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 20,
+          "repository_full_name": "luc-github/ESP3D",
+          "size_kb": 140824,
+          "default_branch": "3.1",
+          "archived": false
+        },
+        {
+          "rank": 21,
+          "repository_full_name": "libimobiledevice/idevicerestore",
+          "size_kb": 1329,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 22,
+          "repository_full_name": "trezor/trezor-firmware",
+          "size_kb": 576531,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 23,
+          "repository_full_name": "prusa3d/Prusa-Firmware-Buddy",
+          "size_kb": 155163,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 24,
+          "repository_full_name": "polhenarejos/pico-fido",
+          "size_kb": 8489,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 25,
+          "repository_full_name": "akospasztor/stm32-bootloader",
+          "size_kb": 141909,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 26,
+          "repository_full_name": "Ultrawipf/OpenFFBoard",
+          "size_kb": 48036,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 27,
+          "repository_full_name": "alienatedsec/yi-hack-v5",
+          "size_kb": 1211,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 28,
+          "repository_full_name": "feaser/openblt",
+          "size_kb": 256259,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 29,
+          "repository_full_name": "roleoroleo/yi-hack-MStar",
+          "size_kb": 4165,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 30,
+          "repository_full_name": "linuxboot/linuxboot",
+          "size_kb": 8966,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 31,
+          "repository_full_name": "OWASP/IoTGoat",
+          "size_kb": 213353,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 32,
+          "repository_full_name": "OpenRTX/OpenRTX",
+          "size_kb": 28415,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 33,
+          "repository_full_name": "retro-esp32/RetroESP32",
+          "size_kb": 374021,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 34,
+          "repository_full_name": "thesofproject/sof",
+          "size_kb": 40856,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 35,
+          "repository_full_name": "JPShag/PCILeech-DMA-Firmware",
+          "size_kb": 33837,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 36,
+          "repository_full_name": "dirtyjtag/DirtyJTAG",
+          "size_kb": 36894,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 37,
+          "repository_full_name": "benzino77/tasmocompiler",
+          "size_kb": 5319,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 38,
+          "repository_full_name": "msm8916-mainline/lk2nd",
+          "size_kb": 16041,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 39,
+          "repository_full_name": "mcknly/breadboard-os",
+          "size_kb": 429,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 40,
+          "repository_full_name": "picoruby/prk_firmware",
+          "size_kb": 3643,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 41,
+          "repository_full_name": "deividAlfa/stm32_soldering_iron_controller",
+          "size_kb": 178271,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 42,
+          "repository_full_name": "wntrblm/Castor_and_Pollux",
+          "size_kb": 169244,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 43,
+          "repository_full_name": "quarkslab/binbloom",
+          "size_kb": 175,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 44,
+          "repository_full_name": "polhenarejos/pico-hsm",
+          "size_kb": 2679,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 45,
+          "repository_full_name": "Gissio/radpro",
+          "size_kb": 128947,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 46,
+          "repository_full_name": "travisgoodspeed/goodwatch",
+          "size_kb": 74097,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 47,
+          "repository_full_name": "DC-SWAT/DreamShell",
+          "size_kb": 107800,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 48,
+          "repository_full_name": "memfault/interrupt",
+          "size_kb": 230400,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 49,
+          "repository_full_name": "greggersaurus/OpenSteamController",
+          "size_kb": 33271,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 50,
+          "repository_full_name": "wolfSSL/wolfBoot",
+          "size_kb": 13297,
+          "default_branch": "master",
+          "archived": false
+        }
+      ]
+    },
+    {
+      "query_id": 3,
+      "query": "topic:embedded-systems language:C stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 23,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "RT-Thread/rt-thread",
+          "size_kb": 1034735,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "olikraus/u8g2",
+          "size_kb": 205310,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "vvaltchev/tilck",
+          "size_kb": 14968,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "wolfSSL/wolfssl",
+          "size_kb": 1033587,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "sbabic/swupdate",
+          "size_kb": 25091,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "sbrin/lopaka",
+          "size_kb": 6806,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "Xilinx/Vitis-Tutorials",
+          "size_kb": 953667,
+          "default_branch": "2026.1",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "QuantumLeaps/modern-embedded-programming-course",
+          "size_kb": 16416,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "LibVNC/libvncserver",
+          "size_kb": 15787,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "Sguan-ZhouQing/SguanFOC_Library",
+          "size_kb": 64791,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "theEmbeddedGeorge/theEmbeddedNewTestament.github.io",
+          "size_kb": 76037,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "mudita/MuditaOS",
+          "size_kb": 761369,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 13,
+          "repository_full_name": "xboot/xboot",
+          "size_kb": 142723,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 14,
+          "repository_full_name": "debevv/nanoMODBUS",
+          "size_kb": 27352,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 15,
+          "repository_full_name": "jedisct1/libhydrogen",
+          "size_kb": 405,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 16,
+          "repository_full_name": "lvgl/lvgl_pro",
+          "size_kb": 35004,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 17,
+          "repository_full_name": "embeddedartistry/libc",
+          "size_kb": 1734,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 18,
+          "repository_full_name": "xboot/libonnx",
+          "size_kb": 96120,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 19,
+          "repository_full_name": "quarkslab/binbloom",
+          "size_kb": 175,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 20,
+          "repository_full_name": "MaJerle/lwesp",
+          "size_kb": 60568,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 21,
+          "repository_full_name": "Luos-io/luos_engine",
+          "size_kb": 23545,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 22,
+          "repository_full_name": "MaJerle/lwgps",
+          "size_kb": 370,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 23,
+          "repository_full_name": "skaiui2/SKRTOS_sparrow",
+          "size_kb": 26976,
+          "default_branch": "main",
+          "archived": false
+        }
+      ]
+    },
+    {
+      "query_id": 4,
+      "query": "topic:embedded language:C++ stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 34,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "ClickHouse/ClickHouse",
+          "size_kb": 13133129,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "alibaba/zvec",
+          "size_kb": 7678,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "nasa/fprime",
+          "size_kb": 718009,
+          "default_branch": "devel",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "dusty-nv/jetson-inference",
+          "size_kb": 155646,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "idea4good/GuiLite",
+          "size_kb": 80748,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "FastLED/FastLED",
+          "size_kb": 537016,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "PaddlePaddle/Paddle-Lite",
+          "size_kb": 329500,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "bblanchon/ArduinoJson",
+          "size_kb": 6905,
+          "default_branch": "7.x",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "blinker-iot/blinker-library",
+          "size_kb": 6336,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "openthread/openthread",
+          "size_kb": 129237,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "Blynk-Technologies/blynk-library",
+          "size_kb": 10141,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "ETLCPP/etl",
+          "size_kb": 35391,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 13,
+          "repository_full_name": "dfeneyrou/palanteer",
+          "size_kb": 10075,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 14,
+          "repository_full_name": "uTensor/uTensor",
+          "size_kb": 77937,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 15,
+          "repository_full_name": "thorvg/thorvg",
+          "size_kb": 412861,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 16,
+          "repository_full_name": "OpenSparX/MasterAgent",
+          "size_kb": 19036,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 17,
+          "repository_full_name": "SmingHub/Sming",
+          "size_kb": 98878,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 18,
+          "repository_full_name": "TinyMPC/TinyMPC",
+          "size_kb": 2366,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 19,
+          "repository_full_name": "speedb-io/speedb",
+          "size_kb": 151093,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 20,
+          "repository_full_name": "modm-io/modm",
+          "size_kb": 49648,
+          "default_branch": "develop",
+          "archived": false
+        },
+        {
+          "rank": 21,
+          "repository_full_name": "DNedic/lockfree",
+          "size_kb": 663,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 22,
+          "repository_full_name": "EmbeddedRPC/erpc",
+          "size_kb": 10764,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 23,
+          "repository_full_name": "charlesnicholson/nanoprintf",
+          "size_kb": 852,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 24,
+          "repository_full_name": "ckormanyos/real-time-cpp",
+          "size_kb": 288625,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 25,
+          "repository_full_name": "idea4good/GuiLiteSamples",
+          "size_kb": 210453,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 26,
+          "repository_full_name": "johnmcfarlane/cnl",
+          "size_kb": 8890,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 27,
+          "repository_full_name": "vilassn/whisper_android",
+          "size_kb": 288850,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 28,
+          "repository_full_name": "dontsovcmc/waterius",
+          "size_kb": 15005,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 29,
+          "repository_full_name": "intel/compile-time-init-build",
+          "size_kb": 3541,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 30,
+          "repository_full_name": "andrew-gresyk/HFSM2",
+          "size_kb": 2590,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 31,
+          "repository_full_name": "feelfreelinux/cspot",
+          "size_kb": 12290,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 32,
+          "repository_full_name": "Shim06/Anemoia-ESP32",
+          "size_kb": 74482,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 33,
+          "repository_full_name": "LennartHennigs/Button2",
+          "size_kb": 308,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 34,
+          "repository_full_name": "matth-x/MicroOcpp",
+          "size_kb": 3740,
+          "default_branch": "main",
+          "archived": false
+        }
+      ]
+    },
+    {
+      "query_id": 5,
+      "query": "topic:firmware language:C++ stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 16,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "MarlinFirmware/Marlin",
+          "size_kb": 259384,
+          "default_branch": "bugfix-2.1.x",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "justcallmekoko/ESP32Marauder",
+          "size_kb": 479258,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "mriscoc/Ender3V2S1",
+          "size_kb": 107061,
+          "default_branch": "Ender3V2S1-Bugfix",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "Benjamin-Dobell/Heimdall",
+          "size_kb": 8998,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "xoseperez/espurna",
+          "size_kb": 223828,
+          "default_branch": "dev",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "OpenStickCommunity/GP2040-CE",
+          "size_kb": 302851,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "LucidVR/lucidgloves",
+          "size_kb": 2726,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "opentx/opentx",
+          "size_kb": 230019,
+          "default_branch": "2.3",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "mongoose-os-apps/shelly-homekit",
+          "size_kb": 3606,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "HamletDuFromage/aio-switch-updater",
+          "size_kb": 1271,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "REhints/efiXplorer",
+          "size_kb": 57826,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "ayushsharma82/ElegantOTA",
+          "size_kb": 17597,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 13,
+          "repository_full_name": "charlesnicholson/nanoprintf",
+          "size_kb": 852,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 14,
+          "repository_full_name": "SynthstromAudible/DelugeFirmware",
+          "size_kb": 223509,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 15,
+          "repository_full_name": "intel/compile-time-init-build",
+          "size_kb": 3541,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 16,
+          "repository_full_name": "richonguzman/LoRa_APRS_iGate",
+          "size_kb": 21927,
+          "default_branch": "main",
+          "archived": false
+        }
+      ]
+    },
+    {
+      "query_id": 6,
+      "query": "topic:embedded-systems language:C++ stars:>=500 archived:false fork:false pushed:>=2024-01-01",
+      "result_count": 12,
+      "sort_crosscheck_identical": true,
+      "records": [
+        {
+          "rank": 1,
+          "repository_full_name": "nasa/fprime",
+          "size_kb": 718009,
+          "default_branch": "devel",
+          "archived": false
+        },
+        {
+          "rank": 2,
+          "repository_full_name": "BruceDevices/firmware",
+          "size_kb": 241259,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 3,
+          "repository_full_name": "ETLCPP/etl",
+          "size_kb": 35391,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 4,
+          "repository_full_name": "benhoyt/inih",
+          "size_kb": 173,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 5,
+          "repository_full_name": "sony/flutter-embedded-linux",
+          "size_kb": 934,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 6,
+          "repository_full_name": "milesburton/Arduino-Temperature-Control-Library",
+          "size_kb": 356,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 7,
+          "repository_full_name": "DNedic/lockfree",
+          "size_kb": 663,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 8,
+          "repository_full_name": "charlesnicholson/nanoprintf",
+          "size_kb": 852,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 9,
+          "repository_full_name": "ckormanyos/real-time-cpp",
+          "size_kb": 288625,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 10,
+          "repository_full_name": "andrew-gresyk/HFSM2",
+          "size_kb": 2590,
+          "default_branch": "master",
+          "archived": false
+        },
+        {
+          "rank": 11,
+          "repository_full_name": "Shim06/Anemoia-ESP32",
+          "size_kb": 74482,
+          "default_branch": "main",
+          "archived": false
+        },
+        {
+          "rank": 12,
+          "repository_full_name": "stillwater-sc/universal",
+          "size_kb": 149117,
+          "default_branch": "main",
+          "archived": false
+        }
+      ]
+    }
+  ],
+  "deduplicated_hash_ranked_pool": [
+    {
+      "repository_full_name": "vvaltchev/tilck",
+      "size_kb": 14968,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 3
+        }
+      ],
+      "selection_hash": "007a70c1ddf37b94b6b8d7fad53404ef9950d9111dbf8d80d4d9d643d50b743a"
+    },
+    {
+      "repository_full_name": "zephyrproject-rtos/zephyr",
+      "size_kb": 969324,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 3
+        }
+      ],
+      "selection_hash": "03683826c817e80d4dcb1ef398be4284b39dabf04cc2d61eeef855d89203c937"
+    },
+    {
+      "repository_full_name": "FastLED/FastLED",
+      "size_kb": 537016,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "0378c9d0eddda8aeeb7daa744066abe3257ea13b08fa4f779f8896e0257f6b9a"
+    },
+    {
+      "repository_full_name": "quarkslab/binbloom",
+      "size_kb": 175,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 43
+        },
+        {
+          "query_id": 3,
+          "rank": 19
+        }
+      ],
+      "selection_hash": "047239c0d454115481996d08185e90b7f341d1992da911c4df9b69f89e9239e0"
+    },
+    {
+      "repository_full_name": "pikasTech/PikaPython",
+      "size_kb": 330578,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 30
+        }
+      ],
+      "selection_hash": "048d0a06ed67c4b25c51eb7442f2c22c9981ba42a5d10b4bed64085d0de7b7cb"
+    },
+    {
+      "repository_full_name": "apache/nuttx",
+      "size_kb": 382469,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 14
+        }
+      ],
+      "selection_hash": "06ff9fed9dd566192fdc652c4b77940266bd2699e5755e5e476ac715f3877d44"
+    },
+    {
+      "repository_full_name": "rauc/rauc",
+      "size_kb": 7238,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 43
+        }
+      ],
+      "selection_hash": "088af6755c19e461937b910ac888d8d40072807f31b75563348a1c04c9822424"
+    },
+    {
+      "repository_full_name": "gnuton/asuswrt-merlin.ng",
+      "size_kb": 2940441,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 16
+        }
+      ],
+      "selection_hash": "099888db0037836323dcc89df7ff7c44ac505b967e40f983d6f2325f0a1d2fe5"
+    },
+    {
+      "repository_full_name": "lvgl/lvgl_pro",
+      "size_kb": 35004,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 16
+        }
+      ],
+      "selection_hash": "0abd726b752c53f3e24e8d98dc458c72301780084c948f45127eb56051dc9dca"
+    },
+    {
+      "repository_full_name": "InfiniTimeOrg/InfiniTime",
+      "size_kb": 50085,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 16
+        }
+      ],
+      "selection_hash": "0c5e438ad0879ed82daddff08560bdbb83c3eb00dad95159fb739123e6d88fd3"
+    },
+    {
+      "repository_full_name": "polhenarejos/pico-fido",
+      "size_kb": 8489,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 24
+        }
+      ],
+      "selection_hash": "0c85f4cbaf26d4be1a35c0c9d576d77cf6145b423e5aeea712894925ca2b042d"
+    },
+    {
+      "repository_full_name": "blinker-iot/blinker-library",
+      "size_kb": 6336,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "10a3cd1bf942fe16be6b0bd41ce0e59cc87f440de854aadc0768ab6898615c36"
+    },
+    {
+      "repository_full_name": "RavenSystem/esp-homekit-devices",
+      "size_kb": 25048,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "11f924669aca72759ef5bd7913d76bc3c1ab4b52254f72cf9362f9e8ebcad0a4"
+    },
+    {
+      "repository_full_name": "nanopb/nanopb",
+      "size_kb": 5494,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 12
+        }
+      ],
+      "selection_hash": "13d9695bf33ce2bc6cca23a0ec6a5a927ac9a63f2926414a938f27d86800c34c"
+    },
+    {
+      "repository_full_name": "olikraus/u8g2",
+      "size_kb": 205310,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "14ab0f5128b3892ea2e8e5f9cd6006d46a2c12b3df562c8d0639c88e4e3c69bb"
+    },
+    {
+      "repository_full_name": "idea4good/GuiLiteSamples",
+      "size_kb": 210453,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 25
+        }
+      ],
+      "selection_hash": "150c3257f29cad909ca63ae93fa7fb39baf774b34fe1c2d02310ac2f5e79782e"
+    },
+    {
+      "repository_full_name": "TinyMPC/TinyMPC",
+      "size_kb": 2366,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 18
+        }
+      ],
+      "selection_hash": "161245263abb9b8940c9f439baf1f847377ea06acc26a9ae7b85ebf977059e00"
+    },
+    {
+      "repository_full_name": "mriscoc/Ender3V2S1",
+      "size_kb": 107061,
+      "default_branch": "Ender3V2S1-Bugfix",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 3
+        }
+      ],
+      "selection_hash": "16332b10c140c4ba6c66bf33f9399a2b52b7380896ea6c08cd3c2daabeefab4e"
+    },
+    {
+      "repository_full_name": "wasm3/wasm3",
+      "size_kb": 8547,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "16d49b31f5adfdbb8a50594568c14dd202cdb45c5bd033ff2be7ef47e1b7676a"
+    },
+    {
+      "repository_full_name": "pellepl/spiffs",
+      "size_kb": 1105,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 33
+        }
+      ],
+      "selection_hash": "181346ec24e0bfad15465a34a0d2dcf9e3789f43749f246a1861d8cb656b572b"
+    },
+    {
+      "repository_full_name": "cesanta/mongoose",
+      "size_kb": 53165,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "18982a7a47bb16b97448ccea57c647c81705770d798d84343b24bf7149f4eaa1"
+    },
+    {
+      "repository_full_name": "mongoose-os-apps/shelly-homekit",
+      "size_kb": 3606,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "195d9476c5ba137cd455afbeadb5679aa1092cfa05004237404f9b159bd6e840"
+    },
+    {
+      "repository_full_name": "LibVNC/libvncserver",
+      "size_kb": 15787,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 42
+        },
+        {
+          "query_id": 3,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "1ec96fa2b031380208d32f5b9cd895788a05e423303358962d32f8e4192b24a6"
+    },
+    {
+      "repository_full_name": "BruceDevices/firmware",
+      "size_kb": 241259,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 6,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "20d58529a37be7cb204606b8bfeab05a88e3d1006418368a27aad29ce521a514"
+    },
+    {
+      "repository_full_name": "deividAlfa/stm32_soldering_iron_controller",
+      "size_kb": 178271,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 41
+        }
+      ],
+      "selection_hash": "220780172df4655f71f1cdf4c1f263568300bacaf9dec17a603b8c2d44662998"
+    },
+    {
+      "repository_full_name": "zlgopen/awtk",
+      "size_kb": 236791,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 17
+        }
+      ],
+      "selection_hash": "2579e86dc426c37266342dd969af5bbdf511dfb45b9641db0037f8b94fa23d3e"
+    },
+    {
+      "repository_full_name": "mcknly/breadboard-os",
+      "size_kb": 429,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 39
+        }
+      ],
+      "selection_hash": "27ff884244fbd74d37e06a10e8583de67b4be55bf65b91b2f4247588743e7694"
+    },
+    {
+      "repository_full_name": "lmarzen/esp32-weather-epd",
+      "size_kb": 79654,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "287512bb0c0047b9ab08d228d4b46c207f29b4ba8689ef5e67d175d4289c8f4c"
+    },
+    {
+      "repository_full_name": "alibaba/zvec",
+      "size_kb": 7678,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "2a80726b643e6522d30620e4f1fd142d7b2c824b706a18a02e5c6fac870c9bc9"
+    },
+    {
+      "repository_full_name": "Ralim/IronOS",
+      "size_kb": 59717,
+      "default_branch": "dev",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "2b0208db3e0c4738d2cf22c3166c5729e015b098b8ac86895779a6a5ebdd0957"
+    },
+    {
+      "repository_full_name": "richonguzman/LoRa_APRS_iGate",
+      "size_kb": 21927,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 16
+        }
+      ],
+      "selection_hash": "2dacea32db4c313b107940727c75e8f0ee9bfef7530fe6b409ce0a5af3c6d59e"
+    },
+    {
+      "repository_full_name": "fwupd/fwupd",
+      "size_kb": 87473,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "2fc8821e878f9e6304cffcd782a30ebe731523660686f63239999cb048044001"
+    },
+    {
+      "repository_full_name": "DarkFlippers/unleashed-firmware",
+      "size_kb": 107011,
+      "default_branch": "dev",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "3079804bc17e9e355246bf784a898a1116102386f031599a2e4db2f8eeb9888d"
+    },
+    {
+      "repository_full_name": "libimobiledevice/idevicerestore",
+      "size_kb": 1329,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 21
+        }
+      ],
+      "selection_hash": "31e223b9f7fd68cd4069767ddddac6933e46087b1b32a8c07c220904acdf779d"
+    },
+    {
+      "repository_full_name": "wntrblm/Castor_and_Pollux",
+      "size_kb": 169244,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 42
+        }
+      ],
+      "selection_hash": "32037019f3985ee1e6327f2fb9753f0fafd47d4829436fa196f756720503ff35"
+    },
+    {
+      "repository_full_name": "embeddedartistry/libc",
+      "size_kb": 1734,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 17
+        }
+      ],
+      "selection_hash": "35adf84f016be174431124784411cb993e8a5becd3765eb4b4ee2728c1ff2501"
+    },
+    {
+      "repository_full_name": "QuantumLeaps/qpc",
+      "size_kb": 69606,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 40
+        }
+      ],
+      "selection_hash": "35e8fe46138bd52874c73c2de6d43ecbe7b40ea6ba928bf52186a57b57f71e8b"
+    },
+    {
+      "repository_full_name": "embox/embox",
+      "size_kb": 108906,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 35
+        }
+      ],
+      "selection_hash": "376eea74ace3adca3d544d96e595d21d945b916e7964b9a3db9e3ef68fc46176"
+    },
+    {
+      "repository_full_name": "sony/flutter-embedded-linux",
+      "size_kb": 934,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 6,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "387cde4c46f96012dfbc3cf63b928cb14af134dcd774e6351011ee1d664bb685"
+    },
+    {
+      "repository_full_name": "alienatedsec/yi-hack-v5",
+      "size_kb": 1211,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 27
+        }
+      ],
+      "selection_hash": "38cf1f2b83cd504d4ba175b2f6ba0e89b97320fb9f085ec8b96e09c6aa9e1ca9"
+    },
+    {
+      "repository_full_name": "tio/tio",
+      "size_kb": 18107,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 18
+        }
+      ],
+      "selection_hash": "39980facd2476b90b6f1972d457acf532e456973accac9f8e4a2aa08b7a5d780"
+    },
+    {
+      "repository_full_name": "wolfSSL/wolfssl",
+      "size_kb": 1033587,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "3c7036c8f195a7da3ff394a77c7a6f8211f737705fea7a6082e2984697860dcd"
+    },
+    {
+      "repository_full_name": "benzino77/tasmocompiler",
+      "size_kb": 5319,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 37
+        }
+      ],
+      "selection_hash": "3d6a4d46e18696206045dcf120a995af9d8c3ea2d9ee3b8c9811e91539f21c48"
+    },
+    {
+      "repository_full_name": "ckormanyos/real-time-cpp",
+      "size_kb": 288625,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 24
+        },
+        {
+          "query_id": 6,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "3d845b99f708fa2fc6c79809df4642db0fa45c31384e060586126be46ac38740"
+    },
+    {
+      "repository_full_name": "RMerl/asuswrt-merlin.ng",
+      "size_kb": 2769051,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "3dde6b8708b01b5b021c6f2f4b1d4f9ab16b3bc83e50d779acb73522988bc13d"
+    },
+    {
+      "repository_full_name": "Benjamin-Dobell/Heimdall",
+      "size_kb": 8998,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "3df6bd9a280e8437e93c18459a19562d8799da9999f4bbb77290a65ec7e0c1c8"
+    },
+    {
+      "repository_full_name": "uTensor/uTensor",
+      "size_kb": 77937,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 14
+        }
+      ],
+      "selection_hash": "3fa26b46f79b4fda978ccef6372305e2a11bdd1eb71091714c4785d8d313459b"
+    },
+    {
+      "repository_full_name": "symisc/unqlite",
+      "size_kb": 2555,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 22
+        }
+      ],
+      "selection_hash": "4065473550388999f702e0827131bd8208daa203c8ab18269b1c9cf00cc3f02b"
+    },
+    {
+      "repository_full_name": "korginc/logue-sdk",
+      "size_kb": 37571,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 49
+        }
+      ],
+      "selection_hash": "4179eca875efabe2151ce40f5ea53f1bd3d31bec17210e78d7d05806c64a884f"
+    },
+    {
+      "repository_full_name": "Xilinx/Vitis-Tutorials",
+      "size_kb": 953667,
+      "default_branch": "2026.1",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 34
+        },
+        {
+          "query_id": 3,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "42b6d38d9c2ffcf0ee09ec8f087aed7400c47ba58997e7f400a7a14f95fcfba2"
+    },
+    {
+      "repository_full_name": "OpenRTX/OpenRTX",
+      "size_kb": 28415,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 32
+        }
+      ],
+      "selection_hash": "42dfbf5d85a05a56c45e7ff49a0f5b67e6e40c26c5c73f1236d0b964b09b0f35"
+    },
+    {
+      "repository_full_name": "Ultrawipf/OpenFFBoard",
+      "size_kb": 48036,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 26
+        }
+      ],
+      "selection_hash": "43fd92cb8213d8b46872f876e363e7f0e40a89b398bcc4a3c7a19c5c06f05fdd"
+    },
+    {
+      "repository_full_name": "ghaerr/elks",
+      "size_kb": 41118,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 32
+        }
+      ],
+      "selection_hash": "44ebfbc6529723f6d958952257fd4eed677a993bf7d9df9a550936602745244d"
+    },
+    {
+      "repository_full_name": "dfeneyrou/palanteer",
+      "size_kb": 10075,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 13
+        }
+      ],
+      "selection_hash": "4612a7e51371932acba5a634201b90c1dbf8de33f5067f6cbdc37bbf1c6f73ea"
+    },
+    {
+      "repository_full_name": "xboot/xboot",
+      "size_kb": 142723,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 13
+        }
+      ],
+      "selection_hash": "46ecf8b9ddfa581d16d127197313e68d7e1652b3eacaa262997ab58c4405343e"
+    },
+    {
+      "repository_full_name": "msm8916-mainline/lk2nd",
+      "size_kb": 16041,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 38
+        }
+      ],
+      "selection_hash": "474854e095ab6627fe003b203f9b9c8f7d280f3da988c09cc64ccc2e3c0963e9"
+    },
+    {
+      "repository_full_name": "GhostESP-Revival/GhostESP",
+      "size_kb": 345993,
+      "default_branch": "Development-deki",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 50
+        }
+      ],
+      "selection_hash": "4863227e67a1b45916f6dee820ab4353175b606785c893d17617fc1596cb547f"
+    },
+    {
+      "repository_full_name": "xoseperez/espurna",
+      "size_kb": 223828,
+      "default_branch": "dev",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "48ad135d6f808e18a445a9bc6af7cd3ae983c042a33c6d9f2e1a94961847b1d4"
+    },
+    {
+      "repository_full_name": "benhoyt/inih",
+      "size_kb": 173,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 6,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "4a234d9014df380f7e23b51b6410bfc773ed4ca5b0e7cc04237f0f2418318b4e"
+    },
+    {
+      "repository_full_name": "MarlinFirmware/Marlin",
+      "size_kb": 259384,
+      "default_branch": "bugfix-2.1.x",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "4bac8f865485e8bdfdc75dbea29c6b9ccc5c4f2d8ddc083559aa6fe26691ef19"
+    },
+    {
+      "repository_full_name": "DNedic/lockfree",
+      "size_kb": 663,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 21
+        },
+        {
+          "query_id": 6,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "4d0bb949f1d53fdafe99c8ed9df6cf5276f34061aa46170e4fcced400991c2df"
+    },
+    {
+      "repository_full_name": "ClickHouse/ClickHouse",
+      "size_kb": 13133129,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "4e0bd2195393cab445a7066b124f3341a6cb627693391562c1111235fab2513a"
+    },
+    {
+      "repository_full_name": "vilassn/whisper_android",
+      "size_kb": 288850,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 27
+        }
+      ],
+      "selection_hash": "50aff7f9b61f73228fe9f54f26de7eec41ebcd4a4ad5775cb1ef01488847c159"
+    },
+    {
+      "repository_full_name": "trezor/trezor-firmware",
+      "size_kb": 576531,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 22
+        }
+      ],
+      "selection_hash": "53e4e502a4ca8c0f3634c6822e9debfd97381bc9dc7be7385bf2c60bbfe7550d"
+    },
+    {
+      "repository_full_name": "linuxboot/linuxboot",
+      "size_kb": 8966,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 30
+        }
+      ],
+      "selection_hash": "550a0ccd618412717bc94529ce6ad2a0b3279a9e319e93bec54592fcd872521c"
+    },
+    {
+      "repository_full_name": "Sguan-ZhouQing/SguanFOC_Library",
+      "size_kb": 64791,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "56589bb0575005b6733567ac9851ddc010e53cd91702ec2b28986353a5ae2128"
+    },
+    {
+      "repository_full_name": "armink/FlashDB",
+      "size_kb": 4751,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 19
+        }
+      ],
+      "selection_hash": "5720123d01be8b4f8c429a008a63aab040a917babd86bfa7046af0cb74a52132"
+    },
+    {
+      "repository_full_name": "Next-Flip/Momentum-Firmware",
+      "size_kb": 597572,
+      "default_branch": "dev",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "58ee351a2f4c22babf2ac6129ca5733da19221f38b81f689f3c058a2e59738ee"
+    },
+    {
+      "repository_full_name": "OpenSparX/MasterAgent",
+      "size_kb": 19036,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 16
+        }
+      ],
+      "selection_hash": "590899e88c32ca8f4c4f711b6dd1f995b5c3e533afa186960f9148024b859790"
+    },
+    {
+      "repository_full_name": "ayushsharma82/ElegantOTA",
+      "size_kb": 17597,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 12
+        }
+      ],
+      "selection_hash": "5b7c6880a5fe9fac8ee938010ede892678e3d9f39d01e44ac8ec69561b8b21bd"
+    },
+    {
+      "repository_full_name": "hrvach/deskhop",
+      "size_kb": 14977,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "5e5095477294186751c12c57ce0e79f8f94890124d14e0bccd6327a1d55a3cd0"
+    },
+    {
+      "repository_full_name": "justcallmekoko/ESP32Marauder",
+      "size_kb": 479258,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "5ebeda4ffdc1927464e38c0db553bcdce17936d95ef90d9d6dab0ccb44d6beaf"
+    },
+    {
+      "repository_full_name": "skaiui2/SKRTOS_sparrow",
+      "size_kb": 26976,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 23
+        }
+      ],
+      "selection_hash": "5f7a13aca75fc236632c97180930426a5817d0c08a3401c212fabdc7fca0432e"
+    },
+    {
+      "repository_full_name": "polhenarejos/pico-hsm",
+      "size_kb": 2679,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 44
+        }
+      ],
+      "selection_hash": "60108b0057aba59beac6e77a4d0dc06e43b91d940fbcd20d1c146af501d46678"
+    },
+    {
+      "repository_full_name": "thesofproject/sof",
+      "size_kb": 40856,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 34
+        }
+      ],
+      "selection_hash": "604a9ad2e98b301b5fd8a495548e7cc0239e113881d00df537638b2388f3d5f1"
+    },
+    {
+      "repository_full_name": "littlefs-project/littlefs",
+      "size_kb": 12915,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 9
+        }
+      ],
+      "selection_hash": "650e28b9bdc5ee5e19d1546ff2733973eced402f28e8ed25434c63e109090b32"
+    },
+    {
+      "repository_full_name": "xboot/libonnx",
+      "size_kb": 96120,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 18
+        }
+      ],
+      "selection_hash": "669ee375a20f4ae90817ae6b860510cf6e59de0def3c14f306e8d3d43c3de27d"
+    },
+    {
+      "repository_full_name": "sbrin/lopaka",
+      "size_kb": 6806,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 31
+        },
+        {
+          "query_id": 3,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "672ab6feb38d4242ad98a5b40ee3d2ee7b12295c3c8103b4300261aa26da46aa"
+    },
+    {
+      "repository_full_name": "EmbeddedRPC/erpc",
+      "size_kb": 10764,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 22
+        }
+      ],
+      "selection_hash": "69ec62bbbd9d785b1d671ac08ecd56378228bf0cdbb6b42b83a0970de9bc7218"
+    },
+    {
+      "repository_full_name": "tianocore/edk2",
+      "size_kb": 344391,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "6a8b6e7647e691bf06370b8f3377ec83bc9ce5d5baf3307071491cea58bb564a"
+    },
+    {
+      "repository_full_name": "opentx/opentx",
+      "size_kb": 230019,
+      "default_branch": "2.3",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "6f903335240b369e3ad7e9dabeb7a1b196863fc170699ac4025a995c5a818500"
+    },
+    {
+      "repository_full_name": "SynthstromAudible/DelugeFirmware",
+      "size_kb": 223509,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 14
+        }
+      ],
+      "selection_hash": "71844ce4b7398b703df80c5a04d26937286281d49df141a9d7e1df2c88be48ab"
+    },
+    {
+      "repository_full_name": "JPShag/PCILeech-DMA-Firmware",
+      "size_kb": 33837,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 35
+        }
+      ],
+      "selection_hash": "71d1e110e6636aca2d167ebca5b0e9ae25a7f293068e3c8dba01dcba140be0a2"
+    },
+    {
+      "repository_full_name": "feaser/openblt",
+      "size_kb": 256259,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 28
+        }
+      ],
+      "selection_hash": "71f5dff48dc0bb84d96c2394fd0af1f6a591eb31f362cdbe2fe1e075dfaa69af"
+    },
+    {
+      "repository_full_name": "mudita/MuditaOS",
+      "size_kb": 761369,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 12
+        }
+      ],
+      "selection_hash": "720e27bb1c03b5332ab5268f72221d4748044488af3da426f84bbdc87ec461f0"
+    },
+    {
+      "repository_full_name": "o-gs/dji-firmware-tools",
+      "size_kb": 24659,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 17
+        }
+      ],
+      "selection_hash": "728cbd01a53881d4236f70bbea625b69ff95167a3be8773ccd58e59899fe16b6"
+    },
+    {
+      "repository_full_name": "ardera/flutter-pi",
+      "size_kb": 2162,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 26
+        }
+      ],
+      "selection_hash": "744b889ff703bd26bb885ed4e3b40a8cc7799fc11f37b3eaed0efb11553711bc"
+    },
+    {
+      "repository_full_name": "openthread/openthread",
+      "size_kb": 129237,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "753e9fe8b2ae188845a15f646be71c80bdc65a0f736b4dd7b72afc8fc9333f61"
+    },
+    {
+      "repository_full_name": "speedb-io/speedb",
+      "size_kb": 151093,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 19
+        }
+      ],
+      "selection_hash": "753eed2609f62aa97f666e6912d3c604a16252ea7601d03fb25f3be9d515c00a"
+    },
+    {
+      "repository_full_name": "memfault/interrupt",
+      "size_kb": 230400,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 48
+        }
+      ],
+      "selection_hash": "7591e27941064c28cb143cc3500376229abded20f2721582c36af09e101cdf85"
+    },
+    {
+      "repository_full_name": "REhints/efiXplorer",
+      "size_kb": 57826,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "75bbf30e82fad1d2dba8c8536a4a36640c71ff8807c9d6d871b46232c602d619"
+    },
+    {
+      "repository_full_name": "luc-github/ESP3D",
+      "size_kb": 140824,
+      "default_branch": "3.1",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 20
+        }
+      ],
+      "selection_hash": "7841c06eb62694d87946e4148f1b1dc49851234352a2b6ca92db4a5db59120eb"
+    },
+    {
+      "repository_full_name": "majianjia/nnom",
+      "size_kb": 27147,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 45
+        }
+      ],
+      "selection_hash": "7ba0e5a07d6d18b66d35562bd4475ace75a1bec20cb46a29adf43b109a8b8ac0"
+    },
+    {
+      "repository_full_name": "sbabic/swupdate",
+      "size_kb": 25091,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 28
+        },
+        {
+          "query_id": 3,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "7c591719bb3330194cb7ead77ecc721e17e9260173f3b5491a86cacefe659c45"
+    },
+    {
+      "repository_full_name": "rusefi/rusefi",
+      "size_kb": 1674542,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 44
+        }
+      ],
+      "selection_hash": "7e79181e2989c4b8fbdccca27063d1798908f83ea3c18f7e82bd40afe8a9f686"
+    },
+    {
+      "repository_full_name": "micropython/micropython",
+      "size_kb": 76917,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 2
+        }
+      ],
+      "selection_hash": "7fccdae91fa575616a4fbb2ca04e595a9ccd628f8082d6fcc590af7ecef7a932"
+    },
+    {
+      "repository_full_name": "cesanta/elk",
+      "size_kb": 4814,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 27
+        }
+      ],
+      "selection_hash": "80d7c08895f37205dfa78905e98472b44209032dd06edd94460656ec0561669f"
+    },
+    {
+      "repository_full_name": "SmingHub/Sming",
+      "size_kb": 98878,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 17
+        }
+      ],
+      "selection_hash": "83ef21235f9f2b6e00a7c6547bea7f6718630c0842f64bbaf683d0c653e08fc0"
+    },
+    {
+      "repository_full_name": "ARM-software/CMSIS-DSP",
+      "size_kb": 99970,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 46
+        }
+      ],
+      "selection_hash": "861bc2a7059b3980f4d30edd775f8a90291dfc341c09bd255df886398ea7489d"
+    },
+    {
+      "repository_full_name": "jedisct1/libhydrogen",
+      "size_kb": 405,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 15
+        }
+      ],
+      "selection_hash": "88317e0079d247b2417ad8da44c0f88f314ec26db0301480cba25fe9e6f9604f"
+    },
+    {
+      "repository_full_name": "andrew-gresyk/HFSM2",
+      "size_kb": 2590,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 30
+        },
+        {
+          "query_id": 6,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "8bc368e7b38bf4d746f5088dddc32696c1ac65ac7acf3aad5a38dcb8609980d1"
+    },
+    {
+      "repository_full_name": "nodemcu/nodemcu-firmware",
+      "size_kb": 113147,
+      "default_branch": "release",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "8e3ac9827f43c39d778aa1893a603ee3d39e241dc686120f68c2b6b30a47a5b8"
+    },
+    {
+      "repository_full_name": "LennartHennigs/Button2",
+      "size_kb": 308,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 33
+        }
+      ],
+      "selection_hash": "92e2a450d0cbb87348f644ea29894c8a5cf4329ca7a399cb24959e980d25a96a"
+    },
+    {
+      "repository_full_name": "cesanta/mjs",
+      "size_kb": 5331,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 24
+        }
+      ],
+      "selection_hash": "961d1963235d5c67520da76d4ce5323504d3e2e5a8c9d30c8b3fab90e6363338"
+    },
+    {
+      "repository_full_name": "idea4good/GuiLite",
+      "size_kb": 80748,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 5
+        }
+      ],
+      "selection_hash": "97f55b289fbd92d73f8c700207cc63d40525189d737136b8116d1f9583ea79d5"
+    },
+    {
+      "repository_full_name": "stlink-org/stlink",
+      "size_kb": 17886,
+      "default_branch": "testing",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 13
+        }
+      ],
+      "selection_hash": "98e2b180f20cfe3074863f026db5c3253c1782f4377d9c5ac65d75c9529276bd"
+    },
+    {
+      "repository_full_name": "OpenStickCommunity/GP2040-CE",
+      "size_kb": 302851,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "9ce0a85ae0e2a85fd314e566cba05642bca3f4dba956c8c667a4f2f7c06a68a3"
+    },
+    {
+      "repository_full_name": "RightNow-AI/picolm",
+      "size_kb": 297,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 23
+        }
+      ],
+      "selection_hash": "a163f4f01230946d9e7cf3aada3f9b81394272f66047adc0b0da22656e119d6e"
+    },
+    {
+      "repository_full_name": "LucidVR/lucidgloves",
+      "size_kb": 2726,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "a19553373d192a31002364ac037b6db716e9e7a0ea23a7a0a61df967a944a5e6"
+    },
+    {
+      "repository_full_name": "coreboot/coreboot",
+      "size_kb": 262897,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 14
+        }
+      ],
+      "selection_hash": "a338965261b5934b7e826021c5f6ee7656601c626c71cf2462ba3c89e78d8026"
+    },
+    {
+      "repository_full_name": "eclipse-paho/paho.mqtt.embedded-c",
+      "size_kb": 602,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 36
+        }
+      ],
+      "selection_hash": "a35c67e1603f7df500e4b21efef89010a596b5a0aa99343773b69f0e5251c338"
+    },
+    {
+      "repository_full_name": "ImpulseAdventure/GUIslice",
+      "size_kb": 42233,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 41
+        }
+      ],
+      "selection_hash": "a39d28a471f6b261b63bc636404be42a99ed2160c3c6e8a9939561e02c76b6a5"
+    },
+    {
+      "repository_full_name": "feelfreelinux/cspot",
+      "size_kb": 12290,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 31
+        }
+      ],
+      "selection_hash": "a57e1674f9eeff45702f8ebdf2bf5445d1ba5396a8cabd3f4b348def09c9672f"
+    },
+    {
+      "repository_full_name": "introlab/odas",
+      "size_kb": 1212,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 47
+        }
+      ],
+      "selection_hash": "a658b14f0ff0d72a8cd513dfc0d426f4dfadb87d268d99f7814480a25f4fbc18"
+    },
+    {
+      "repository_full_name": "Blynk-Technologies/blynk-library",
+      "size_kb": 10141,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "ab09faa1065973683e69646184ce5f94bb4e4a661fc2d9cb2127021b15124ce3"
+    },
+    {
+      "repository_full_name": "picoruby/prk_firmware",
+      "size_kb": 3643,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 40
+        }
+      ],
+      "selection_hash": "ab72837232bf57b91a51fe935e54efe7de208961917e1cadef32d50da892d7b7"
+    },
+    {
+      "repository_full_name": "charlesnicholson/nanoprintf",
+      "size_kb": 852,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 23
+        },
+        {
+          "query_id": 5,
+          "rank": 13
+        },
+        {
+          "query_id": 6,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "ac5122712428a1887f3544bc54040f0c0e936d4aa5aabfb9c40600f6257c9a25"
+    },
+    {
+      "repository_full_name": "milesburton/Arduino-Temperature-Control-Library",
+      "size_kb": 356,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 6,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "ac867eb89e1e303ad1cf60c5ba7f639b88846f2988afcd5f76e2d79088217a5b"
+    },
+    {
+      "repository_full_name": "ETLCPP/etl",
+      "size_kb": 35391,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 12
+        },
+        {
+          "query_id": 6,
+          "rank": 3
+        }
+      ],
+      "selection_hash": "ae431a34116a126f22af98752bba5c8a03e31585b3d0f9dc4cb4c730fb9c0011"
+    },
+    {
+      "repository_full_name": "crosspoint-reader/crosspoint-reader",
+      "size_kb": 103086,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 6
+        }
+      ],
+      "selection_hash": "af107d75f6e0ea145dc0b77ceca9ff53a23c67b69ceb28785e395b7c190f23f4"
+    },
+    {
+      "repository_full_name": "travisgoodspeed/goodwatch",
+      "size_kb": 74097,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 46
+        }
+      ],
+      "selection_hash": "af2da1ea447be81f3e0d02cb91f39008b02dadcc9f4b668708dccbc69982267d"
+    },
+    {
+      "repository_full_name": "acados/acados",
+      "size_kb": 53612,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 37
+        }
+      ],
+      "selection_hash": "b0f8ad5d4debf669837e24b6ea974d5f3754256ef201a74ee28de6ff4517e616"
+    },
+    {
+      "repository_full_name": "PaddlePaddle/Paddle-Lite",
+      "size_kb": 329500,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "b183e3ef28e7341ea40c3e0aa284860b4d882e0bc84940a1323b8df7976babd9"
+    },
+    {
+      "repository_full_name": "Serial-Studio/Serial-Studio",
+      "size_kb": 530021,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 7
+        }
+      ],
+      "selection_hash": "b1e3dcfb4418e7d616f94a5f02ac20369e0fd603a924747965d64b44b94bb467"
+    },
+    {
+      "repository_full_name": "MaJerle/lwesp",
+      "size_kb": 60568,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 20
+        }
+      ],
+      "selection_hash": "b37938183414d067a88aef4a59a149581ca75a93cf1902017190529bff260245"
+    },
+    {
+      "repository_full_name": "OpenIPC/firmware",
+      "size_kb": 229092,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 18
+        }
+      ],
+      "selection_hash": "b7241b43b293e748f0d1f1121ba1d90d3cb308b0412da34285a860eccdb33219"
+    },
+    {
+      "repository_full_name": "Shim06/Anemoia-ESP32",
+      "size_kb": 74482,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 32
+        },
+        {
+          "query_id": 6,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "b88e161f664c8215a11d8bab58bdcc557de5cb6078d460ab53ee01b398928a17"
+    },
+    {
+      "repository_full_name": "QuantumLeaps/modern-embedded-programming-course",
+      "size_kb": 16416,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 38
+        },
+        {
+          "query_id": 3,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "b94cd9529f32b6eb756a42ebc671a12329a0fe5455714845fa836de371a1a14b"
+    },
+    {
+      "repository_full_name": "modm-io/modm",
+      "size_kb": 49648,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 20
+        }
+      ],
+      "selection_hash": "b9ed4ee2776ea1d429343be58ba625ba2ba181d3e0dc462c79e1d9f284f74789"
+    },
+    {
+      "repository_full_name": "matth-x/MicroOcpp",
+      "size_kb": 3740,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 34
+        }
+      ],
+      "selection_hash": "bbcede5b5f9186e1847949d552fd4c13509513ed3252888c94459a307a68fd66"
+    },
+    {
+      "repository_full_name": "MaJerle/lwgps",
+      "size_kb": 370,
+      "default_branch": "develop",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 22
+        }
+      ],
+      "selection_hash": "bcc9b41086de9a36d549c7b33b420a500e2db252082f87228bdd66d92926ec92"
+    },
+    {
+      "repository_full_name": "thorvg/thorvg",
+      "size_kb": 412861,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 15
+        }
+      ],
+      "selection_hash": "c4936e70fe9deb89e54e2be8d2561b112dcca5041252e00db9b82f5c38fc1fec"
+    },
+    {
+      "repository_full_name": "CANopenNode/CANopenNode",
+      "size_kb": 2664,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 25
+        }
+      ],
+      "selection_hash": "c6c3ea9d07ca9b6b4ffabf55fca02cc1af8a8cf9248825dc55114a00bdaabae6"
+    },
+    {
+      "repository_full_name": "Softmotions/ejdb",
+      "size_kb": 12622,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 39
+        }
+      ],
+      "selection_hash": "c824bfa7692593068a1d33ed975c0c527681ced6da5c2226bfa63f7f8169b30d"
+    },
+    {
+      "repository_full_name": "cesanta/mongoose-os",
+      "size_kb": 47081,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 15
+        }
+      ],
+      "selection_hash": "c87d3d5a7d01d1987962a5d1b0eb816e04b503c74638687216ff8f97cbcdaeaa"
+    },
+    {
+      "repository_full_name": "OWASP/IoTGoat",
+      "size_kb": 213353,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 31
+        }
+      ],
+      "selection_hash": "c908a469a8eb765946f0d852df2f316b876a2f025b527bac8ff70f0a53f2984b"
+    },
+    {
+      "repository_full_name": "prusa3d/Prusa-Firmware-Buddy",
+      "size_kb": 155163,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 23
+        }
+      ],
+      "selection_hash": "c97533161d798989a6022fec67c417ba60be706911bd0769b29c00eeb8af765d"
+    },
+    {
+      "repository_full_name": "arendst/Tasmota",
+      "size_kb": 283894,
+      "default_branch": "development",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "c9af3afa0251fc53e933dff79dd0e8404300d34b98760d445fba8d7c23c0f61a"
+    },
+    {
+      "repository_full_name": "seemoo-lab/nexmon",
+      "size_kb": 385352,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 12
+        }
+      ],
+      "selection_hash": "cae7967adbe6e876bbbf7863ab4606099d2426176a9daef61b4ac01b44014a95"
+    },
+    {
+      "repository_full_name": "stillwater-sc/universal",
+      "size_kb": 149117,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 6,
+          "rank": 12
+        }
+      ],
+      "selection_hash": "caed9321297cd40f7dd099b9c4becd6aa624868f14ccc882da5779bc25b418c5"
+    },
+    {
+      "repository_full_name": "intel/compile-time-init-build",
+      "size_kb": 3541,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 29
+        },
+        {
+          "query_id": 5,
+          "rank": 15
+        }
+      ],
+      "selection_hash": "cb0e90486b9d6be9f25f7d29b35aafc28f37be01e27b75b04f29f6d686c777e1"
+    },
+    {
+      "repository_full_name": "flipperdevices/flipperzero-firmware",
+      "size_kb": 80093,
+      "default_branch": "dev",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 3
+        }
+      ],
+      "selection_hash": "cb8d43d378794840ce15987ff04d74c1d5147cec775f4aafcbfd091dc24b150c"
+    },
+    {
+      "repository_full_name": "Gissio/radpro",
+      "size_kb": 128947,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 45
+        }
+      ],
+      "selection_hash": "cd576630b349a3829e6f60e0eb295d0bb1627ad1f5890619ad4c98d1804c90c4"
+    },
+    {
+      "repository_full_name": "ipxe/ipxe",
+      "size_kb": 28303,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 19
+        }
+      ],
+      "selection_hash": "cee491b6d84c07d77a127865887f1f4380239a497e309a7d04f423b304ed1021"
+    },
+    {
+      "repository_full_name": "eclipse-threadx/threadx",
+      "size_kb": 25309,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 15
+        }
+      ],
+      "selection_hash": "cf531299f26d2cb4cf326ffcdfc2a6e4231a7aa85f51aa9f0e96c351cbb81603"
+    },
+    {
+      "repository_full_name": "RT-Thread/rt-thread",
+      "size_kb": 1034735,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "d18d03240d0e60e050994c0903804d509ebdceccd6c5e49349eb8c1d7ea05cba"
+    },
+    {
+      "repository_full_name": "johnmcfarlane/cnl",
+      "size_kb": 8890,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 26
+        }
+      ],
+      "selection_hash": "d50f452e4ed4d8553bd815aa024dfabb1a6e009b7a3868ec3ad591f9e910ddec"
+    },
+    {
+      "repository_full_name": "retro-esp32/RetroESP32",
+      "size_kb": 374021,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 33
+        }
+      ],
+      "selection_hash": "d75d13bcf1c676740d559181c20c9227079e74895660dfc91ffa06b3d85d0a08"
+    },
+    {
+      "repository_full_name": "akospasztor/stm32-bootloader",
+      "size_kb": 141909,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 25
+        }
+      ],
+      "selection_hash": "d8fcdcc9ef6efe16a273750ed6c680e38e693427d989e05db2c591595ad4ed74"
+    },
+    {
+      "repository_full_name": "buserror/simavr",
+      "size_kb": 6067,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 29
+        }
+      ],
+      "selection_hash": "d991ecefc7436831593342fd6b07d2358a69878b5461a641b84bc4b390d64f3c"
+    },
+    {
+      "repository_full_name": "raysan5/raylib",
+      "size_kb": 415803,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "ddf7999c534045ff237f66099b4035872bc05e6335a1af6687fdd817dad2094a"
+    },
+    {
+      "repository_full_name": "bblanchon/ArduinoJson",
+      "size_kb": 6905,
+      "default_branch": "7.x",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "e107012a49a3d66c35984089edd7a7307fa9001263f79291776b99f7e9aa0c43"
+    },
+    {
+      "repository_full_name": "wasm-micro-runtime/wasm-micro-runtime",
+      "size_kb": 30917,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "e1bdfee7e35b5d04c89e15b8af387573737da31b6e0b4831f31077bbe57b424d"
+    },
+    {
+      "repository_full_name": "armink/EasyFlash",
+      "size_kb": 6889,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 21
+        }
+      ],
+      "selection_hash": "e25d40f0c5830b2d05264738d9d62c3dda918300d104981d223e0d103dfe82a3"
+    },
+    {
+      "repository_full_name": "Luos-io/luos_engine",
+      "size_kb": 23545,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 21
+        }
+      ],
+      "selection_hash": "e56ad0150eec54ac9d49fc119c69f9bc023c5c7dbcc266d54e0b06e8500e67e2"
+    },
+    {
+      "repository_full_name": "dusty-nv/jetson-inference",
+      "size_kb": 155646,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 4
+        }
+      ],
+      "selection_hash": "e665ce36415d7c8c324bd82badc5904b3fb2977e1eb206a0a289c8be308b6f72"
+    },
+    {
+      "repository_full_name": "nasa/fprime",
+      "size_kb": 718009,
+      "default_branch": "devel",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 3
+        },
+        {
+          "query_id": 6,
+          "rank": 1
+        }
+      ],
+      "selection_hash": "e6b8755a62e0ff93ca19fb120edd428fb50d7bc520d30bea2ed02a74816eb127"
+    },
+    {
+      "repository_full_name": "roleoroleo/yi-hack-MStar",
+      "size_kb": 4165,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 29
+        }
+      ],
+      "selection_hash": "e9ba9675961984d671d173872c3c81d6373f6b57c281122b0169a2d5098a15da"
+    },
+    {
+      "repository_full_name": "debevv/nanoMODBUS",
+      "size_kb": 27352,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 14
+        }
+      ],
+      "selection_hash": "e9bd63fbd90fb75cb81a5c2467be3b2c9703c7b77ef4c6e1408af1e6f8b62749"
+    },
+    {
+      "repository_full_name": "greggersaurus/OpenSteamController",
+      "size_kb": 33271,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 49
+        }
+      ],
+      "selection_hash": "eab3a164e4693708c5b44cd71a2c8771b193083abf8b058f772721d6b3ed48b7"
+    },
+    {
+      "repository_full_name": "DC-SWAT/DreamShell",
+      "size_kb": 107800,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 47
+        }
+      ],
+      "selection_hash": "ee22ba44978901480aefa49b89253d460bb281c1a3c85a1e54f01bff91380749"
+    },
+    {
+      "repository_full_name": "theEmbeddedGeorge/theEmbeddedNewTestament.github.io",
+      "size_kb": 76037,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 3,
+          "rank": 11
+        }
+      ],
+      "selection_hash": "f34db7bcff25e5681b02359a8b29c7bde150ee35c19b75a715bd87ed23ab52f4"
+    },
+    {
+      "repository_full_name": "wolfSSL/wolfBoot",
+      "size_kb": 13297,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 50
+        }
+      ],
+      "selection_hash": "f458816b771c9c01d45a461eb9c7bbded7c5ae67075a1bb1dc80fcc4e1399cea"
+    },
+    {
+      "repository_full_name": "dirtyjtag/DirtyJTAG",
+      "size_kb": 36894,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 2,
+          "rank": 36
+        }
+      ],
+      "selection_hash": "f8a28d9c8fd5b59f5b3d1ef45cb2029c856ea6e28636e959136cf424deabe969"
+    },
+    {
+      "repository_full_name": "dontsovcmc/waterius",
+      "size_kb": 15005,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 4,
+          "rank": 28
+        }
+      ],
+      "selection_hash": "fb34106ad813744463a5dce3a29b6b1a64116c43f8945792f71a290aa2637a4e"
+    },
+    {
+      "repository_full_name": "berry-lang/berry",
+      "size_kb": 1972,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 48
+        }
+      ],
+      "selection_hash": "fbfe9523482907849edc6b20a8f64b9c68558a08d1fcc27a9de4db958035cda5"
+    },
+    {
+      "repository_full_name": "ARMmbed/DAPLink",
+      "size_kb": 28769,
+      "default_branch": "main",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 20
+        },
+        {
+          "query_id": 2,
+          "rank": 13
+        }
+      ],
+      "selection_hash": "fcaa4ccc65203a5116d6afc1ecdaa061e684cb5dfba8cd7560055d5dd0bfae56"
+    },
+    {
+      "repository_full_name": "hathach/tinyusb",
+      "size_kb": 54454,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 1,
+          "rank": 8
+        }
+      ],
+      "selection_hash": "fcab89e4bb1b42d604921633ed86da2bf668699b9c27bfc06b7d46d579772038"
+    },
+    {
+      "repository_full_name": "HamletDuFromage/aio-switch-updater",
+      "size_kb": 1271,
+      "default_branch": "master",
+      "query_membership": [
+        {
+          "query_id": 5,
+          "rank": 10
+        }
+      ],
+      "selection_hash": "fff6ebd36cfff586ae76b8c2ced91bb274ab3cf0b20be5a450a7e911b9fe8474"
+    }
+  ]
+}
