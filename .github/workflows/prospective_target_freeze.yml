@@ -1,0 +1,34 @@
+name: Prospective target source freeze
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_target_freeze.yml'
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone frozen target
+        run: |
+          git clone https://github.com/berry-lang/berry.git target
+          cd target
+          git checkout 997de1c7c51ba3f8cd78e40cc605e92385d52ecc
+          test "$(git rev-parse HEAD)" = "997de1c7c51ba3f8cd78e40cc605e92385d52ecc"
+          cd ..
+      - name: Create deterministic source archive and hashes
+        run: |
+          tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
+              --exclude='target/.git' -czf berry_997de1c7_source.tar.gz target
+          sha256sum berry_997de1c7_source.tar.gz | tee berry_997de1c7_source.tar.gz.sha256
+          find target -type f -not -path 'target/.git/*' -print0 | sort -z | xargs -0 sha256sum > berry_997de1c7_file_manifest.sha256
+      - name: Upload frozen source
+        uses: actions/upload-artifact@v4
+        with:
+          name: berry-997de1c7-source-freeze
+          path: |
+            berry_997de1c7_source.tar.gz
+            berry_997de1c7_source.tar.gz.sha256
+            berry_997de1c7_file_manifest.sha256
+          if-no-files-found: error
+          retention-days: 90
