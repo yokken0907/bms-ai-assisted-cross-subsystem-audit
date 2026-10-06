@@ -80,6 +80,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.1.md \
                   prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.1.json \
                   prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.1.txt
