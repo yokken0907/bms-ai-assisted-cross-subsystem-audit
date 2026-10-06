@@ -1,0 +1,28 @@
+name: Prospective target CLOC eligibility
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_target_cloc.yml'
+
+jobs:
+  cloc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install cloc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y cloc
+          cloc --version
+      - name: Clone frozen candidate
+        run: |
+          git clone https://github.com/berry-lang/berry.git target
+          cd target
+          git checkout 997de1c7c51ba3f8cd78e40cc605e92385d52ecc
+          echo "FROZEN_COMMIT=$(git rev-parse HEAD)"
+      - name: Measure C and C++ LOC under frozen exclusions
+        run: |
+          cloc target \
+            --include-lang=C,C++ \
+            --exclude-dir=.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen \
+            --json | tee cloc.json
