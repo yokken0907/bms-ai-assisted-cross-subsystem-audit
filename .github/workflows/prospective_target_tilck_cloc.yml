@@ -1,0 +1,29 @@
+name: Prospective target Tilck CLOC eligibility
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_target_tilck_cloc.yml'
+
+jobs:
+  cloc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install cloc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y cloc >/dev/null
+          cloc --version
+      - name: Clone frozen candidate without commit-message display
+        run: |
+          git clone --quiet https://github.com/vvaltchev/tilck.git target
+          cd target
+          git -c advice.detachedHead=false checkout --quiet 81ae0ca95956c00fc3cba7ce88e9d2a0647b6fbb
+          test "$(git rev-parse HEAD)" = "81ae0ca95956c00fc3cba7ce88e9d2a0647b6fbb"
+          echo "FROZEN_COMMIT=$(git rev-parse HEAD)"
+      - name: Measure C and C++ LOC under frozen exclusions
+        run: |
+          cloc target \
+            --include-lang=C,C++ \
+            --exclude-dir=.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen \
+            --json | tee cloc.json
