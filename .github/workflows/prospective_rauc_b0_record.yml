@@ -1,0 +1,97 @@
+name: Prospective RAUC B0 record
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_rauc_b0_record.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  b0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout audit repository
+        uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y cloc jq >/dev/null
+      - name: Clone exact frozen RAUC target
+        run: |
+          rm -rf /tmp/rauc-target
+          git clone --quiet https://github.com/rauc/rauc.git /tmp/rauc-target
+          cd /tmp/rauc-target
+          git -c advice.detachedHead=false checkout --quiet 1a412fe80badb9cf91f5374ea2ef791de4db55a9
+          test "$(git rev-parse HEAD)" = "1a412fe80badb9cf91f5374ea2ef791de4db55a9"
+      - name: Measure frozen source and create integrity records
+        run: |
+          mkdir -p /tmp/b0
+          CLOC_VERSION="$(cloc --version)"
+          cloc /tmp/rauc-target \
+            --include-lang=C,C++ \
+            --exclude-dir=.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen \
+            --json > /tmp/b0/cloc.json
+          CODE_LOC="$(jq -r '.SUM.code' /tmp/b0/cloc.json)"
+          CPP_FILES="$(jq -r '.SUM.nFiles' /tmp/b0/cloc.json)"
+          cd /tmp
+          tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
+              --exclude='rauc-target/.git' -czf /tmp/b0/rauc_1a412fe_source.tar.gz rauc-target
+          ARCHIVE_SHA="$(sha256sum /tmp/b0/rauc_1a412fe_source.tar.gz | awk '{print $1}')"
+          find /tmp/rauc-target -type f -not -path '/tmp/rauc-target/.git/*' -print0 | sort -z | xargs -0 sha256sum > /tmp/b0/file_manifest.sha256
+          MANIFEST_SHA="$(sha256sum /tmp/b0/file_manifest.sha256 | awk '{print $1}')"
+          cd "$GITHUB_WORKSPACE"
+          mkdir -p prospective-transfer/2026-10-07
+          cat > prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md <<EOF
+          # B0 RAUC source-freeze record v1.0.0
+
+          Recorded before B1 candidate generation.
+
+          - target: rauc/rauc
+          - frozen commit: `1a412fe80badb9cf91f5374ea2ef791de4db55a9`
+          - source acquisition: quiet git clone + detached checkout of exact commit
+          - cloc version: `${CLOC_VERSION}`
+          - cloc include languages: `C,C++`
+          - cloc excluded directories: `.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen`
+          - non-generated C/C++ LOC: `${CODE_LOC}`
+          - C/C++ file count reported by cloc: `${CPP_FILES}`
+          - deterministic source tar SHA-256: `${ARCHIVE_SHA}`
+          - complete non-.git file-manifest SHA-256: `${MANIFEST_SHA}`
+          - prior B0 source-freeze workflow run: `37503869800`
+          - prior B0 source-freeze artifact digest: `sha256:95a0188ec4de00648a67d3b5f99308de72d860b9fae1f8421939d634cfe3b1e2`
+
+          ## Frozen admissible evidence surfaces
+
+          Present in the frozen tree before B1:
+          - runtime implementation under `src/`;
+          - public headers/contracts under `include/` and `src/bootloaders/*.h`;
+          - configuration/build surfaces including `meson.build`, `meson_options.txt`, service/config files;
+          - contemporaneous documentation under `docs/` and `README.rst`;
+          - extensive tests under `test/` and fuzz targets under `fuzz/`.
+
+          No issue/PR/fix-history reconnaissance is part of this B0 record.
+          EOF
+          cp /tmp/b0/cloc.json prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json
+          sha256sum prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md \
+                    prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json \
+            > prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.0.txt
+      - name: Commit B0 record
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md \
+                  prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json \
+                  prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.0.txt
+          git commit -m "Record frozen RAUC B0 source and CLOC evidence"
+          git push
+      - name: Upload B0 source-freeze artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rauc-b0-source-freeze-record
+          path: |
+            /tmp/b0/rauc_1a412fe_source.tar.gz
+            /tmp/b0/file_manifest.sha256
+            /tmp/b0/cloc.json
+          if-no-files-found: error
+          retention-days: 90
