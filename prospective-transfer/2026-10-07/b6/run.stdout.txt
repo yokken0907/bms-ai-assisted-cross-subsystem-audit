@@ -1,0 +1,7 @@
+C001 sector64=4294967296 narrowed=0
+C002 target=4294971391 before=4294967040 after_plus_512=256 monotonic=no
+C003 start=18446744073709551104 size=1024 wrapped_sum=512
+C007 interval_sec=3000000 INT_MAX=2147483647 exceeds_safe_int_mul=yes mathematical_ms=3000000000
+C008a input=1Kgarbage parsed=1024 unconsumed_tail=Kgarbage
+C008b base=9223372036854775808 shift=10 scaled_mod_2^64=0
+C009 interval_ms=86400000 factor=213503982335 product_mod_2^64=34448384 mathematical_exceeds_uint64=yes
