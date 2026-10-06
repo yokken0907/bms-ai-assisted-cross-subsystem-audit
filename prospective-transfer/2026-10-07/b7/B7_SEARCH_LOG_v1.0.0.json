@@ -1,0 +1,193 @@
+{
+  "generated_date": "2026-10-07",
+  "target": "rauc/rauc",
+  "frozen_commit": "1a412fe80badb9cf91f5374ea2ef791de4db55a9",
+  "mutable_upstream_head_at_review": "1a412fe80badb9cf91f5374ea2ef791de4db55a9",
+  "note": "GitHub issue/PR/commit searches were performed only after B1 freeze and B2-B6 source-only adjudication. Selected related results are recorded; noisy unrelated search hits are not treated as evidence of a same-mechanism prior.",
+  "candidates": [
+    {
+      "id": "C001",
+      "queries": [
+        "partition_start_le guint32",
+        "boot-mbr-switch partition size overflow",
+        "MBR 32 bit sector",
+        "get_raw_partition_entry"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/6d23122975defd45c4b29698f10df84c6cfc3387",
+          "reason": "Same helper, different error-path bug."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/7b05b8fbac7316b1f29c1d016a5b6db15abd41ad",
+          "reason": "Same MBR module/range checking, different empty-partition bug."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C002",
+      "queries": [
+        "clear_boot_switch_partition overflow",
+        "clear_count partition size",
+        "boot switch clear partition size"
+      ],
+      "selected_related": [
+        {
+          "kind": "issue",
+          "url": "https://github.com/rauc/rauc/issues/780",
+          "reason": "Discusses clearing policy but not the guint/guint64 counter-width mechanism."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/a41dda42c88c2bcbd8562cea16e355bae7a1a37e",
+          "reason": "Same helper, different return-code error handling."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C003",
+      "queries": [
+        "region-start region-size overflow",
+        "region_start region_size overflow",
+        "Region configuration is bigger than device overflow",
+        "validate_region",
+        "check_region"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/bdb0d7fb40d29a87b93da3b481915f3c96fed826",
+          "reason": "Same MBR validation function, different ioctl argument/device-size bug."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/7b05b8fbac7316b1f29c1d016a5b6db15abd41ad",
+          "reason": "Same MBR region checks, different empty-partition arithmetic bug."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C004",
+      "queries": [
+        "r_nbd_remove_device",
+        "nl_send_sync nbd remove",
+        "nbd device is already removed",
+        "already removed nbd device",
+        "nl_send_sync"
+      ],
+      "selected_related": [
+        {
+          "kind": "issue",
+          "url": "https://github.com/rauc/rauc/issues/1517",
+          "reason": "NBD/network failure context, not disconnect-send error normalization."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/04100deb0a04e6fb817ae5227842d43a9e246572",
+          "reason": "Same function, message-only change."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/df070939e8fccb1bdd9c3185e6102d51fbf41357",
+          "reason": "NBD error handling, different retry/read mechanism."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C005",
+      "queries": [
+        "status_file_get_slot_status size sha256",
+        "checksum size status file",
+        "status file sha256 size invalid",
+        "g_key_file_get_uint64 size status"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/69a7aa617886b115627e85e111e27e44f872d610",
+          "reason": "General design history: slot-status loading errors are tolerated/logged to keep a valid status object; not the size-field mechanism specifically."
+        },
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/157c9b9a7df7a3a2f57a07849429d2a7c7163c4f",
+          "reason": "Historical introduction of storing size with digest; no invalid-size parse mechanism."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C006",
+      "queries": [
+        "r_mark_active status save",
+        "activated_count status save",
+        "status update mark_active",
+        "do not let mark_active fail status update"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/5bb3b500de87a6527cb34a086dc44ccde54311e2",
+          "reason": "Exact same mechanism and explicit maintainer rationale: status update failure should not make mark_active fail because installation/boot activation has already succeeded."
+        }
+      ],
+      "same_mechanism_match": true
+    },
+    {
+      "id": "C007",
+      "queries": [
+        "polling interval overflow",
+        "interval-sec max-interval-sec overflow",
+        "polling_interval_ms"
+      ],
+      "selected_related": [],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C008a",
+      "queries": [
+        "key_file_consume_binary_suffixed_string",
+        "binary suffix overflow",
+        "region-start garbage suffix"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/0be8e507140df3d6f8c448486a17c0c12311fb25",
+          "reason": "Documents the intended binary-suffixed value formats; no trailing-token rejection fix."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C008b",
+      "queries": [
+        "key_file_consume_binary_suffixed_string",
+        "binary suffix overflow"
+      ],
+      "selected_related": [
+        {
+          "kind": "commit",
+          "url": "https://github.com/rauc/rauc/commit/0be8e507140df3d6f8c448486a17c0c12311fb25",
+          "reason": "Documents intended formats; no scaled-value overflow fix."
+        }
+      ],
+      "same_mechanism_match": false
+    },
+    {
+      "id": "C009",
+      "queries": [
+        "recent_error_count overflow",
+        "polling backoff overflow",
+        "recent_error_count"
+      ],
+      "selected_related": [],
+      "same_mechanism_match": false
+    }
+  ]
+}
