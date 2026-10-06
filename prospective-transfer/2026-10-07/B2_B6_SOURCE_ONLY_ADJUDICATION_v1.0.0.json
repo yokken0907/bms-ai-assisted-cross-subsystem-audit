@@ -1,0 +1,1170 @@
+{
+  "target": "rauc/rauc",
+  "commit": "1a412fe80badb9cf91f5374ea2ef791de4db55a9",
+  "phase": "B2-B6 source-only adjudication",
+  "records": [
+    {
+      "candidate_id": "C001",
+      "origin_proposal_ids": [
+        "P01-01",
+        "P07-01"
+      ],
+      "b1_lens_id": 1,
+      "frozen_source_anchors": [
+        "src/config_file.c::parse_slots()",
+        "include/update_handler.h::boot_switch_partition",
+        "src/mbr.c::r_mbr_switch_get_inactive_partition()",
+        "src/mbr.c::get_raw_partition_entry()",
+        "src/mbr.c::r_mbr_switch_set_boot_partition()",
+        "docs/reference.rst",
+        "docs/advanced.rst"
+      ],
+      "bounded_proposition": "Boot-MBR start/size sector counts are narrowed from guint64-derived values to guint32 without a range check before encoding the MBR entry.",
+      "direct_source_fact": "Configured region quantities and boot-switch partition start/size are 64-bit byte values; get_raw_partition_entry divides by sector size and assigns to guint32.",
+      "inferred_consequence": "A reachable inactive half whose sector start/size exceeds G_MAXUINT32 is encoded modulo the 32-bit destination representation.",
+      "falsifying_or_downgrading_evidence": "A frozen invariant proving every reachable inactive MBR half fits the 32-bit sector fields would downgrade/falsify.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/config_file.c::parse_slots()",
+        "src/update_handler.c::img_to_boot_mbr_switch_handler()",
+        "src/mbr.c::r_mbr_switch_get_inactive_partition()",
+        "src/mbr.c::r_mbr_switch_set_boot_partition()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/config_file.c::parse_slots()",
+            "src/update_handler.c::img_to_boot_mbr_switch_handler()",
+            "src/mbr.c::r_mbr_switch_get_inactive_partition()",
+            "src/mbr.c::r_mbr_switch_set_boot_partition()"
+          ],
+          "note": "boot-mbr-switch consumes region_start/region_size, derives the inactive half, clears/writes it, then encodes it into the MBR entry."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/mbr.c::validate_region()",
+            "src/mbr.c::get_raw_partition_entry()"
+          ],
+          "note": "validate_region checks alignment/device extent but does not cap inactive-half sector start/size to G_MAXUINT32."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "docs/advanced.rst",
+            "test/boot_switch.c"
+          ],
+          "note": "Docs expose byte-valued region configuration; boot_switch tests use small ordinary regions and do not exercise the 32-bit sector boundary."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "origin_proposal_ids": [
+        "P01-02"
+      ],
+      "b1_lens_id": 1,
+      "frozen_source_anchors": [
+        "include/update_handler.h::boot_switch_partition.size",
+        "src/update_handler.c::clear_boot_switch_partition()",
+        "src/update_handler.c::img_to_boot_mbr_switch_handler()",
+        "src/update_handler.c::img_to_boot_gpt_switch_handler()"
+      ],
+      "bounded_proposition": "A guint64 boot-switch partition size is cleared with a guint byte counter.",
+      "direct_source_fact": "clear_count is guint; dest_partition->size is guint64; the loop increments clear_count by write counts until it equals the 64-bit target.",
+      "inferred_consequence": "On a 32-bit guint ABI, a reachable half larger than G_MAXUINT bytes makes the counter wrap before representing the target.",
+      "falsifying_or_downgrading_evidence": "A frozen size bound <=G_MAXUINT, or a supported ABI contract with wider guint, would downgrade/falsify.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/config_file.c::parse_slots()",
+        "src/mbr.c::r_mbr_switch_get_inactive_partition() / src/gpt.c::r_gpt_switch_get_inactive_partition()",
+        "src/update_handler.c::clear_boot_switch_partition()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/update_handler.c::clear_boot_switch_partition()",
+            "test/boot_switch.c"
+          ],
+          "note": "No <=G_MAXUINT half-size guard was found before clear_boot_switch_partition; ordinary boot-switch tests use 3 MiB halves."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+          ],
+          "note": "Separate fixed-width witness demonstrates the counter-wrap mechanism; the source contract uses GLib guint versus guint64."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "origin_proposal_ids": [
+        "P01-03"
+      ],
+      "b1_lens_id": 1,
+      "frozen_source_anchors": [
+        "src/config_file.c::parse_slots()",
+        "src/mbr.c::validate_region()",
+        "src/mbr.c::is_region_free()",
+        "src/gpt.c::check_region()"
+      ],
+      "bounded_proposition": "Region validation directly adds guint64 region_start and region_size without a pre-addition overflow guard.",
+      "direct_source_fact": "Both MBR and GPT validation form region_start+region_size; MBR also uses region_start+region_size-1 in overlap checks.",
+      "inferred_consequence": "For accepted aligned operands whose mathematical sum exceeds UINT64_MAX, validation can evaluate a wrapped end value rather than the mathematical region end.",
+      "falsifying_or_downgrading_evidence": "A frozen parser/range invariant proving region_start+region_size always fits guint64 would falsify.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c::parse_slots()",
+        "src/mbr.c::validate_region()",
+        "src/gpt.c::check_region()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/utils.c::key_file_consume_binary_suffixed_string()",
+            "src/config_file.c::parse_slots()",
+            "src/mbr.c::validate_region()",
+            "src/gpt.c::check_region()"
+          ],
+          "note": "The configured 64-bit region values flow directly to MBR/GPT validation for the corresponding slot types."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/mbr.c::validate_region()",
+            "src/gpt.c::check_region()"
+          ],
+          "note": "No explicit sum-overflow guard precedes the cited additions; alignment and nonzero checks do not bound the mathematical sum."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "origin_proposal_ids": [
+        "P02-01"
+      ],
+      "b1_lens_id": 2,
+      "frozen_source_anchors": [
+        "src/nbd.c::r_nbd_remove_device()"
+      ],
+      "bounded_proposition": "A negative NBD netlink disconnect send result is normalized to local cleanup and TRUE return.",
+      "direct_source_fact": "The nl_send_sync<0 branch logs that the device is already removed; the function then invalidates local index/socket state and returns TRUE.",
+      "inferred_consequence": "If libnl can return a non-benign removal failure at this call, that error is collapsed into caller-visible success.",
+      "falsifying_or_downgrading_evidence": "A libnl/kernel contract showing all reachable negative results mean already absent, or an explicit RAUC best-effort API contract, would resolve the ambiguity.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "CONTEXT_DEPENDENT_CANDIDATE",
+      "b3_path_status": "NOT_REQUIRED_LOCAL_ONLY",
+      "b3_path_anchors": [
+        "src/nbd.c::r_nbd_remove_device()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [
+            "src/nbd.c::r_nbd_remove_device()"
+          ],
+          "note": "The frozen RAUC tree does not establish the complete error-result contract of nl_send_sync for this disconnect command."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [
+            "src/nbd.c::r_nbd_remove_device()"
+          ],
+          "note": "The code strongly suggests best-effort idempotent cleanup, but the frozen target material inspected does not establish whether TRUE intentionally covers all netlink failures."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [],
+          "note": "External API semantics remain material to the bounded consequence."
+        }
+      },
+      "b5_provisional_claim_gate": "CONTRACT_DEPENDENT",
+      "b6_check_type": "NOT_REQUIRED_NON_STRONG",
+      "b6_check_artifacts": [],
+      "source_only_technical_disposition": "CONTRACT_DEPENDENT",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": true,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "origin_proposal_ids": [
+        "P02-02"
+      ],
+      "b1_lens_id": 2,
+      "frozen_source_anchors": [
+        "src/status_file.c::status_file_get_slot_status()",
+        "src/status_file.c::status_file_set_slot_status()",
+        "src/install.c::handle_slot_install_plan()"
+      ],
+      "bounded_proposition": "With a stored SHA-256 digest present, companion checksum size is read with a NULL error channel and accepted into slot status.",
+      "direct_source_fact": "The size getter has no error handling while nearby count fields do; install-same skip logic compares digest/status and does not validate stored size at that point.",
+      "inferred_consequence": "Malformed or missing stored size can coexist with a populated digest/type; whether that constitutes an invalid status contract is unresolved.",
+      "falsifying_or_downgrading_evidence": "An explicit tolerant-status-file contract or proof that all persisted/consumed size values are guaranteed valid would downgrade the anomaly.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "CONTEXT_DEPENDENT_CANDIDATE",
+      "b3_path_status": "NOT_REQUIRED_LOCAL_ONLY",
+      "b3_path_anchors": [
+        "src/status_file.c::status_file_get_slot_status()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/status_file.c::status_file_get_slot_status()"
+          ],
+          "note": "The local parsing behavior is direct; the unresolved question is the intended status-file validity contract."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [
+            "src/install.c::handle_slot_install_plan()"
+          ],
+          "note": "Digest-only install-same logic limits the immediate consequence of size=0; other consumers may use size but a mandatory validity authority is not established."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [
+            "src/status_file.c"
+          ],
+          "note": "Nearby fields deliberately tolerate malformed counts by setting zero, so tolerant recovery may be intentional; the size-specific intent is not established."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [],
+          "note": "Source proves permissive parsing, not that permissiveness violates the intended persistence contract."
+        }
+      },
+      "b5_provisional_claim_gate": "CONTRACT_DEPENDENT",
+      "b6_check_type": "NOT_REQUIRED_NON_STRONG",
+      "b6_check_artifacts": [],
+      "source_only_technical_disposition": "CONTRACT_DEPENDENT",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": true,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "origin_proposal_ids": [
+        "P03-01"
+      ],
+      "b1_lens_id": 3,
+      "frozen_source_anchors": [
+        "src/mark.c::r_mark_active()",
+        "src/status_file.c",
+        "docs/reference.rst"
+      ],
+      "bounded_proposition": "After a successful bootloader-primary change, r_mark_active can return TRUE even if saving the activation timestamp/count fails.",
+      "direct_source_fact": "r_boot_set_primary failure is fatal; r_slot_status_save failure is logged and freed, then TRUE is returned.",
+      "inferred_consequence": "Caller-visible activation success may coexist with unpersisted activation metadata.",
+      "falsifying_or_downgrading_evidence": "A documented contract that activation metadata is deliberately best-effort/non-authoritative would downgrade this from an anomaly to intentional behavior.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "CONTEXT_DEPENDENT_CANDIDATE",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/mark.c::r_mark_active()",
+        "r_boot_set_primary()",
+        "r_slot_status_save()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [],
+          "note": "Bootloader state is the authoritative activation action while status metadata may be secondary; intent is not resolved source-only."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [
+            "src/mark.c::r_mark_active()",
+            "docs/reference.rst"
+          ],
+          "note": "The explicit log-and-continue structure is evidence of possible intentional best-effort metadata handling; frozen docs state RAUC tracks activation metadata but do not establish failure semantics."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESIDUAL_MATERIAL_DOUBT",
+          "evidence_anchors": [],
+          "note": "The source behavior is reproducible but policy/authority remains material."
+        }
+      },
+      "b5_provisional_claim_gate": "INTENT_DEPENDENT_HOLD",
+      "b6_check_type": "NOT_REQUIRED_NON_STRONG",
+      "b6_check_artifacts": [],
+      "source_only_technical_disposition": "INTENT_DEPENDENT_HOLD",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": true,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "origin_proposal_ids": [
+        "P04-01"
+      ],
+      "b1_lens_id": 4,
+      "frozen_source_anchors": [
+        "src/config_file.c::parse_polling_section()",
+        "include/config_file.h::RaucConfig",
+        "src/polling.c::polling_reschedule()",
+        "docs/reference.rst",
+        "docs/advanced.rst"
+      ],
+      "bounded_proposition": "Accepted gint polling intervals are multiplied in gint arithmetic before assignment to gint64 milliseconds.",
+      "direct_source_fact": "interval_sec/max_interval_sec are gint; checks impose a lower bound and ordering but no safe upper bound; *1000 and default *4 occur before widened assignment.",
+      "inferred_consequence": "An accepted interval such as 3,000,000 seconds requires 3,000,000,000 ms, exceeding INT_MAX before storage in gint64.",
+      "falsifying_or_downgrading_evidence": "A frozen upper bound or integer-promotion rule proving the intermediate cannot overflow would falsify.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/config_file.c::parse_polling_section()",
+        "RaucConfig.polling_interval_ms/polling_max_interval_ms",
+        "src/polling.c::polling_reschedule()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "docs/reference.rst",
+            "docs/advanced.rst",
+            "test/test_polling.py",
+            "test/config_file.c"
+          ],
+          "note": "Polling docs state lower/order constraints but no upper bound; located tests cover normal-scale values only."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+          ],
+          "note": "B6 widened-arithmetic check shows 3,000,000*1000 exceeds INT_MAX; the source expression is evaluated before assignment to gint64."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "STATIC_CONTRACT",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "origin_proposal_ids": [
+        "P04-02"
+      ],
+      "b1_lens_id": 4,
+      "frozen_source_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c",
+        "docs/reference.rst"
+      ],
+      "bounded_proposition": "The binary-suffixed parser proposal contains two counterfactually separable mechanisms: unvalidated trailing token text and unchecked scaled-value shift.",
+      "direct_source_fact": "The helper parses a numeric prefix, inspects only the first non-digit character, and returns a shifted guint64 without full-token/overflow validation.",
+      "inferred_consequence": "Either malformed-token acceptance or numeric wrap can occur independently.",
+      "falsifying_or_downgrading_evidence": "B3 split children must be evaluated independently.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [
+        "C008a",
+        "C008b"
+      ],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Language/representation semantics were checked; strong rows additionally use the separate B6 witness/static check."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "NOT_EVALUABLE",
+      "b6_check_type": "NOT_EVALUABLE",
+      "b6_check_artifacts": [],
+      "source_only_technical_disposition": "NOT_EVALUABLE",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Composite parent superseded by C008a/C008b; no standalone final technical disposition.",
+      "residual_material_doubt": true,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C008a",
+      "origin_proposal_ids": [
+        "P04-02"
+      ],
+      "b1_lens_id": 4,
+      "frozen_source_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c",
+        "docs/reference.rst"
+      ],
+      "bounded_proposition": "The binary-suffixed helper accepts a decimal prefix plus recognized first suffix character without requiring end-of-string.",
+      "direct_source_fact": "g_ascii_strtoull supplies an end pointer; only *scale is switched on; no check validates scale[1] or token exhaustion.",
+      "inferred_consequence": "Inputs such as 1Kgarbage are accepted with the same scaled value as 1K by the mirrored parser structure.",
+      "falsifying_or_downgrading_evidence": "An upstream full-token validator on every caller would falsify reachability.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "NOT_REQUIRED_LOCAL_ONLY",
+      "b3_path_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c consumers"
+      ],
+      "parent_candidate_id": "C008",
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "docs/reference.rst"
+          ],
+          "note": "Reference docs specify optional K/M/G/T suffixes, not arbitrary trailing text."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+          ],
+          "note": "Separate parser-structure witness accepts 1Kgarbage as 1024 and leaves Kgarbage unconsumed."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C008b",
+      "origin_proposal_ids": [
+        "P04-02"
+      ],
+      "b1_lens_id": 4,
+      "frozen_source_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c"
+      ],
+      "bounded_proposition": "The binary-suffixed helper left-shifts a parsed guint64 by 10/20/30/40 without checking whether the mathematical scaled value fits guint64.",
+      "direct_source_fact": "The return expression is result << scale_shift on an unsigned 64-bit quantity.",
+      "inferred_consequence": "Sufficiently large accepted base values can wrap modulo 2^64 during scaling.",
+      "falsifying_or_downgrading_evidence": "An upstream bound on every caller/input proving result <= UINT64_MAX>>scale_shift would falsify reachability.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "NOT_REQUIRED_LOCAL_ONLY",
+      "b3_path_anchors": [
+        "src/utils.c::key_file_consume_binary_suffixed_string()",
+        "src/config_file.c consumers"
+      ],
+      "parent_candidate_id": "C008",
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Reachability was checked on the frozen configuration/execution path."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/utils.c::key_file_consume_binary_suffixed_string()",
+            "src/config_file.c"
+          ],
+          "note": "No caller-wide pre-shift range validator was found in the frozen parsing path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+          ],
+          "note": "Separate unsigned-width witness shows 2^63<<10 yields 0 modulo 2^64."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No contemporaneous documentation was found authorizing the specific bounded mismatch as intended behavior."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "origin_proposal_ids": [
+        "P06-01"
+      ],
+      "b1_lens_id": 6,
+      "frozen_source_anchors": [
+        "src/polling.c::RPollingContext",
+        "src/polling.c::polling_reschedule()",
+        "include/config_file.h"
+      ],
+      "bounded_proposition": "Normal polling backoff multiplies signed interval milliseconds by recent_error_count+1 (guint64) before applying the configured maximum.",
+      "direct_source_fact": "recent_error_count increments on each failed polling_step and resets only on success; the multiplication precedes MIN(...,max_interval).",
+      "inferred_consequence": "At sufficiently large counts, usual signed/unsigned conversion and unsigned multiplication can wrap before the clamp.",
+      "falsifying_or_downgrading_evidence": "A frozen reachable-state cap/reset proving the factor stays below the overflow threshold would falsify.",
+      "b1_schema_status": "ACCEPTED_TO_FROZEN_LEDGER",
+      "b1_schema_reason": "",
+      "b2_provisional_class": "DIRECT_SOURCE_SEMANTIC_ANOMALY_OR_EXPLICIT_CONTRACT_MISMATCH",
+      "b3_path_status": "CLOSED",
+      "b3_path_anchors": [
+        "src/polling.c::polling_step()/poll callback failure path",
+        "recent_error_count += 1",
+        "src/polling.c::polling_reschedule()"
+      ],
+      "parent_candidate_id": null,
+      "split_child_ids": [],
+      "b4_defeater_dispositions": {
+        "api_contract_misread": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Frozen source/API representation was re-read against the proposition."
+        },
+        "version_provenance_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "All source anchors are from frozen commit 1a412fe80badb9cf91f5374ea2ef791de4db55a9."
+        },
+        "configuration_reachability_mismatch": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "src/polling.c::polling_step()/poll callback failure path",
+            "recent_error_count += 1",
+            "src/polling.c::polling_reschedule()"
+          ],
+          "note": "The counter is incremented on every failed poll and fed directly into polling_reschedule; no finite cap is present in the frozen source."
+        },
+        "upstream_safeguard_invariant": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "No frozen-source safeguard was found that falsifies the bounded proposition on the closed path."
+        },
+        "stale_doc_or_test_oracle": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Contemporaneous docs/tests were inspected where relevant and did not contradict the bounded source proposition."
+        },
+        "language_semantics_toolchain": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+          ],
+          "note": "B6 witness demonstrates a factor for which the unsigned product exceeds UINT64_MAX mathematically and wraps before any max clamp."
+        },
+        "alternative_architecture_authority": {
+          "status": "NOT_APPLICABLE",
+          "evidence_anchors": [],
+          "note": "Not applicable to the bounded proposition."
+        },
+        "executable_test_contradiction": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Located tests exercise ordinary cases and do not contradict the bounded edge proposition."
+        },
+        "intentional_documented_behavior": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [
+            "docs/advanced.rst"
+          ],
+          "note": "Docs describe linear backoff capped at max-interval-sec, not modulo wrap before the cap."
+        },
+        "claim_escalation_beyond_ceiling": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Claim is restricted to source-level behavior; no field/safety/severity consequence is asserted."
+        },
+        "open_challenge": {
+          "status": "RESOLVED_BY_EVIDENCE",
+          "evidence_anchors": [],
+          "note": "Final frozen open-challenge pass found no material source-only counterexample beyond recorded residuals."
+        }
+      },
+      "b5_provisional_claim_gate": "PROVISIONAL_STRONG",
+      "b6_check_type": "EXECUTABLE",
+      "b6_check_artifacts": [
+        "prospective-transfer/2026-10-07/b6/B6_SEPARATE_CHECK_REPORT_v1.0.0.md",
+        "prospective-transfer/2026-10-07/b6/run.stdout.txt"
+      ],
+      "source_only_technical_disposition": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NOT_SEARCHED",
+      "process_eligibility": "PRIMARY_ELIGIBLE",
+      "contamination_level": "C0_NONE",
+      "upstream_disposition": "NOT_REPORTED",
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-only disposition only; no public-prior novelty or maintainer/patch claim before B7.",
+      "residual_material_doubt": false,
+      "artifact_anchors": [
+        "prospective-transfer/2026-10-07/b1/B1_CANDIDATE_LEDGER_FROZEN_v1.0.0.csv"
+      ]
+    }
+  ]
+}
