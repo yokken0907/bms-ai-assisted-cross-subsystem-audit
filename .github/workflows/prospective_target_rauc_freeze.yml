@@ -1,0 +1,35 @@
+name: Prospective target RAUC source freeze
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_target_rauc_freeze.yml'
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone selected target quietly at exact commit
+        run: |
+          git clone --quiet https://github.com/rauc/rauc.git target
+          cd target
+          git -c advice.detachedHead=false checkout --quiet 1a412fe80badb9cf91f5374ea2ef791de4db55a9
+          test "$(git rev-parse HEAD)" = "1a412fe80badb9cf91f5374ea2ef791de4db55a9"
+          echo "FROZEN_COMMIT=$(git rev-parse HEAD)"
+          cd ..
+      - name: Create deterministic source archive and manifests
+        run: |
+          tar --sort=name --mtime='UTC 1970-01-01' --owner=0 --group=0 --numeric-owner \
+              --exclude='target/.git' -czf rauc_1a412fe_source.tar.gz target
+          sha256sum rauc_1a412fe_source.tar.gz | tee rauc_1a412fe_source.tar.gz.sha256
+          find target -type f -not -path 'target/.git/*' -print0 | sort -z | xargs -0 sha256sum > rauc_1a412fe_file_manifest.sha256
+      - name: Upload frozen source
+        uses: actions/upload-artifact@v4
+        with:
+          name: rauc-1a412fe-source-freeze
+          path: |
+            rauc_1a412fe_source.tar.gz
+            rauc_1a412fe_source.tar.gz.sha256
+            rauc_1a412fe_file_manifest.sha256
+          if-no-files-found: error
+          retention-days: 90
