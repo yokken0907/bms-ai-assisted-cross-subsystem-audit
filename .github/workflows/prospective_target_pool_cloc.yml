@@ -1,0 +1,44 @@
+name: Prospective target pool CLOC screening
+
+on:
+  push:
+    paths:
+      - '.github/workflows/prospective_target_pool_cloc.yml'
+
+jobs:
+  cloc:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: zephyr
+            repo: zephyrproject-rtos/zephyr
+          - id: fastled
+            repo: FastLED/FastLED
+          - id: binbloom
+            repo: quarkslab/binbloom
+          - id: pikapython
+            repo: pikasTech/PikaPython
+          - id: nuttx
+            repo: apache/nuttx
+          - id: rauc
+            repo: rauc/rauc
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install cloc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y cloc >/dev/null
+          cloc --version
+      - name: Clone candidate quietly and freeze HEAD
+        run: |
+          git clone --depth 1 --quiet https://github.com/${{ matrix.repo }}.git target
+          cd target
+          echo "CANDIDATE=${{ matrix.repo }}"
+          echo "FROZEN_COMMIT=$(git rev-parse HEAD)"
+      - name: Measure C and C++ LOC under frozen exclusions
+        run: |
+          cloc target \
+            --include-lang=C,C++ \
+            --exclude-dir=.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen \
+            --json | tee cloc.json
