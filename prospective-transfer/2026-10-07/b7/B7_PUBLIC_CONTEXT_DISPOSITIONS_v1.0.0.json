@@ -1,0 +1,98 @@
+{
+  "target": "rauc/rauc",
+  "frozen_commit": "1a412fe80badb9cf91f5374ea2ef791de4db55a9",
+  "mutable_upstream_head": "1a412fe80badb9cf91f5374ea2ef791de4db55a9",
+  "current_state_summary": "At B7 review, upstream master resolves to the exact frozen commit; therefore no post-freeze source fix exists on master for any row.",
+  "rows": [
+    {
+      "id": "C001",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "NARROWS",
+      "post_external_claim_ceiling": "Source-level MBR range-validation/narrowing finding only. Do not imply ordinary configurations, field failure, or a device above the MBR representable domain is actually deployed.",
+      "maintainer_facing_wording": "At the current/frozen source, boot-mbr-switch derives 64-bit byte start/size values and encodes the resulting sector values into 32-bit MBR fields without an explicit representability check at the encoding boundary. This report would be limited to the missing range guard; no field consequence is assumed."
+    },
+    {
+      "id": "C002",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "NARROWS",
+      "post_external_claim_ceiling": "Source/type-width finding. Consequence is conditional on a reachable boot-switch half larger than the guint counter range; no deployment prevalence asserted.",
+      "maintainer_facing_wording": "clear_boot_switch_partition() compares a guint byte counter with a guint64 partition size. On an ABI where guint is 32-bit, a boot-switch half larger than that counter range cannot be represented monotonically by clear_count. Is a <=G_MAXUINT size invariant intended but unstated?"
+    },
+    {
+      "id": "C003",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "NARROWS",
+      "post_external_claim_ceiling": "Source-level extreme-input validation arithmetic only; no claim that a physical device/configuration near the guint64 boundary is practical.",
+      "maintainer_facing_wording": "The MBR/GPT region validators form region_start+region_size on guint64 inputs before the device-bound check, with no explicit pre-add overflow test. The bounded report would ask whether the parser/device contract intentionally excludes values whose mathematical sum exceeds guint64."
+    },
+    {
+      "id": "C004",
+      "b6": "CONTRACT_DEPENDENT",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Remain CONTRACT_DEPENDENT. Do not call this a defect without the intended nl_send_sync/disconnect error contract.",
+      "maintainer_facing_wording": "r_nbd_remove_device() treats every negative nl_send_sync result as 'already removed', clears local state and returns TRUE. Is TRUE intentionally best-effort for all disconnect-send failures, or only for a narrower already-absent condition?"
+    },
+    {
+      "id": "C005",
+      "b6": "CONTRACT_DEPENDENT",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "CLARIFIES_INTENT",
+      "post_external_claim_ceiling": "Permissive/tolerant status parsing observation only. Historical design context supports recovery/logging behavior generally, but does not establish a size-specific contract violation.",
+      "maintainer_facing_wording": "When a stored SHA-256 exists, slot-status size is read without an error channel while nearby counters explicitly validate malformed values. Is checksum size deliberately best-effort/tolerant in the persisted status format?"
+    },
+    {
+      "id": "C006",
+      "b6": "INTENT_DEPENDENT_HOLD",
+      "prior_public_status": "SAME_MECHANISM_PRIOR",
+      "current_fix_exists": false,
+      "external_context_effect": "CLARIFIES_INTENT",
+      "post_external_claim_ceiling": "Do not report as a defect. Historical commit 5bb3b500 explicitly introduced the current log-and-continue behavior and states the rationale that activation/install success should not be reversed by status-file update failure.",
+      "maintainer_facing_wording": "No upstream report proposed: the exact policy was already documented by commit 5bb3b500 and the B6 hold is resolved as intentional behavior for publication interpretation."
+    },
+    {
+      "id": "C007",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NO_MATCH_FOUND",
+      "current_fix_exists": false,
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-level configuration arithmetic finding. No claim of field incidence; ordinary values below the signed-int multiplication threshold are unaffected.",
+      "maintainer_facing_wording": "parse_polling_section() accepts gint seconds with no safe upper bound, then evaluates interval_sec*1000 (and default interval_sec*4) before assignment to gint64. For example 3,000,000 seconds is within gint but requires 3,000,000,000 ms. Would an explicit upper bound or widened arithmetic be appropriate?"
+    },
+    {
+      "id": "C008a",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "SUPPORTS",
+      "post_external_claim_ceiling": "Source-level parser/format mismatch only. Documentation clarifies the intended suffix formats; no security or field consequence asserted.",
+      "maintainer_facing_wording": "key_file_consume_binary_suffixed_string() parses a decimal prefix and switches on only the first following character. It does not require token exhaustion, so e.g. '1Kgarbage' follows the same scaling path as '1K'. Current docs describe only the supported numeric-plus-optional-suffix formats."
+    },
+    {
+      "id": "C008b",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "RELATED_ONLY",
+      "current_fix_exists": false,
+      "external_context_effect": "NONE",
+      "post_external_claim_ceiling": "Source-level unsigned scaling-overflow finding only; practical configuration reachability near guint64 limits is not established.",
+      "maintainer_facing_wording": "The same helper returns result<<10/20/30/40 for suffix scaling without checking representability of the scaled value. The bounded question is whether values above UINT64_MAX>>shift should be rejected."
+    },
+    {
+      "id": "C009",
+      "b6": "STRONG_SOURCE_FINDING",
+      "prior_public_status": "NO_MATCH_FOUND",
+      "current_fix_exists": false,
+      "external_context_effect": "NARROWS",
+      "post_external_claim_ceiling": "Theoretical source arithmetic edge only. No practical reachability, uptime feasibility, or field relevance is established; do not present as an operational defect without additional evidence.",
+      "maintainer_facing_wording": "polling_reschedule() multiplies polling_interval_ms by recent_error_count+1 before applying MIN(max_interval). recent_error_count is guint64 and increments on each failed poll. The source-level arithmetic can wrap before the clamp at sufficiently large counts, although practical reachability is not claimed."
+    }
+  ]
+}
