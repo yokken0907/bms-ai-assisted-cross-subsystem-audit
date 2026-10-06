@@ -43,52 +43,52 @@ jobs:
           MANIFEST_SHA="$(sha256sum /tmp/b0/file_manifest.sha256 | awk '{print $1}')"
           cd "$GITHUB_WORKSPACE"
           mkdir -p prospective-transfer/2026-10-07
-          cat > prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md <<EOF
-          # B0 RAUC source-freeze record v1.0.0
-
-          Recorded before B1 candidate generation.
-
-          - target: rauc/rauc
-          - frozen commit: `1a412fe80badb9cf91f5374ea2ef791de4db55a9`
-          - source acquisition: quiet git clone + detached checkout of exact commit
-          - cloc version: `${CLOC_VERSION}`
-          - cloc include languages: `C,C++`
-          - cloc excluded directories: `.git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen`
-          - non-generated C/C++ LOC: `${CODE_LOC}`
-          - C/C++ file count reported by cloc: `${CPP_FILES}`
-          - deterministic source tar SHA-256: `${ARCHIVE_SHA}`
-          - complete non-.git file-manifest SHA-256: `${MANIFEST_SHA}`
-          - prior B0 source-freeze workflow run: `37503869800`
-          - prior B0 source-freeze artifact digest: `sha256:95a0188ec4de00648a67d3b5f99308de72d860b9fae1f8421939d634cfe3b1e2`
-
-          ## Frozen admissible evidence surfaces
-
-          Present in the frozen tree before B1:
-          - runtime implementation under `src/`;
-          - public headers/contracts under `include/` and `src/bootloaders/*.h`;
-          - configuration/build surfaces including `meson.build`, `meson_options.txt`, service/config files;
-          - contemporaneous documentation under `docs/` and `README.rst`;
-          - extensive tests under `test/` and fuzz targets under `fuzz/`.
-
-          No issue/PR/fix-history reconnaissance is part of this B0 record.
-          EOF
-          cp /tmp/b0/cloc.json prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json
-          sha256sum prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md \
-                    prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json \
-            > prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.0.txt
+          {
+            echo "# B0 RAUC source-freeze record v1.0.1"
+            echo
+            echo "Recorded before B1 candidate generation."
+            echo
+            echo "- target: rauc/rauc"
+            echo "- frozen commit: 1a412fe80badb9cf91f5374ea2ef791de4db55a9"
+            echo "- source acquisition: quiet git clone + detached checkout of exact commit"
+            echo "- cloc version: $CLOC_VERSION"
+            echo "- cloc include languages: C,C++"
+            echo "- cloc excluded directories: .git,build,dist,out,vendor,vendors,third_party,third-party,external,generated,gen"
+            echo "- non-generated C/C++ LOC: $CODE_LOC"
+            echo "- C/C++ file count reported by cloc: $CPP_FILES"
+            echo "- deterministic source tar SHA-256: $ARCHIVE_SHA"
+            echo "- complete non-.git file-manifest SHA-256: $MANIFEST_SHA"
+            echo "- prior B0 source-freeze workflow run: 37503869800"
+            echo "- prior B0 source-freeze artifact digest: sha256:95a0188ec4de00648a67d3b5f99308de72d860b9fae1f8421939d634cfe3b1e2"
+            echo
+            echo "## Frozen admissible evidence surfaces"
+            echo
+            echo "Present in the frozen tree before B1:"
+            echo "- runtime implementation under src/"
+            echo "- public headers/contracts under include/ and src/bootloaders/*.h"
+            echo "- configuration/build surfaces including meson.build, meson_options.txt, service/config files"
+            echo "- contemporaneous documentation under docs/ and README.rst"
+            echo "- extensive tests under test/ and fuzz targets under fuzz/"
+            echo
+            echo "No issue/PR/fix-history reconnaissance is part of this B0 record."
+          } > prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.1.md
+          cp /tmp/b0/cloc.json prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.1.json
+          sha256sum prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.1.md \
+                    prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.1.json \
+            > prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.1.txt
       - name: Commit B0 record
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.0.md \
-                  prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.0.json \
-                  prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.0.txt
-          git commit -m "Record frozen RAUC B0 source and CLOC evidence"
+          git add prospective-transfer/2026-10-07/B0_RAUC_SOURCE_FREEZE_RECORD_v1.0.1.md \
+                  prospective-transfer/2026-10-07/B0_RAUC_CLOC_v1.0.1.json \
+                  prospective-transfer/2026-10-07/B0_RAUC_RECORD_SHA256SUMS_v1.0.1.txt
+          git commit -m "Record corrected frozen RAUC B0 evidence v1.0.1"
           git push
       - name: Upload B0 source-freeze artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: rauc-b0-source-freeze-record
+          name: rauc-b0-source-freeze-record-v1.0.1
           path: |
             /tmp/b0/rauc_1a412fe_source.tar.gz
             /tmp/b0/file_manifest.sha256
